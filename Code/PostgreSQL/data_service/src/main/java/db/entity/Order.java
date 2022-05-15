@@ -4,8 +4,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
-
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,18 +16,34 @@ public class Order {
     private long id;
     @ManyToMany()
     @JoinTable(
-            name= "order_items",
-            joinColumns=@JoinColumn(name="order_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="item_id", referencedColumnName="id")
+            name = "order_items",
+            joinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id")
     )
     private Set<Item> item_list;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date order_date;
     private Long picked_up_by; // Courier ID
-    private Long customer_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "courier_id")
+    private Courier courier;
+
+
     private double total_price;
 
+
+    public Courier getCourier() {
+        return courier;
+    }
+
+    public void setCourier(Courier courier) {
+        this.courier = courier;
+    }
 
     public Order() {
     }
@@ -49,5 +63,29 @@ public class Order {
 
     public void setTotal_price() {
         this.total_price = getTotal_price();
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public Set<Item> getItem_list() {
+        return item_list;
+    }
+
+    public Date getOrder_date() {
+        return order_date;
+    }
+
+    public Long getPicked_up_by() {
+        return picked_up_by;
     }
 }

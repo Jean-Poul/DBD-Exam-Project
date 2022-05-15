@@ -25,7 +25,7 @@ public class Restaurant {
 
     public void addItemToMenu(Item item) {
         this.menu.add(item);
-        if(item.getRestaurant() == null) {
+        if (item.getRestaurant() == null) {
             item.setRestaurant(this);
         }
     }
