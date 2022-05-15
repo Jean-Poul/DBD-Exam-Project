@@ -18,6 +18,7 @@ public class Address implements Serializable {
     private String local_identifier;
     @Column(name = "zipcode")
     private int zipcode;
+
     private double x;
     private double y;
 
