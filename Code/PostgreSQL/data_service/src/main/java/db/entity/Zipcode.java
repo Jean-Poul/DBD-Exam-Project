@@ -12,7 +12,8 @@ public class Zipcode {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private int zipcode;
     private String region;
     private String commune;
