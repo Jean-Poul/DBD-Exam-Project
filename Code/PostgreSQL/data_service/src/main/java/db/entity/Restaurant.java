@@ -1,32 +1,37 @@
 package db.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
+@Entity
 @Table(name = "restaurants")
 public class Restaurant {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Long address_id;
     private String opening_hours;
-    private boolean isOpen;
     private String email;
     private String phone;
-    private Menu menu;
+    @OneToMany(mappedBy = "restaurant")
+    private Set<Item> menu;
 
     public Restaurant() {
     }
 
-    public Long getId() {
-        return id;
+    public void addItemToMenu(Item item) {
+        this.menu.add(item);
+        if(item.getRestaurant() == null) {
+            item.setRestaurant(this);
+        }
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
@@ -51,14 +56,6 @@ public class Restaurant {
 
     public void setOpening_hours(String opening_hours) {
         this.opening_hours = opening_hours;
-    }
-
-    public boolean isOpen() {
-        return isOpen;
-    }
-
-    public void setOpen(boolean open) {
-        isOpen = open;
     }
 
     public String getEmail() {

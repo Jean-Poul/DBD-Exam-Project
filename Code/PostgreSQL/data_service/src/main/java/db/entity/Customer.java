@@ -3,6 +3,7 @@ package db.entity;
 import java.util.Date;
 
 public class Customer {
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String email;
