@@ -12,8 +12,8 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private String type;
     private String category;
+    @Column(columnDefinition="TEXT")
     private String description;
     private double price;
     @ManyToOne(fetch = FetchType.LAZY)
@@ -30,10 +30,6 @@ public class Item {
 
     public String getName() {
         return name;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public String getCategory() {

@@ -12,13 +12,15 @@ public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "restaurants_name")
     private String name;
     private Long address_id;
-    private String opening_hours;
-    private String email;
+   // private String opening_hours;
     private String phone;
     @OneToMany(mappedBy = "restaurant")
     private Set<Item> menu;
+    @OneToMany(mappedBy = "restaurant")
+    private Set<OpeningHours> openingHours;
 
     public Restaurant() {
     }
@@ -48,22 +50,6 @@ public class Restaurant {
 
     public void setAddress_id(Long address_id) {
         this.address_id = address_id;
-    }
-
-    public String getOpening_hours() {
-        return opening_hours;
-    }
-
-    public void setOpening_hours(String opening_hours) {
-        this.opening_hours = opening_hours;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPhone() {
