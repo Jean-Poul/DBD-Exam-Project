@@ -1,7 +1,8 @@
 package db.entity;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "restaurants")
@@ -11,16 +12,16 @@ public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column(name = "restaurants_name")
     private String name;
-    private Long address_id;
-   // private String opening_hours;
+    private int address_id;
+    // private String opening_hours;
     private String phone;
     @OneToMany(mappedBy = "restaurant")
-    private Set<Item> menu;
+    private List<Item> menu = new ArrayList<>();
     @OneToMany(mappedBy = "restaurant")
-    private Set<OpeningHours> openingHours;
+    private List<OpeningHours> openingHours = new ArrayList<>();
 
     public Restaurant() {
     }
@@ -32,7 +33,7 @@ public class Restaurant {
         }
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -44,11 +45,11 @@ public class Restaurant {
         this.name = name;
     }
 
-    public Long getAddress_id() {
+    public int getAddress_id() {
         return address_id;
     }
 
-    public void setAddress_id(Long address_id) {
+    public void setAddress_id(int address_id) {
         this.address_id = address_id;
     }
 

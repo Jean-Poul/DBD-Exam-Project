@@ -3,8 +3,9 @@ package db.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.Set;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 @Entity
 @Table(name = "Orders")
@@ -13,18 +14,18 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @ManyToMany()
-    @JoinTable(
-            name = "order_items",
-            joinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id")
-    )
-    private Set<Item> item_list;
-    @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    private Date order_date;
-    private Long picked_up_by; // Courier ID
+    private int id;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate order_date;
+
+    @ElementCollection
+    @CollectionTable(name = "order_items",
+            joinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id")})
+    @MapKeyColumn(name = "item_id")
+    @Column(name = "quantity")
+    private Map<Item, Integer> items = new HashMap<>();
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")
     private Customer customer;
@@ -33,9 +34,7 @@ public class Order {
     @JoinColumn(name = "courier_id")
     private Courier courier;
 
-
     private double total_price;
-
 
     public Courier getCourier() {
         return courier;
@@ -49,20 +48,16 @@ public class Order {
     }
 
     public void addItem(Item item) {
-        this.item_list.add(item);
+        int quantity = 1;
+        if (this.items.containsKey(item)) {
+            quantity = this.items.get(item) + 1;
+
+        }
+        this.items.put(item, quantity);
     }
 
     public double getTotal_price() {
-        double sum = 0.0;
-        for (Item i : this.item_list
-        ) {
-            sum = sum + i.getPrice();
-        }
-        return sum;
-    }
-
-    public void setTotal_price() {
-        this.total_price = getTotal_price();
+        return this.total_price;
     }
 
     public Customer getCustomer() {
@@ -73,19 +68,30 @@ public class Order {
         this.customer = customer;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public Set<Item> getItem_list() {
-        return item_list;
+    public Map<Item, Integer> getItems() {
+        return this.items;
     }
 
-    public Date getOrder_date() {
+    public LocalDate getOrder_date() {
         return order_date;
     }
 
-    public Long getPicked_up_by() {
-        return picked_up_by;
+    public void setOrder_date(LocalDate order_date) {
+        this.order_date = order_date;
     }
+
+    public void setTotal_price() {
+        double sum = 0.0;
+        for (Item i : this.items.keySet()
+        ) {
+            sum = sum + i.getPrice();
+        }
+        this.total_price = sum;
+    }
+
+
 }

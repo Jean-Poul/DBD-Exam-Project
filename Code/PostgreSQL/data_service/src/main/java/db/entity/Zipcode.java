@@ -1,10 +1,8 @@
 package db.entity;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
 
-//readonly
+
 @Entity
 @Table(name = "zipcodes")
 public class Zipcode {

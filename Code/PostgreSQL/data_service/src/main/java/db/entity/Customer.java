@@ -1,8 +1,8 @@
 package db.entity;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -10,14 +10,15 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String email;
     private Long address_id;
     private String phone;
     private String firstName;
     private String lastName;
     @OneToMany(mappedBy = "customer")
-    private Set<Order> orders;
+    private List<Order> orders = new ArrayList<>();
+    ;
 
     public Customer() {
     }
@@ -29,7 +30,7 @@ public class Customer {
         }
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -53,7 +54,7 @@ public class Customer {
         return lastName;
     }
 
-    public Set<Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 }
