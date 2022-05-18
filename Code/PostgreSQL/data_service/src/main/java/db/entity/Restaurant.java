@@ -18,7 +18,7 @@ public class Restaurant {
     private int address_id;
     // private String opening_hours;
     private String phone;
-    @OneToMany(mappedBy = "restaurant")
+    @OneToMany(mappedBy = "restaurant", fetch = FetchType.EAGER)
     private List<Item> menu = new ArrayList<>();
     @OneToMany(mappedBy = "restaurant")
     private List<OpeningHours> openingHours = new ArrayList<>();
@@ -60,4 +60,13 @@ public class Restaurant {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public List<Item> getMenu() {
+        return menu;
+    }
+
+    public List<OpeningHours> getOpeningHours() {
+        return openingHours;
+    }
+
 }
