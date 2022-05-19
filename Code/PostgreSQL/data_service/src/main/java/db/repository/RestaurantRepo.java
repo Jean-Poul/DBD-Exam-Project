@@ -30,7 +30,7 @@ public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
     Customer getCustomerById(int id);
 
     @Query("SELECT r FROM Restaurant r JOIN r.menu i WHERE r.id = ?1")
-    List<Restaurant> getRestaurantWithItems(int id);
+    List<Item> getRestaurantWithItems(int id);
 
 }
 

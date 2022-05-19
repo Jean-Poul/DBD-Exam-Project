@@ -3,38 +3,32 @@ package db.dto;
 import db.entity.Item;
 import db.entity.OpeningHours;
 import db.entity.Restaurant;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 public class RestaurantDTO {
 
-    // TODO ALT INFO HER ELLER I EN DTO FRA ADDRESS ADDRESS DTO?
-    // Hvad vil vi vise til en user og hvad vil vi gemme fra en user? (overvej)
-    private String street;
-    private String name;
-    private String phone;
-    //private String menu;
+    // TODO MISSING ADDRESS AND THE NESTED RESTAURANT FROM RESPONSE
 
-    private Restaurant restaurant;
+    private final String name;
+    private final String phone;
+    private final int restaurant_id;
 
-    private Item item;
-    private List<Item> listOfMenu = new ArrayList<>();
+    private final Collection<Item> listOfMenu;
 
-    private OpeningHours openingHours;
-    private List<OpeningHours> listOfOpeningHours = new ArrayList<>();
+    private final Collection<OpeningHours> listOfOpeningHours;
 
-    //private AdresDTO adres;
+    //private Address addres;
 
     public RestaurantDTO(Restaurant entity) {
+        this.restaurant_id = entity.getAddress_id();
         this.name = entity.getName();
         this.phone = entity.getPhone();
-       // this.listOfMenu = entity.getMenu();
-       // this.listOfOpeningHours = entity.getOpeningHours();
+        this.listOfOpeningHours = entity.getOpeningHours();
+        this.listOfMenu = entity.getMenu();
     }
 
-    public String getStreet() {
-        return street;
+    public int getRestaurant_id() {
+        return restaurant_id;
     }
 
     public String getName() {
@@ -45,15 +39,10 @@ public class RestaurantDTO {
         return phone;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public List<Item> getListOfMenu() {
+    public Collection<Item> getListOfMenu() {
         return listOfMenu;
     }
-
-    public List<OpeningHours> getListOfOpeningHours() {
+    public Collection<OpeningHours> getListOfOpeningHours() {
         return listOfOpeningHours;
     }
 }

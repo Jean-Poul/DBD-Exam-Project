@@ -2,6 +2,7 @@ package db.interfaces;
 
 import db.dto.RestaurantDTO;
 import db.dto.RestaurantsDTO;
+import db.entity.Item;
 import db.entity.Restaurant;
 
 import java.util.Collection;

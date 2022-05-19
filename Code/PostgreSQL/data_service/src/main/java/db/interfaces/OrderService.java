@@ -1,15 +1,16 @@
 package db.interfaces;
 
-import db.entity.Customer;
+import db.dto.CourierDTO;
+import db.dto.OrderDTO;
 import db.entity.Order;
-
-import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 public interface OrderService {
 
-    public Customer getOrderByCustomerId(int id) throws Exception;
+    public OrderDTO getOrderByCustomerId(int id) throws Exception;
 
-    public Order getCourierOrderById(int id);
+    public CourierDTO getCourierOrderById(int id);
 
+    public ResponseEntity<Order> postCustomerOrder(Order order);
 
 }

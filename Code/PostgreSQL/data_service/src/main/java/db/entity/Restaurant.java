@@ -1,6 +1,8 @@
 package db.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -22,13 +24,18 @@ public class Restaurant {
     // private String opening_hours;
     private String phone;
     @JsonIgnore
+    @LazyCollection(LazyCollectionOption.FALSE)
     @OneToMany(mappedBy = "restaurant")
     private Collection<Item> menu = new ArrayList<>();
+
+    @JsonIgnore
+    @LazyCollection(LazyCollectionOption.FALSE)
     @OneToMany(mappedBy = "restaurant")
     private Collection<OpeningHours> openingHours = new ArrayList<>();
 
     public Restaurant() {
     }
+
     public int getId() {
         return id;
     }
@@ -62,7 +69,7 @@ public class Restaurant {
     }
 
     public Collection<OpeningHours> getOpeningHours() {
-        return openingHours;
+    return openingHours;
     }
 
 }

@@ -3,6 +3,7 @@ package db.rest;
 
 import db.dto.RestaurantDTO;
 import db.dto.RestaurantsDTO;
+import db.entity.Item;
 import db.entity.Restaurant;
 import db.services.OrderPopulator;
 import db.services.RestaurantServiceImpl;

@@ -1,5 +1,7 @@
 package db.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,9 @@ public class Courier {
     private String phone;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "courier")
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "courier", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
 
     public Courier() {

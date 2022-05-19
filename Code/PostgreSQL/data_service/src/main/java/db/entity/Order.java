@@ -17,6 +17,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private String firstName;
+    private String lastName;
+    private double order_price;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate order_date;
 
@@ -32,6 +36,7 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "courier_id")
     private Courier courier;
@@ -47,6 +52,12 @@ public class Order {
     }
 
     public Order() {
+    }
+
+    public Order(String firstName, String lastName, double order_price) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.order_price = order_price;
     }
 
     public void addItem(Item item) {
@@ -95,5 +106,15 @@ public class Order {
         this.total_price = sum;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public double getOrder_price() {
+        return order_price;
+    }
 }
