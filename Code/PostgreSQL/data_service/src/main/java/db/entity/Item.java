@@ -16,7 +16,7 @@ public class Item {
     @Column(columnDefinition="TEXT")
     private String description;
     private double price;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 

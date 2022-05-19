@@ -1,5 +1,7 @@
 package db.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +18,9 @@ public class Customer {
     private String phone;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "customer")
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
-    ;
 
     public Customer() {
     }

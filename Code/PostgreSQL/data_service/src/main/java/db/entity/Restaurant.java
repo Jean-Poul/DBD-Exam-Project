@@ -1,7 +1,10 @@
 package db.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -18,21 +21,14 @@ public class Restaurant {
     private int address_id;
     // private String opening_hours;
     private String phone;
-    @OneToMany(mappedBy = "restaurant", fetch = FetchType.EAGER)
-    private List<Item> menu = new ArrayList<>();
+    @JsonIgnore
     @OneToMany(mappedBy = "restaurant")
-    private List<OpeningHours> openingHours = new ArrayList<>();
+    private Collection<Item> menu = new ArrayList<>();
+    @OneToMany(mappedBy = "restaurant")
+    private Collection<OpeningHours> openingHours = new ArrayList<>();
 
     public Restaurant() {
     }
-
-    public void addItemToMenu(Item item) {
-        this.menu.add(item);
-        if (item.getRestaurant() == null) {
-            item.setRestaurant(this);
-        }
-    }
-
     public int getId() {
         return id;
     }
@@ -61,11 +57,11 @@ public class Restaurant {
         this.phone = phone;
     }
 
-    public List<Item> getMenu() {
+    public Collection<Item> getMenu() {
         return menu;
     }
 
-    public List<OpeningHours> getOpeningHours() {
+    public Collection<OpeningHours> getOpeningHours() {
         return openingHours;
     }
 

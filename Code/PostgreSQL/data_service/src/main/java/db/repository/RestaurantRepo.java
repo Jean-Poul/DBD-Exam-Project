@@ -29,5 +29,8 @@ public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
     @Query("SELECT c FROM Customer c where c.id = ?1")
     Customer getCustomerById(int id);
 
+    @Query("SELECT r FROM Restaurant r JOIN r.menu i WHERE r.id = ?1")
+    List<Restaurant> getRestaurantWithItems(int id);
+
 }
 
