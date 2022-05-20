@@ -13,35 +13,31 @@ public class Order {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate order_date;
+    private LocalDate orderDate;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "order_items",
             joinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id")})
     @MapKeyColumn(name = "item_id")
     @Column(name = "quantity")
     private Map<Item, Integer> items = new HashMap<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
+    private Integer customerId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "courier_id")
-    private Courier courier;
+    private Integer courierId;
 
-    private double total_price;
+    private double totalPrice;
 
-    public Courier getCourier() {
-        return courier;
+    public Integer getCourierId() {
+        return courierId;
     }
 
-    public void setCourier(Courier courier) {
-        this.courier = courier;
+    public void setCourierId(int courierId) {
+        this.courierId = courierId;
     }
 
     public Order() {
@@ -51,21 +47,20 @@ public class Order {
         int quantity = 1;
         if (this.items.containsKey(item)) {
             quantity = this.items.get(item) + 1;
-
         }
         this.items.put(item, quantity);
     }
 
-    public double getTotal_price() {
-        return this.total_price;
+    public double getTotalPrice() {
+        return this.totalPrice;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Integer getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomer(Integer customer) {
+        this.customerId = customer;
     }
 
     public int getId() {
@@ -76,22 +71,23 @@ public class Order {
         return this.items;
     }
 
-    public LocalDate getOrder_date() {
-        return order_date;
+    public LocalDate getOrderDate() {
+        return orderDate;
     }
 
-    public void setOrder_date(LocalDate order_date) {
-        this.order_date = order_date;
+    public void setOrderDate(LocalDate order_date) {
+        this.orderDate = order_date;
     }
 
-    public void setTotal_price() {
+    public void setTotalPrice() {
         double sum = 0.0;
         for (Item i : this.items.keySet()
         ) {
             sum = sum + i.getPrice();
         }
-        this.total_price = sum;
+        this.totalPrice = sum;
     }
 
-
+    public void setCustomerId(int customerId) {
+    }
 }

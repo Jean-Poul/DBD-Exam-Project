@@ -6,21 +6,23 @@ import java.util.List;
 
 @Entity
 @Table(name = "restaurants")
-public class Restaurant {
+public class Restaurant  {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    private Integer userId;
     @Column(name = "restaurants_name")
     private String name;
-    private int address_id;
-    // private String opening_hours;
+
+    private Integer addressId;
     private String phone;
-    @OneToMany(mappedBy = "restaurant")
+    @OneToMany(mappedBy = "restaurantId")
     private List<Item> menu = new ArrayList<>();
-    @OneToMany(mappedBy = "restaurant")
+    @OneToMany(mappedBy = "restaurantId")
     private List<OpeningHours> openingHours = new ArrayList<>();
 
     public Restaurant() {
@@ -28,8 +30,8 @@ public class Restaurant {
 
     public void addItemToMenu(Item item) {
         this.menu.add(item);
-        if (item.getRestaurant() == null) {
-            item.setRestaurant(this);
+        if (item.getRestaurantId() == null) {
+            item.setRestaurantId(id);
         }
     }
 
@@ -45,12 +47,12 @@ public class Restaurant {
         this.name = name;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public int getAddressId() {
+        return addressId;
     }
 
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
     public String getPhone() {
@@ -59,5 +61,15 @@ public class Restaurant {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Restaurant(Integer userId, String name, int addressId, String phone, List<Item> menu, List<OpeningHours> openingHours) {
+
+        this.userId = userId;
+        this.name = name;
+        this.addressId = addressId;
+        this.phone = phone;
+        this.menu = menu;
+        this.openingHours = openingHours;
     }
 }

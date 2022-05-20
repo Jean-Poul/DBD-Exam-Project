@@ -3,23 +3,22 @@ package db.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "items")
+@Table(name = "items", indexes = {
+        @Index(name = "id_index", columnList = "id")
+})
 public class Item {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String name;
     private String category;
-    @Column(columnDefinition="TEXT")
+    @Column(columnDefinition = "TEXT")
     private String description;
     private double price;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
-
+    private Integer restaurantId;
 
     public Item() {
     }
@@ -44,11 +43,11 @@ public class Item {
         return price;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
+    public Integer getRestaurantId() {
+        return restaurantId;
     }
 
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
+    public void setRestaurantId(Integer restaurantId) {
+        this.restaurantId = restaurantId;
     }
 }

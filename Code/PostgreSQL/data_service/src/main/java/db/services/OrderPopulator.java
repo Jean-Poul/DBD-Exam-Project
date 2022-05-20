@@ -68,9 +68,9 @@ public class OrderPopulator {
                 }
 
                 Order order = new Order();
-                order.setOrder_date(randomDate());
-                order.setCourier(courier);
-                order.setCustomer(restaurantRepo.getCustomerById(customerId));
+                order.setOrderDate(randomDate());
+        //       order.setCourierId(courier.getId());
+             order.setCustomerId(customerId);
                 for (int k = 0; k < rand.nextInt(8) + 1; k++) {
                     order.addItem(menu.get(rand.nextInt(menu.size())));
 
@@ -78,7 +78,7 @@ public class OrderPopulator {
                         order.addItem(menu.get(rand.nextInt(menu.size())));
                     }
                 }
-                order.setTotal_price();
+                order.setTotalPrice();
                 orderRepo.save(order);
             }
         }
