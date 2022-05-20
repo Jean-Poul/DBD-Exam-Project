@@ -1,75 +1,79 @@
 package db.entity;
 
+import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "restaurants")
-public class Restaurant  {
+public class Restaurant extends User {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
-    private Integer userId;
     @Column(name = "restaurants_name")
     private String name;
+   // @OneToMany(mappedBy = "restaurantId" ,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "restaurant", fetch = FetchType.EAGER)
+    // @Fetch(FetchMode.JOIN)
 
-    private Integer addressId;
-    private String phone;
+  //  @JoinColumn(name = "restaurant_id")
+    private Set<Item> menu = new HashSet<>();
     @OneToMany(mappedBy = "restaurantId")
-    private List<Item> menu = new ArrayList<>();
+    private Set<OpeningHours> openingHours = new HashSet<>();
     @OneToMany(mappedBy = "restaurantId")
-    private List<OpeningHours> openingHours = new ArrayList<>();
+    private Set<Order> orders = new HashSet<>();
 
     public Restaurant() {
     }
 
-    public void addItemToMenu(Item item) {
-        this.menu.add(item);
-        if (item.getRestaurantId() == null) {
-            item.setRestaurantId(id);
-        }
-    }
-
-    public int getId() {
-        return id;
+    public Restaurant(String email, String password, String phone, Integer addressId, Set<Role> roles, String name, Set<Item> menu, Set<OpeningHours> openingHours, Set<Order> orders) {
+        super(email, password, phone, addressId, roles);
+        this.name = name;
+        this.menu = menu;
+        this.openingHours = openingHours;
+        this.orders = orders;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Set<Item> getMenu() {
+        return menu;
     }
 
-    public int getAddressId() {
-        return addressId;
+    public Set<OpeningHours> getOpeningHours() {
+        return openingHours;
     }
 
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
+    public Set<Order> getOrders() {
+        return orders;
     }
 
-    public String getPhone() {
-        return phone;
+    public void addOrder(Order order) {
+        this.orders.add(order);
+        if (order.getRestaurantId() == null) {
+            order.setRestaurantId(this.getEmail());
+        }
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    @Override
+    public String toString() {
 
-    public Restaurant(Integer userId, String name, int addressId, String phone, List<Item> menu, List<OpeningHours> openingHours) {
-
-        this.userId = userId;
-        this.name = name;
-        this.addressId = addressId;
-        this.phone = phone;
-        this.menu = menu;
-        this.openingHours = openingHours;
+        String ordersStr = "";
+        for (Order o : orders) {
+            ordersStr += o.toString();
+        }
+        return "Restaurant{" +
+                "name='" + name + '\'' +
+                ", menu=" + menu +
+                ", openingHours=" + openingHours +
+                ", orders=" + orders +
+                '}';
     }
 }

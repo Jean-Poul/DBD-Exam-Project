@@ -11,14 +11,19 @@ public class Item {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String category;
     @Column(columnDefinition = "TEXT")
     private String description;
     private double price;
-    private Integer restaurantId;
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
+    private Restaurant restaurant;
+    //private Integer restaurantId;
 
     public Item() {
     }
@@ -43,11 +48,17 @@ public class Item {
         return price;
     }
 
-    public Integer getRestaurantId() {
-        return restaurantId;
+
+
+
+    @ManyToOne(optional = false)
+    private Restaurant restaurants;
+
+    public Restaurant getRestaurants() {
+        return restaurants;
     }
 
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
+    public void setRestaurants(Restaurant restaurants) {
+        this.restaurants = restaurants;
     }
 }

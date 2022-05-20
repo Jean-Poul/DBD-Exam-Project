@@ -1,5 +1,7 @@
 package db.entity;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,12 +10,16 @@ public class OpeningHours {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-   private int restaurantId;
+    @Column(nullable = false)
+    private Integer restaurantId;
+    @Column(nullable = false)
     private String weekDay;
+    @Column(nullable = false)
     private String openFrom;
+    @Column(nullable = false)
     private String openTo;
 
     public OpeningHours() {

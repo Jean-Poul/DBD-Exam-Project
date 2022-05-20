@@ -10,16 +10,15 @@ public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String street;
     @Column(name = "building_id")
     private String buildingIdentifier;
     @Column(name = "local_id")
     private String localIdentifier;
-    @ManyToOne
-    @JoinColumn(name = "zipcode")
-    private Zipcode zipcode;
+
+    private int zipcode;
     private double x;
     private double y;
 
@@ -42,7 +41,7 @@ public class Address implements Serializable {
         return localIdentifier;
     }
 
-    public Zipcode getZipcode() {
+    public int getZipcode() {
         return zipcode;
     }
 
@@ -54,7 +53,7 @@ public class Address implements Serializable {
         return y;
     }
 
-    public Address(String street, String buildingIdentifier, String localIdentifier, Zipcode zipcode, double x, double y) {
+    public Address(String street, String buildingIdentifier, String localIdentifier, int zipcode, double x, double y) {
         this.street = street;
         this.buildingIdentifier = buildingIdentifier;
         this.localIdentifier = localIdentifier;

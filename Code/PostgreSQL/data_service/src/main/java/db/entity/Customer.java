@@ -5,24 +5,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
 @Entity
-@Table(name = "customers")
-
-public class Customer {
+public class Customer extends User {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    @Column(unique = true)
-
-    private String email;
-    private String password;
-    private String phone;
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles = new HashSet();
 
     private Integer addressId;
     private String firstName;
@@ -33,38 +18,49 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(Integer addressId, String firstName, String lastName, List<Order> orders) {
-
-        this.addressId = addressId;
+    public Customer(String email, String password, String phone, Integer addressId, Set<Role> roles, Set<Role> roles1, Integer addressId1, String firstName, String lastName, List<Order> orders) {
+        super(email, password, phone, addressId, roles);
+        this.addressId = addressId1;
         this.firstName = firstName;
         this.lastName = lastName;
         this.orders = orders;
     }
 
-    public void addOrder(Order order) {
-        this.orders.add(order);
-        if (order.getCustomerId() == null) {
-            order.setCustomer(id);
-        }
-    }
-
-    public int getId() {
-        return id;
-    }
-
+    @Override
     public Integer getAddressId() {
         return addressId;
+    }
+
+    @Override
+    public void setAddressId(Integer addressId) {
+        this.addressId = addressId;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public List<Order> getOrders() {
         return orders;
     }
+
+    public void addOrder(Order order) {
+        this.orders.add(order);
+        if (order.getCustomerId() == null) {
+            order.setCustomerId(this.getEmail());
+        }
+    }
+
 }

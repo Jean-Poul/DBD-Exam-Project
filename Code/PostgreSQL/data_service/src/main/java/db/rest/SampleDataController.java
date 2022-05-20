@@ -1,6 +1,6 @@
 package db.rest;
 
-import db.services.OrderPopulator;
+//import db.services.OrderPopulator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/sampledata")
 public class SampleDataController {
 
-    @Autowired
-    private OrderPopulator orderPopulator;
+//    @Autowired
+//    private OrderPopulator orderPopulator;
 
     @GetMapping("geturl")
     public String get() {
 
-        orderPopulator.populateOrders(10);
+//        orderPopulator.populateOrders(10);
         return "SAmple orders created";
     }
 

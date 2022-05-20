@@ -13,10 +13,11 @@ public class Order {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
     private LocalDate orderDate;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -26,22 +27,67 @@ public class Order {
     @Column(name = "quantity")
     private Map<Item, Integer> items = new HashMap<>();
 
-    private Integer customerId;
+    @Column(nullable = false)
+    private String customerId;
 
-    private Integer courierId;
+    //@Column(nullable = false)
+    private String courierId;
 
+    @Column(nullable = false)
+    private String restaurantId;
+
+    @Column(nullable = false)
     private double totalPrice;
-
-    public Integer getCourierId() {
-        return courierId;
-    }
-
-    public void setCourierId(int courierId) {
-        this.courierId = courierId;
-    }
 
     public Order() {
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDate orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public Map<Item, Integer> getItems() {
+        return items;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCourierId() {
+        return courierId;
+    }
+
+    public void setCourierId(String courierId) {
+        this.courierId = courierId;
+    }
+
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
+    public double getTotalPrice() {
+        setTotalPrice();
+        return totalPrice;
+    }
+
 
     public void addItem(Item item) {
         int quantity = 1;
@@ -49,34 +95,6 @@ public class Order {
             quantity = this.items.get(item) + 1;
         }
         this.items.put(item, quantity);
-    }
-
-    public double getTotalPrice() {
-        return this.totalPrice;
-    }
-
-    public Integer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomer(Integer customer) {
-        this.customerId = customer;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public Map<Item, Integer> getItems() {
-        return this.items;
-    }
-
-    public LocalDate getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(LocalDate order_date) {
-        this.orderDate = order_date;
     }
 
     public void setTotalPrice() {
@@ -88,6 +106,4 @@ public class Order {
         this.totalPrice = sum;
     }
 
-    public void setCustomerId(int customerId) {
-    }
 }
