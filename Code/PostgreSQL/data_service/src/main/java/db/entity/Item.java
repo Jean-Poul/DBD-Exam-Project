@@ -19,12 +19,6 @@ public class Item {
     private String description;
     private double price;
 
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
-    private Restaurant restaurant;
-    //private Integer restaurantId;
-
     public Item() {
     }
 
@@ -49,16 +43,14 @@ public class Item {
     }
 
 
-
-
     @ManyToOne(optional = false)
-    private Restaurant restaurants;
+    private Restaurant restaurant;
 
     public Restaurant getRestaurants() {
-        return restaurants;
+        return restaurant;
     }
 
-    public void setRestaurants(Restaurant restaurants) {
-        this.restaurants = restaurants;
+    public void setRestaurants(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 }

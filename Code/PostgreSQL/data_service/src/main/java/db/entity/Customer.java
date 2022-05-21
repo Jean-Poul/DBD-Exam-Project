@@ -12,14 +12,14 @@ public class Customer extends User {
     private Integer addressId;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "customerId")
+    @OneToMany(mappedBy = "customer")
     private List<Order> orders = new ArrayList<>();
 
     public Customer() {
     }
 
-    public Customer(String email, String password, String phone, Integer addressId, Set<Role> roles, Set<Role> roles1, Integer addressId1, String firstName, String lastName, List<Order> orders) {
-        super(email, password, phone, addressId, roles);
+    public Customer(String email, String password, String phone, Integer addressId, Role role, Set<Role> roles1, Integer addressId1, String firstName, String lastName, List<Order> orders) {
+        super(email, password, phone, addressId, role);
         this.addressId = addressId1;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,8 +58,8 @@ public class Customer extends User {
 
     public void addOrder(Order order) {
         this.orders.add(order);
-        if (order.getCustomerId() == null) {
-            order.setCustomerId(this.getEmail());
+        if (order.getCustomer() == null) {
+            order.setCustomer(this);
         }
     }
 

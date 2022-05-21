@@ -39,7 +39,9 @@ class RestRepoTest {
        // System.out.println(size);
 
        Restaurant res =  sut.findById(2).orElseThrow(() -> new NoSuchElementException("NOTHING FOUND"));
-       // System.out.println(res.getMenu().size());
+        System.out.println(res.getMenu().size());
+
+        System.out.println(sut.getMenu(2).size());
     }
 
     @AfterEach

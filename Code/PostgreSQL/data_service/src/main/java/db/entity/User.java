@@ -22,19 +22,21 @@ public class User {
     private String password;
     private String phone;
     private Integer addressId;
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles = new HashSet();
+    //@ManyToMany(fetch = FetchType.EAGER)
+
+    @ManyToOne
+    private Role role;
 
 
     public User() {
     }
 
-    public User(String email, String password, String phone, Integer addressId, Set<Role> roles) {
+    public User(String email, String password, String phone, Integer addressId, Role role) {
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.addressId = addressId;
-        this.roles = roles;
+        this.role = role;
     }
 
     public String getEmail() {
@@ -69,12 +71,12 @@ public class User {
         this.addressId = addressId;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public Integer getId() {

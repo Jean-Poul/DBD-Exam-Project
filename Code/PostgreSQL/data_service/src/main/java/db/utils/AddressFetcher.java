@@ -31,7 +31,7 @@ public class AddressFetcher {
     public static void writeLines(String path_from, String path_in, JSONParser parser) {
         try {
             String data = new String(Files.readAllBytes(Paths.get(path_from)));
-            Object object = (Object) parser.parse(data);
+            Object object = parser.parse(data);
             JSONArray jsonArray = (JSONArray) object;
 
             FileWriter sqlWriter = new FileWriter(path_in);

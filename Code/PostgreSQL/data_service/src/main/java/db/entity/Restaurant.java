@@ -15,24 +15,23 @@ public class Restaurant extends User {
 
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "restaurants_name")
+    @Column(name = "restaurant_name")
     private String name;
-   // @OneToMany(mappedBy = "restaurantId" ,fetch = FetchType.EAGER)
-    @OneToMany(mappedBy = "restaurant", fetch = FetchType.EAGER)
-    // @Fetch(FetchMode.JOIN)
 
-  //  @JoinColumn(name = "restaurant_id")
+
+    //must be EAGER to work...
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Item> menu = new HashSet<>();
     @OneToMany(mappedBy = "restaurantId")
     private Set<OpeningHours> openingHours = new HashSet<>();
-    @OneToMany(mappedBy = "restaurantId")
+    @OneToMany(mappedBy = "restaurant")
     private Set<Order> orders = new HashSet<>();
 
     public Restaurant() {
     }
 
-    public Restaurant(String email, String password, String phone, Integer addressId, Set<Role> roles, String name, Set<Item> menu, Set<OpeningHours> openingHours, Set<Order> orders) {
-        super(email, password, phone, addressId, roles);
+    public Restaurant(String email, String password, String phone, Integer addressId, Role role, String name, Set<Item> menu, Set<OpeningHours> openingHours, Set<Order> orders) {
+        super(email, password, phone, addressId, role);
         this.name = name;
         this.menu = menu;
         this.openingHours = openingHours;
@@ -57,8 +56,8 @@ public class Restaurant extends User {
 
     public void addOrder(Order order) {
         this.orders.add(order);
-        if (order.getRestaurantId() == null) {
-            order.setRestaurantId(this.getEmail());
+        if (order.getRestaurant() == null) {
+            order.setRestaurant(this);
         }
     }
 
