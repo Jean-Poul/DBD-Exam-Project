@@ -73,6 +73,10 @@ public class Order {
         this.totalPrice = sum;
     }
 
+    public void setOrderDate(LocalDate orderDate) {
+        this.orderDate = orderDate;
+    }
+
     public Integer getId() {
         return id;
     }

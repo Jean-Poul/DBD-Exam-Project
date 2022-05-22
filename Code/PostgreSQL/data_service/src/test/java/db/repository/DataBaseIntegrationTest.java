@@ -57,8 +57,10 @@ public class DataBaseIntegrationTest {
         openingHours.add(new OpeningHours("Tuesday", "10:00", "22:00"));
 
         Zipcode zipcode = new Zipcode(2860, "Hovedstaden", "Gladsaxe", "Søborg");
-        Address address = new Address("Buddingevej", "122", "st.th", zipcode, 12.11, 12.11);
+        Zipcode zipcode2 = new Zipcode(2860, "Hovedstaden", "Gladsaxe", "Bagsværd");
+        Address address = new Address("Buddingevej", "122", "st.th", 2860, 12.11, 12.11);
         repoZipcode.save(zipcode);
+        repoZipcode.save(zipcode2);
         initAddressId = repoAddress.save(address).getId();
         Restaurant restaurant = new Restaurant("Pizza Mama Mia", menu, openingHours);
         repoRest.save(restaurant);
@@ -89,35 +91,31 @@ public class DataBaseIntegrationTest {
         repoRole.deleteAll();
         repoAddress.deleteAll();
         repoZipcode.deleteAll();
-    System.out.println("Cleaned up");
-
+        System.out.println("Cleaned up");
     }
 
     @Test
     public void saveRestaurantTes() {
         assertEquals(1, repoRest.count());
-
     }
 
     @Test
     void gateMenuTest() {
-        Restaurant r = repoRest.findByNameWithOpeningHour("Pizza Mama Mia");
-
+        Restaurant r = repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia");
         assertEquals(1, r.getMenu().size());
     }
 
     @Test
     void getOpeningHoursTest() {
-        for (OpeningHours o : repoRest.findByNameWithOpeningHour("Pizza Mama Mia").getOpeningHours()) {
+        for (OpeningHours o : repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia").getOpeningHours()) {
             System.out.println(o.toString());
         }
-        assertEquals(2, repoRest.findByNameWithOpeningHour("Pizza Mama Mia").getOpeningHours().size());
-
+        assertEquals(2, repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia").getOpeningHours().size());
     }
 
     @Test
     void saveOrder() {
-        Restaurant restaurant = repoRest.findByNameWithOpeningHour("Pizza Mama Mia");
+        Restaurant restaurant = repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia");
         Item item = (Item) restaurant.getMenu().stream().toArray()[0];
         Order order = new Order(restaurant, null);
         order.addItem(item);
@@ -134,23 +132,20 @@ public class DataBaseIntegrationTest {
         } catch (Exception e) {
             System.out.println("Because we use a lazy fetch, opening hours are not loaded here. ");
         }
-
         assertEquals(59.0 * 3, savedOrder.getTotalPrice());
         assertEquals(restaurant.getId(), saved.getId());
-//        while (1==1) {
-//            int a = 1;
-//        }
     }
 
     @Test
     public void getAddressesZipcodeInfo() {
-        assertEquals(2860, repoAddress.findById(initAddressId).get().getZipcode().getZipcode());
+        assertEquals(2, repoZipcode.getForAddress(2860).size());
+        //assertEquals(2860, repoAddress.findById(initAddressId).get().getZipcode().getZipcode());
     }
 
 
     @Test
     public void sendOrderWithCourier() {
-        Restaurant restaurant = repoRest.findByNameWithOpeningHour("Pizza Mama Mia");
+        Restaurant restaurant = repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia");
         Item item = (Item) restaurant.getMenu().stream().toArray()[0];
         Order order = new Order(restaurant, null);
         Order newOrder = repoOrder.save(order);
@@ -161,7 +156,7 @@ public class DataBaseIntegrationTest {
 
     @Test
     public void makeOrderAsCustomer() {
-        Restaurant restaurant = repoRest.findByNameWithOpeningHour("Pizza Mama Mia");
+        Restaurant restaurant = repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia");
         Item item = (Item) restaurant.getMenu().stream().toArray()[0];
         Customer customer = repoCustomer.findById(initCustomerId).get();
         Order order = new Order(restaurant, customer);
@@ -186,20 +181,26 @@ public class DataBaseIntegrationTest {
         customer.setUser(user);
         Courier courier = repoCourier.findById(initCourierId).get();
         courier.setUser(user);
-        Restaurant restaurant = repoRest.findByNameWithOpeningHour("Pizza Mama Mia");
+        Restaurant restaurant = repoRest.findByNameWithOpeningHoursAndManu("Pizza Mama Mia");
         restaurant.setUser(user);
         courier = repoCourier.save(courier);
         customer = repoCustomer.save(customer);
         restaurant = repoRest.save(restaurant);
-        assertTrue(customer.getUser().getId() == courier.getUser().getId() && restaurant.getUser().getId() == saved.getId() && restaurant.getUser().getId() == customer.getUser().getId());
-
+        assertTrue(customer.getUser().getId() == courier.getUser().getId()
+                && restaurant.getUser().getId() == saved.getId()
+                && restaurant.getUser().getId() == customer.getUser().getId());
     }
 
     @Test
-    public void getRestaurantsZipcodeInfo() {
+    public void getRestaurantsZipcode() {
         User user = repoUser.findById(initUserid).get();
-
-         assertEquals("Søborg", user.getAddress().getZipcode().getCity());
+        assertEquals(2860, user.getAddress().getZipcode());
     }
 
+    @Test
+    void findByNameWithManu() {
+        Restaurant restaurant = repoRest.findByNameWithManu("Pizza Mama Mia");
+        assertEquals(1, restaurant.getMenu().size());
+
+    }
 }

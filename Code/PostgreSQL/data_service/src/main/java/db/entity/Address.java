@@ -19,16 +19,14 @@ public class Address implements Serializable {
     @Column(name = "local_id")
     private String localIdentifier;
 
-    @ManyToOne
-    @JoinColumn(name = "zipcode_id")
-    private Zipcode zipcode;
+    private int zipcode;
     private double x;
     private double y;
 
     public Address() {
     }
 
-    public Address(String street, String buildingIdentifier, String localIdentifier, Zipcode zipcode, double x, double y) {
+    public Address(String street, String buildingIdentifier, String localIdentifier, int zipcode, double x, double y) {
         this.street = street;
         this.buildingIdentifier = buildingIdentifier;
         this.localIdentifier = localIdentifier;
@@ -53,7 +51,7 @@ public class Address implements Serializable {
         return localIdentifier;
     }
 
-    public Zipcode getZipcode() {
+    public int getZipcode() {
         return zipcode;
     }
 
