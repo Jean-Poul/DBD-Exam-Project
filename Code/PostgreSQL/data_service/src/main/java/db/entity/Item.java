@@ -2,7 +2,7 @@ package db.entity;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name="Item")
 @Table(name = "items")
 public class Item {
 
@@ -10,16 +10,23 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private String category;
     @Column(columnDefinition="TEXT")
     private String description;
     private double price;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "restaurant_id")
+ //  private Restaurant restaurant;
 
+
+    public Item(String name, String category, String description, double price) {
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.price = price;
+    }
 
     public Item() {
     }
@@ -44,11 +51,11 @@ public class Item {
         return price;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
+//    public Restaurant getRestaurant() {
+//        return restaurant;
+//    }
+//
+//    public void setRestaurant(Restaurant restaurant) {
+//        this.restaurant = restaurant;
+//    }
 }

@@ -3,7 +3,7 @@ package db.entity;
 import javax.persistence.*;
 
 
-@Entity
+@Entity(name= "Zipcode")
 @Table(name = "zipcodes")
 public class Zipcode {
 
@@ -11,13 +11,20 @@ public class Zipcode {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     private int zipcode;
     private String region;
     private String commune;
     private String city;
 
     public Zipcode() {
+    }
+
+    public Zipcode(int zipcode, String region, String commune, String city) {
+        this.zipcode = zipcode;
+        this.region = region;
+        this.commune = commune;
+        this.city = city;
     }
 
     public String getRegion() {

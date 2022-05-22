@@ -1,49 +1,47 @@
 package db.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
-@Entity
+@Entity(name="Customer")
+@Table(name="customers")
 public class Customer {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String email;
-    private Long address_id;
-    private String phone;
+    private Integer id;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "customer")
-    private List<Order> orders = new ArrayList<>();
-    ;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Customer() {
     }
 
-    public void addOrder(Order order) {
-        this.orders.add(order);
-        if (order.getCustomer() == null) {
-            order.setCustomer(this);
-        }
+    public Customer(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public int getId() {
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Integer getId() {
         return id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Long getAddress_id() {
-        return address_id;
-    }
-
-    public String getPhone() {
-        return phone;
     }
 
     public String getFirstName() {
@@ -54,7 +52,5 @@ public class Customer {
         return lastName;
     }
 
-    public List<Order> getOrders() {
-        return orders;
-    }
+
 }
