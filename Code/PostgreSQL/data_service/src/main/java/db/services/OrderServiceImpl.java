@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public ResponseEntity<Order> postCustomerOrder(Order order) {
         try {
-           Order newOrder = orderRepo.save(new Order(order.getFirstName(), order.getLastName(), order.getTotal_price()));
+           Order newOrder = orderRepo.save(new Order(order.getFirstName(), order.getLastName()));
             return new ResponseEntity<>(newOrder, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

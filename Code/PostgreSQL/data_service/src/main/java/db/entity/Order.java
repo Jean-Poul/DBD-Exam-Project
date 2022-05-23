@@ -19,7 +19,6 @@ public class Order {
 
     private String firstName;
     private String lastName;
-    private double order_price;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate order_date;
@@ -54,10 +53,9 @@ public class Order {
     public Order() {
     }
 
-    public Order(String firstName, String lastName, double order_price) {
+    public Order(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.order_price = order_price;
     }
 
     public void addItem(Item item) {
@@ -114,7 +112,5 @@ public class Order {
         return lastName;
     }
 
-    public double getOrder_price() {
-        return order_price;
-    }
+
 }
