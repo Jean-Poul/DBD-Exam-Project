@@ -1,10 +1,11 @@
 package db.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
-@Entity
+@Entity(name = "Restaurant")
 @Table(name = "restaurants")
 public class Restaurant {
 
@@ -12,28 +13,41 @@ public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(name = "restaurants_name")
+    private Integer id;
+
+    @Column(name = "restaurant_name",
+            columnDefinition = "TEXT",
+            nullable = false)
     private String name;
-    private int address_id;
-    // private String opening_hours;
-    private String phone;
-    @OneToMany(mappedBy = "restaurant")
-    private List<Item> menu = new ArrayList<>();
-    @OneToMany(mappedBy = "restaurant")
-    private List<OpeningHours> openingHours = new ArrayList<>();
+
+    @OneToMany(targetEntity = Item.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
+    private Set<Item> menu = new HashSet<>();
+
+
+    @OneToMany(targetEntity = OpeningHours.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
+    private Set<OpeningHours> openingHours = new HashSet<>();
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Restaurant() {
     }
 
-    public void addItemToMenu(Item item) {
-        this.menu.add(item);
-        if (item.getRestaurant() == null) {
-            item.setRestaurant(this);
-        }
+    public Restaurant(String name, Set<Item> menu, Set<OpeningHours> openingHours) {
+        this.name = name;
+        this.menu = menu;
+        this.openingHours = openingHours;
     }
 
-    public int getId() {
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Integer getId() {
         return id;
     }
 
@@ -41,23 +55,15 @@ public class Restaurant {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Collection<Item> getMenu() {
+        return menu;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public Collection<OpeningHours> getOpeningHours() {
+        return openingHours;
     }
 
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public User getUser() {
+        return user;
     }
 }

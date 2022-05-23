@@ -1,10 +1,6 @@
 package db.services;
 
-import db.dto.OrderDTO;
-import db.entity.Courier;
-import db.entity.Item;
-import db.entity.Order;
-import db.repository.CourierRepo;
+import db.entity.*;
 import db.repository.CustomerRepo;
 import db.repository.OrderRepo;
 import db.repository.RestaurantRepo;
@@ -33,7 +29,7 @@ public class OrderPopulator {
         return LocalDate.ofEpochDay(randomEpochDay);
     }
 
-    public List<OrderDTO> populateOrders(int customer_quantity) {
+    public long populateOrders(int customer_quantity) {
         Random rand = new Random();
 
         List<Integer> rest_ids = restaurantRepo.getRestaurantsIds();
@@ -44,9 +40,13 @@ public class OrderPopulator {
         Set<Integer> restNoMenu = new HashSet<>();
         for (int i = 0; i < customer_quantity; i++) {
 
+            //Get random unique customer
             int randCustIndex = rand.nextInt(cust_ids.size());
             int customerId = cust_ids.get(randCustIndex);
+            Customer customer = customerRepo.findById(customerId).get();
             cust_ids.remove(randCustIndex);
+
+            //choose random quantity of orders to create for the customer
             int ordersQuantity = rand.nextInt(100) + 1;
 
             for (int j = 0; j < ordersQuantity; j++) {
@@ -54,12 +54,14 @@ public class OrderPopulator {
 
                 int randCourIndex = rand.nextInt(couriers.size());
                 Courier courier = couriers.get(randCourIndex);
+                Restaurant restaurant = null;
 
                 List<Item> menu = new ArrayList<>();
                 int menuSize = 0;
                 while (menuSize == 0) {
                     int randRestIndx = rand.nextInt(rest_ids.size());
                     int restaurantId = rest_ids.get(randRestIndx);
+                    restaurant = restaurantRepo.findById(restaurantId).get();
                     menu = restaurantRepo.getMenu(restaurantId);
                     menuSize = menu.size();
                     if (menuSize == 0) {
@@ -67,10 +69,9 @@ public class OrderPopulator {
                     }
                 }
 
-                Order order = new Order();
-                order.setOrder_date(randomDate());
-                order.setCourier(courier);
-                order.setCustomer(restaurantRepo.getCustomerById(customerId));
+                Order order = new Order(restaurant, customer);
+                order.sendWithCourier(courier);
+
                 for (int k = 0; k < rand.nextInt(8) + 1; k++) {
                     order.addItem(menu.get(rand.nextInt(menu.size())));
 
@@ -78,13 +79,13 @@ public class OrderPopulator {
                         order.addItem(menu.get(rand.nextInt(menu.size())));
                     }
                 }
-                order.setTotal_price();
+                System.out.println("TOTAL PRICE: " + order.getTotalPrice());
+                order.setOrderDate(randomDate());
                 orderRepo.save(order);
             }
         }
         System.out.println("Restaurants with no items: ");
         restNoMenu.forEach(integer -> System.out.print(integer + ", "));
-        List<OrderDTO> dtos = new ArrayList<>();
-        return dtos;
+        return orderRepo.count();
     }
 }

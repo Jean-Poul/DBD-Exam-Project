@@ -2,18 +2,16 @@ package db.entity;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name="OpeningHours")
+@Table(name="opening_hours")
 public class OpeningHours {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
     private String weekDay;
     private String openFrom;
     private String openTo;
@@ -21,24 +19,30 @@ public class OpeningHours {
     public OpeningHours() {
     }
 
-    public long getId() {
-        return id;
+    public OpeningHours(String weekDay, String openFrom, String openTo) {
+        this.weekDay = weekDay;
+        this.openFrom = openFrom;
+        this.openTo = openTo;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
+    public Integer getId() {
+        return id;
     }
 
     public String getWeekDay() {
         return weekDay;
     }
 
-    public String getFrom() {
+    public String getOpenFrom() {
         return openFrom;
     }
 
-    public String getTo() {
+    public String getOpenTo() {
         return openTo;
     }
 
+    @Override
+    public String toString() {
+        return weekDay + " from " + openFrom + " to " + openTo;
+    }
 }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 //readonly
-@Entity
+@Entity(name = "Address")
 @Table(name = "addresses")
 public class Address implements Serializable {
 
@@ -12,12 +12,13 @@ public class Address implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String street;
     @Column(name = "building_id")
-    private String building_identifier;
+    private String buildingIdentifier;
     @Column(name = "local_id")
-    private String local_identifier;
+    private String localIdentifier;
+
     private int zipcode;
     private double x;
     private double y;
@@ -25,7 +26,16 @@ public class Address implements Serializable {
     public Address() {
     }
 
-    public int getId() {
+    public Address(String street, String buildingIdentifier, String localIdentifier, int zipcode, double x, double y) {
+        this.street = street;
+        this.buildingIdentifier = buildingIdentifier;
+        this.localIdentifier = localIdentifier;
+        this.zipcode = zipcode;
+        this.x = x;
+        this.y = y;
+    }
+
+    public Integer getId() {
         return id;
     }
 
@@ -33,12 +43,12 @@ public class Address implements Serializable {
         return street;
     }
 
-    public String getBuilding_identifier() {
-        return building_identifier;
+    public String getBuildingIdentifier() {
+        return buildingIdentifier;
     }
 
-    public String getLocal_identifier() {
-        return local_identifier;
+    public String getLocalIdentifier() {
+        return localIdentifier;
     }
 
     public int getZipcode() {

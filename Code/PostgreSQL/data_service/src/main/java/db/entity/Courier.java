@@ -1,44 +1,40 @@
 package db.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
-@Entity
+@Entity(name = "Courier")
+@Table(name = "couriers")
 public class Courier {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String email;
-    private String phone;
+    private Integer id;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "courier")
-    private List<Order> orders = new ArrayList<>();
+    private double x;
+    private double y;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Courier() {
     }
 
-    public void addOrder(Order order) {
-        this.orders.add(order);
-        if (order.getCourier() == null) {
-            order.setCourier(this);
-        }
+    public Courier(String firstName, String lastName, double x, double y) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.x = x;
+        this.y = y;
     }
 
-    public int getId() {
+    public User getUser() {
+        return user;
+    }
+
+    public Integer getId() {
         return id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhone() {
-        return phone;
     }
 
     public String getFirstName() {
@@ -49,7 +45,24 @@ public class Courier {
         return lastName;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public double[] getLocation() {
+        return new double[]{x, y};
+    }
+
+    public void setLocation(double[] loc) {
+        this.x = loc[0];
+        this.y = loc[1];
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
