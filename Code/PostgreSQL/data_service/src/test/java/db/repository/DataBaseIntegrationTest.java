@@ -9,10 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -229,5 +231,33 @@ public class DataBaseIntegrationTest {
         searchList.add(id2);
         Set<Restaurant> restaurants = repoRest.findListByIdWithOpeningHoursAndMenu(searchList);
         assertEquals(2, restaurants.size());
+    }
+
+    @Test
+    public void playground() {
+        System.out.println(randomDate().toString());
+    }
+    private LocalDate randomDate() {
+        LocalDate startDate = LocalDate.of(2020, 1, 1); //start date
+        long start = startDate.toEpochDay();
+        LocalDate endDate = LocalDate.now(); //end date
+        long end = endDate.toEpochDay();
+        long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
+        return LocalDate.ofEpochDay(randomEpochDay);
+    }
+
+    @Test
+    public void getOrdersForCustomer () {
+        Restaurant restaurant = repoRest.findByNameWithOpeningHoursAndMenu("Pizza Mama Mia");
+        Item item = (Item) restaurant.getMenu().stream().toArray()[0];
+        Customer customer = repoCustomer.findById(initCustomerId).get();
+        Order order = new Order(restaurant, customer);
+        order.addItem(item);
+        Order order2 = new Order(restaurant, customer);
+        order.addItem(item);
+        repoOrder.save(order);
+        repoOrder.save(order2);
+
+        assertEquals(2,repoOrder.getOrdersForCustomer(customer.getId()).size());
     }
 }
