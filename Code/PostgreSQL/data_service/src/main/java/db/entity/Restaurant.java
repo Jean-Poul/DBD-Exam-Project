@@ -55,11 +55,11 @@ public class Restaurant {
         return name;
     }
 
-    public Collection<Item> getMenu() {
+    public Set<Item> getMenu() {
         return menu;
     }
 
-    public Collection<OpeningHours> getOpeningHours() {
+    public Set<OpeningHours> getOpeningHours() {
         return openingHours;
     }
 
