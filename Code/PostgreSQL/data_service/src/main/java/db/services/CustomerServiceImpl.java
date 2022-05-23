@@ -1,5 +1,6 @@
 package db.services;
 
+import db.dto.CustomerDTO;
 import db.dto.UserDTO;
 import db.entity.Customer;
 import db.entity.User;
@@ -23,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     //public ResponseEntity<Customer> createCustomer(CustomerRequest request) {
-        public UserDTO createCustomer(CustomerRequest request) {
+    public CustomerDTO createCustomer(CustomerRequest request) {
         /*try {
             Customer newCustomer = customerRepo.save(new Customer(customer.getUser().getEmail(), customer.getFirstName(), customer.getLastName()));
             return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
@@ -36,9 +37,12 @@ public class CustomerServiceImpl implements CustomerService {
         // set user id on request (this customer) (a whole user on a customer)
         request.setUserId(userId.getId());
         // use this request to customer service to create customer
-        Customer createCustomer = service
+        // Customer createCustomer = .createCustomer(new CustomerRequest(customer.getUser().getEmail(), customer.getUser().getPassword(), customer.getUser().getPhone(), customer.getUser().getAddress().getId(), customer.getFirstName(), customer.getLastName()));
+
         // Now i have customer id for making new customer
         //createCustomer(new CustomerRequest(customer.getUser().getEmail(), customer.getUser().getPassword(), customer.getUser().getPhone(), customer.getUser().getAddress().getId(), customer.getFirstName(), customer.getLastName()));
+        CustomerDTO customerDTO = null;
+        return customerDTO;
     }
 
 }
