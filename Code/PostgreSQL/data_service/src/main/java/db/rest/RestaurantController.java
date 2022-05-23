@@ -1,13 +1,15 @@
 package db.rest;
 
 
-import db.repository.OrderRepo;
-import db.repository.RestaurantRepo;
+import db.dto.RestaurantDTO;
+
+import db.entity.Restaurant;
+import db.services.RestaurantServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Set;
 
 @CrossOrigin
 @RestController
@@ -15,15 +17,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestaurantController {
 
     @Autowired
-    RestaurantRepo restRepo;
+    private RestaurantServiceImpl restaurantServiceImpl;
 
-    @Autowired
-    OrderRepo orderRepo;
-
-    @GetMapping("")
-    public String getById() {
-        return "HELLLLLLLLLLLLO";
+    @GetMapping("test")
+    public String getEndpoint() {
+        return "Hello World!";
     }
+
+    @GetMapping("restaurantbyid")
+    public RestaurantDTO get(@RequestParam("id") int id) throws Exception {
+        return restaurantServiceImpl.getRestaurantById(id);
+    }
+
+    @GetMapping("allrestaurantsbyid")
+    public Set<RestaurantDTO> getAll(@RequestBody List<Integer> list) throws Exception {
+        System.out.println("endpoint hit: ");
+        for (int r : list
+        ) {
+            System.out.println(r);
+        }
+        return restaurantServiceImpl.getAllRestaurantsById(list);
+    }
+
 
 
 }
