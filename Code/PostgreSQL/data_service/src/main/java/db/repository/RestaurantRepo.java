@@ -36,14 +36,18 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.Set;
 
 public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
 
     @Query("SELECT r FROM Restaurant r left JOIN FETCH r.openingHours oh left Join fetch r.menu m WHERE r.name = ?1")
-    Restaurant findByNameWithOpeningHoursAndManu(String name);
+    Restaurant findByNameWithOpeningHoursAndMenu(String name);
+
+    @Query("SELECT r FROM Restaurant r left JOIN FETCH r.openingHours oh left Join fetch r.menu m WHERE r.id = ?1")
+    Restaurant findByIdWithOpeningHoursAndMenu(int id);
 
     @Query("SELECT r FROM Restaurant r left Join fetch r.menu m WHERE r.name = ?1")
-    Restaurant findByNameWithManu(String name);
+    Restaurant findByNameWithMenu(String name);
 
     @Query("SELECT r.id FROM Restaurant r")
     List<Integer> getRestaurantsIds();
@@ -53,4 +57,8 @@ public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
 
     @Query("SELECT i FROM Restaurant r JOIN r.menu i WHERE r.id = ?1")
     List<Item> getMenu(int restaurantId);
+
+    @Query("SELECT r FROM Restaurant r left JOIN FETCH r.openingHours oh left Join fetch r.menu m WHERE r.id in ?1")
+    Set<Restaurant> findListByIdWithOpeningHoursAndMenu(List<Integer> ids);
+
 }
