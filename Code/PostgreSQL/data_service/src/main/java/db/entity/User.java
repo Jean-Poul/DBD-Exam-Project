@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "User")
-@Table(name="users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -34,7 +34,6 @@ public class User {
         this.password = password;
         this.phone = phone;
         this.address = address;
-
     }
 
     public void setEmail(String email) {

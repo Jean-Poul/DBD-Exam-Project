@@ -1,11 +1,12 @@
 package db.interfaces;
 
+import db.dto.UserDTO;
 import db.entity.Customer;
 import db.requestmodel.CustomerRequest;
 import org.springframework.http.ResponseEntity;
 
 public interface CustomerService {
 
-    public ResponseEntity<Customer> createCustomer(CustomerRequest request);
+    UserDTO createCustomer(CustomerRequest request);
 
 }

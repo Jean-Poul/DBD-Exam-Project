@@ -18,4 +18,32 @@ public class CustomerDTO {
         this.lastName = lastName;
         this.address = address;
     }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public AddressDTO getAddress() {
+        return address;
+    }
 }

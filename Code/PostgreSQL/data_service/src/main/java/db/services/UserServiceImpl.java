@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
         //String street, String buildingIdentifier, String localIdentifier, int zipcode, double x, double y
         Address address = addressRepo.findById(request.getAddressId()).get();
         User user = new User(request.getEmail(), request.getPassword(), request.getPhone(), address);
+        userRepo.save(user);
         int userRespone = user.getId();
         return userRespone;
     }
