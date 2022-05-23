@@ -17,7 +17,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public ResponseEntity<Customer> createCustomer(Customer customer) {
         try {
-            Customer newCustomer = customerRepo.save(new Customer(customer.getFirstName(), customer.getLastName()));
+            Customer newCustomer = customerRepo.save(new Customer(customer.getUser().getEmail(), customer.getFirstName(), customer.getLastName()));
             return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

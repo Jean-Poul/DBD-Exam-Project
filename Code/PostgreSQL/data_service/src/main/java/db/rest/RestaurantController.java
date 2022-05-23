@@ -31,11 +31,6 @@ public class RestaurantController {
 
     @GetMapping("allrestaurantsbyid")
     public Set<RestaurantDTO> getAll(@RequestBody List<Integer> list) throws Exception {
-        System.out.println("endpoint hit: ");
-        for (int r : list
-        ) {
-            System.out.println(r);
-        }
         return restaurantServiceImpl.getAllRestaurantsById(list);
     }
 
