@@ -1,8 +1,12 @@
 package db.rest;
 
+import db.dto.CustomerDTO;
 import db.entity.Customer;
+import db.requestmodel.CustomerRequest;
+import db.requestmodel.UserRequest;
 import db.services.CustomerServiceImpl;
 import db.services.RestaurantServiceImpl;
+import db.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +19,22 @@ public class CustomerController {
     @Autowired
     private CustomerServiceImpl customerServiceImpl;
 
+    @Autowired
+    private UserServiceImpl userServiceImpl;
+
     @PostMapping(path = "/createcustomer", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Customer> createOrder(@RequestBody Customer customer) {
+    public ResponseEntity<CustomerDTO> createOrder(@RequestBody Customer customer) {
         System.out.println("customer controller hit (post customer)");
-        return customerServiceImpl.createCustomer(customer);
+        // return customerServiceImpl.createCustomer(customer);
+
+        // take a customer request as the (requestbody) body
+        // call user service to create user and make it return a userid
+        int userId = userServiceImpl.createUser(new UserRequest(customer.getUser().getEmail(), customer.getUser().getPassword(), customer.getUser().getPhone(), customer.getUser().getAddress().getId()));
+        // add a setter in user request to set the id from the returned id
+        // then use customer request to create a new customer
+        // make user return userDTO
+        UserDTO userDTO = customerServiceImpl.createCustomer(new CustomerRequest(customer.getUser().getEmail(), customer.getUser().getPassword(), customer.getUser().getPhone(), customer.getUser().getAddress().getId(), customer.getFirstName(), customer.getLastName()));
+        // Customer service should also return customerDTO
+        return null;
     }
 }
