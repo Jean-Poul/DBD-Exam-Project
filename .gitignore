@@ -3,7 +3,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,netbeans,intellij,node,visualstudiocode,windows,macos,linux
 
 ### Ignore application properties so each developer can set his/hers own:
-**/src/main/resources/application.properties
 
 
 ### Intellij ###
