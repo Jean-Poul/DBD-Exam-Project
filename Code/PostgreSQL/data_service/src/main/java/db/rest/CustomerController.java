@@ -48,4 +48,9 @@ public class CustomerController {
     public List<CustomerDTO> getAllCustomers() {
         return customerServiceImpl.getAllCustomers();
     }
+
+    @GetMapping(path = "/customerbyid")
+    public CustomerDTO getCustomerById(@RequestParam("id") int id) throws Exception {
+        return customerServiceImpl.getCustomerById(id);
+    }
 }

@@ -53,6 +53,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public CustomerDTO getCustomerById(int id) throws Exception {
+        Customer customer = customerRepo.findById(id).get();
+        return new CustomerDTO(customer);
+    }
+
+    @Override
     public List<CustomerDTO> getAllCustomers() {
         return customerRepo.getAllCustomers();
     }
