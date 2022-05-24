@@ -19,6 +19,16 @@ public class CustomerDTO {
         this.address = address;
     }
 
+    // TODO DELETE CONSTRUCTOR WHEN WORKING
+    public CustomerDTO(int userId, int customerId, String email, String phone, String firstName, String lastName) {
+        this.userId = userId;
+        this.customerId = customerId;
+        this.email = email;
+        this.phone = phone;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public int getUserId() {
         return userId;
     }

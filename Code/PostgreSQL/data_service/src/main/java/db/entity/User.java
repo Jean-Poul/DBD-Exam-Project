@@ -36,6 +36,13 @@ public class User {
         this.address = address;
     }
 
+    // TODO DELETE THIS CONSTRUCTOR
+    public User(String email, String password, String phone) {
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
