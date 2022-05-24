@@ -1,5 +1,7 @@
 package db.dto;
 
+import db.entity.Customer;
+
 public class CustomerDTO {
     private int userId;
     private int customerId;
@@ -8,6 +10,15 @@ public class CustomerDTO {
     private String firstName;
     private String lastName;
     private AddressDTO address;
+
+    public CustomerDTO(Customer customer) {
+        this.userId = customer.getUser().getId();
+        this.customerId = customer.getId();
+        this.email = customer.getUser().getEmail();
+        this.phone = customer.getUser().getPhone();
+        this.firstName = customer.getFirstName();
+        this.lastName = customer.getLastName();
+    }
 
     public CustomerDTO(int userId, int customerId, String email, String phone, String firstName, String lastName, AddressDTO address) {
         this.userId = userId;

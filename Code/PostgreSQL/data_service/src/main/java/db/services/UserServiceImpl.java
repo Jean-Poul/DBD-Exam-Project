@@ -2,6 +2,7 @@ package db.services;
 
 import db.entity.Address;
 import db.entity.Customer;
+import db.entity.Role;
 import db.entity.User;
 import db.interfaces.UserService;
 import db.repository.AddressRepo;
@@ -12,6 +13,9 @@ import db.requestmodel.CustomerRequest;
 import db.requestmodel.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -42,10 +46,13 @@ public class UserServiceImpl implements UserService {
         System.out.println("USER SAVED");
         Customer newCustomer = new Customer(request.getFirstName(), request.getLastName());
         newCustomer.setUser(user);
+        Role role = new Role("Customer");
+        newCustomer.getUser().addRole(role);
+        //newCustomer.getUser().setAddress(address);
         customerRepo.save(newCustomer);
         System.out.println("CUSTOMER SAVED");
         User userResponse = userRepo.findById(user.getId()).get();
-        // Address test = addressRepo.findAddressById(userResponse.getEmail());
+        Address test = addressRepo.findAddressById(userResponse.getEmail());
         // System.out.println("TEST ID: " + test.getId());
         System.out.println("USER id: " + userResponse.getId());
         //System.out.println("USER ADDR: " + userResponse.getAddress());

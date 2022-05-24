@@ -7,8 +7,12 @@ import db.requestmodel.CustomerRequest;
 import db.requestmodel.UserRequest;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 public interface CustomerService {
 
     CustomerDTO createCustomer(UserRequest request);
+
+    List<CustomerDTO> getAllCustomers();
 
 }
