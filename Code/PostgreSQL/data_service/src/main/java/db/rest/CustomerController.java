@@ -1,14 +1,9 @@
 package db.rest;
 
 import db.dto.CustomerDTO;
-import db.dto.OrderDTO;
-import db.dto.UserDTO;
-import db.entity.Address;
-import db.entity.Customer;
 import db.requestmodel.CustomerRequest;
 import db.requestmodel.UserRequest;
 import db.services.CustomerServiceImpl;
-import db.services.RestaurantServiceImpl;
 import db.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
