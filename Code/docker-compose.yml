@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+    neo4jservice:
+        build: Neo4J
+        ports:
+            - 8096:8066
+    neo4j:
+        image: neo4j:latest
+        hostname: neo4j
+        container_name: neo4j 
+        ports:
+          - "7474:7474"
+          - "7687:7687"
+        volumes:
+          - ./neo4j/plugins:/plugins
+        environment:
+          NEO4J_AUTH: none
+          NEO4J_dbms_logs_debug_level: DEBUG
