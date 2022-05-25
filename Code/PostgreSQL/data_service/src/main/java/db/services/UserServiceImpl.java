@@ -46,13 +46,14 @@ public class UserServiceImpl implements UserService {
         System.out.println("USER SAVED");
         Customer newCustomer = new Customer(request.getFirstName(), request.getLastName());
         newCustomer.setUser(user);
+        // call db to get role and set it
         Role role = new Role("Customer");
         newCustomer.getUser().addRole(role);
         //newCustomer.getUser().setAddress(address);
         customerRepo.save(newCustomer);
         System.out.println("CUSTOMER SAVED");
         User userResponse = userRepo.findById(user.getId()).get();
-        Address test = addressRepo.findAddressById(userResponse.getEmail());
+        //Address test = addressRepo.findAddressById(userResponse.getEmail());
         // System.out.println("TEST ID: " + test.getId());
         System.out.println("USER id: " + userResponse.getId());
         //System.out.println("USER ADDR: " + userResponse.getAddress());
