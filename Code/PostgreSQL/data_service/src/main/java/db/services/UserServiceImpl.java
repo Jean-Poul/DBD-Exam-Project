@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
         User user = userRepo.getUserByUserEmail(userEmail);
         Address address = new Address(user.getAddress().getStreet(), user.getAddress().getBuildingIdentifier(), user.getAddress().getLocalIdentifier(), user.getAddress().getZipcode(), user.getAddress().getX(), user.getAddress().getY());
         AddressDTO addressDTO = new AddressDTO(address);
-        if (user.verifyPassword(password)) {
+        if (user.verifyPassword(password) && user.getEmail() != null) {
             return new UserDTO(user.getEmail(), user.getPhone(), addressDTO);
         } else {
             throw new AuthenticationException("Verification failed");
