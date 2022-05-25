@@ -1,13 +1,12 @@
 package db.services;
 
 import db.dto.OrderDTO;
-import db.dto.OrderRequest;
+import db.requestmodel.OrderRequest;
 import db.entity.*;
 import db.interfaces.OrderService;
 import db.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;

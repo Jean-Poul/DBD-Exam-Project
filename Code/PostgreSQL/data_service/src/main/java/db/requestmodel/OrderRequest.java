@@ -1,4 +1,4 @@
-package db.dto;
+package db.requestmodel;
 
 import java.util.HashMap;
 import java.util.Map;
