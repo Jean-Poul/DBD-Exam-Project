@@ -1,0 +1,138 @@
+id,restaurant_name,user_id,address_id
+1,Height's Cafe - Hotel Bangalore International,1,2093
+2,Cobaja,2,27717
+3,Nossa Goa,3,37849
+4,China South,4,19833
+5,Gobble Up Churros Cafe,5,17143
+6,Ente Keralam,6,12366
+7,Mirchi Bites- Spice Heaven,7,33600
+8,Kaayal,8,34337
+9,Dilli Dil Se,9,6385
+10,Euki,10,36767
+11,Cashmere Nites,11,1029
+12,New Leaf Restaurant,12,9524
+13,Homemade Food,13,36895
+14,Delhi Highway,14,31478
+15,The Twisted Desi,15,31536
+16,Just Khao Suey,16,20012
+17,Donne Biriyani Mane,17,30369
+18,Shawarma Inc,18,32224
+19,Tunday Kababi,19,7856
+20,City Durbar,20,36011
+21,1441 Pizzeria,21,29245
+22,Indian Desi Momo,22,27103
+23,Rajdhani Thali Restaurant,23,23983
+24,Maraheb Restaurant,24,21803
+25,Khyma Biryani,25,35650
+26,Ammi's Biryani,26,11809
+27,Marhaba,27,28762
+28,Vanas,28,6172
+29,Hotel Parampare,29,32836
+30,Malabar Mandra,30,36183
+31,Rasovara,31,12273
+32,Swasthi Spice Restaurant,32,136
+33,Chickpet Donne Biryani House,33,12499
+34,Deccan Kitchen,34,5735
+35,Sholay - The Barbeque,35,38333
+36,Kuttanadu Family Restaurant,36,28994
+37,Ute Food,37,32819
+38,Lumbee Food,38,15472
+39,Salvadoran Food,39,18795
+40,Korean Food,40,37123
+41,Colville Food,41,38634
+42,Micronesian Food,42,2695
+43,Cheyenne Food,43,25635
+44,Chickasaw Food,44,1375
+45,Potawatomi Food,45,12330
+46,South American Food,46,18073
+47,Pakistani Food,47,11374
+48,Eskimo Food,48,1466
+49,Polynesian Food,49,21223
+50,Sioux Food,50,267
+51,Menominee Food,51,16084
+52,Venezuelan Food,52,18973
+53,Iroquois Food,53,17604
+54,Bolivian Food,54,9294
+55,Yuman Food,55,2804
+56,Fijian Food,56,1324
+57,Navajo Food,57,20719
+58,Cherokee Food,58,19146
+59,Paraguayan Food,59,37237
+61,Creek Food,61,22558
+62,Taiwanese Food,62,22366
+63,Pueblo Food,63,1209
+64,Blackfeet Food,64,4320
+65,Osage Food,65,23616
+66,Ecuadorian Food,66,32230
+67,Delaware Food,67,19408
+68,Mexican Food,68,5957
+69,White Food,69,29169
+70,Guamanian Food,70,37867
+71,Samoan Food,71,8450
+72,Japanese Food,72,11386
+73,Honduran Food,73,37824
+74,Paiute Food,74,33919
+75,Hmong Food,75,9702
+76,Spaniard Food,76,13612
+77,Vietnamese Food,77,32774
+78,Thai Food,78,21134
+79,Melanesian Food,79,39121
+80,Tongan Food,80,4524
+81,Shoshone Food,81,17427
+82,Asian Indian Food,82,4173
+83,Argentinian Food,83,4048
+84,Crow Food,84,9991
+85,Daltfresh,85,3424
+86,Ronstring,86,12335
+87,Prodder,87,15677
+88,Stringtough,88,32980
+89,Temp,89,34034
+90,Tempsoft,90,28244
+91,Wrapsafe,91,1683
+92,Fintone,92,19221
+93,Keylex,93,2861
+94,Fintone,94,24279
+95,Andalax,95,23371
+96,Sonair,96,18480
+97,Bytecard,97,11993
+98,Otcom,98,3592
+99,Rank,99,30896
+100,It,100,14596
+101,Kanlam,101,23251
+102,Flowdesk,102,21069
+103,Otcom,103,20633
+104,Mat Lam Tam,104,7811
+105,Tresom,105,11745
+106,Mat Lam Tam,106,16228
+107,Alphazap,107,7535
+108,Keylex,108,19086
+109,Holdlamis,109,9242
+110,Voyatouch,110,38763
+111,Matsoft,111,22442
+112,Y-find,112,27966
+114,Regrant,114,19195
+115,Shree Mandarathi Grand,115,2489
+116,Shanthi Sagar,116,16917
+117,South Grand,117,25256
+118,Kapoor's Cafe,118,29771
+119,SLV Corner Restaurant,119,22000
+120,Roti Ghar,120,33696
+121,Kadala Tarangaa,121,6790
+122,Pizza Hut,122,2185
+123,New Prashanth Hotel,123,13266
+124,Swadd Kitchen,124,9460
+125,Blue Berry Restaurant,125,26921
+127,Curry Flavours,127,23648
+128,Dosa Time,128,24760
+130,Cafe Treat - The Pride Hotel,130,21437
+131,Xpress Biryani,131,8913
+132,Kabab Magic,132,20452
+133,The Good Grain,133,2530
+134,The Brekkie Shop,134,15606
+135,Shaadi Ki Biryani,135,5404
+136,Qissa Khawani,136,35735
+137,Cambodian Food,137,12790
+138,Chamorro Food,138,33202
+140,Uruguayan Food,140,14422
+141,Puerto Rican Food,141,6026
+142,Aleut Food,142,22526
