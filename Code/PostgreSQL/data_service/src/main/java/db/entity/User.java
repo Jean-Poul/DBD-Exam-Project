@@ -3,6 +3,7 @@ package db.entity;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+//import org.mindrot.jbcrypt.BCrypt;
 
 @Entity(name = "User")
 @Table(name="users")
@@ -32,6 +33,7 @@ public class User {
     public User(String email, String password, String phone, Address address) {
         this.email = email;
         this.password = password;
+       // this.password = BCrypt.hashpw(password, BCrypt.gensalt(12));
         this.phone = phone;
         this.address = address;
 
