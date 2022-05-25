@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomersDTO {
-    List<CustomerDTO> all = new ArrayList();
+    List<CustomerDTO> customers = new ArrayList();
 
     public CustomersDTO(List<Customer> customerEntities) {
         customerEntities.forEach((customer) -> {
-            all.add(new CustomerDTO(customer));
+            customers.add(new CustomerDTO(customer));
         });
     }
 

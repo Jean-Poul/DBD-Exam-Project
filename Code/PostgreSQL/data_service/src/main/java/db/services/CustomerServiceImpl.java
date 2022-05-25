@@ -2,6 +2,7 @@ package db.services;
 
 import db.dto.AddressDTO;
 import db.dto.CustomerDTO;
+import db.dto.CustomersDTO;
 import db.dto.UserDTO;
 import db.entity.Customer;
 import db.entity.User;
@@ -16,19 +17,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-    AddressRepo addressRepo;
-
-    @Autowired
     CustomerRepo customerRepo;
 
-    @Autowired
-    UserRepo userRepo;
 
     @Override
     public CustomerDTO getCustomerById(int id) throws Exception {
@@ -38,7 +35,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<CustomerDTO> getAllCustomers() {
-        return customerRepo.getAllCustomers();
+        List<CustomerDTO> customers = new ArrayList<>();
+        for (Customer c : customerRepo.getAllCustomers()) {
+            customers.add(new CustomerDTO(c));
+        }
+        return customers;
     }
 
 }

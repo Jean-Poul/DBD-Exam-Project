@@ -1,6 +1,7 @@
 package db.rest;
 
 import db.dto.CustomerDTO;
+import db.dto.CustomersDTO;
 import db.dto.UserDTO;
 import db.requestmodel.CustomerRequest;
 import db.requestmodel.UserRequest;
