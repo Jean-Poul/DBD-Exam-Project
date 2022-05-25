@@ -12,8 +12,6 @@ import java.util.List;
 
 public interface CustomerService {
 
-    CustomerDTO createCustomer(UserRequest request);
-
     CustomerDTO getCustomerById(int id) throws Exception;
 
     List<CustomerDTO> getAllCustomers();

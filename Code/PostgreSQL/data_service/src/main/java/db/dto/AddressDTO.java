@@ -1,24 +1,26 @@
 package db.dto;
 
+import db.entity.Address;
+
 public class AddressDTO {
-    private String buildindId;
-    private String localId;
+    private String building;
+    private String local;
     private String street;
     private int zipcode;
 
-    public AddressDTO(String buildindId, String localId, String street, int zipcode) {
-        this.buildindId = buildindId;
-        this.localId = localId;
-        this.street = street;
-        this.zipcode = zipcode;
+    public AddressDTO(Address address) {
+        this.building = address.getBuildingIdentifier();
+        this.local = address.getLocalIdentifier();
+        this.street = address.getStreet();
+        this.zipcode = address.getZipcode();
     }
 
-    public String getBuildindId() {
-        return buildindId;
+    public String getBuilding() {
+        return building;
     }
 
-    public String getLocalId() {
-        return localId;
+    public String getLocal() {
+        return local;
     }
 
     public String getStreet() {

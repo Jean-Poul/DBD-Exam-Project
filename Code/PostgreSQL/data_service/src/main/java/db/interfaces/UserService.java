@@ -1,11 +1,13 @@
 package db.interfaces;
 
-import db.entity.Customer;
+import db.dto.CustomerDTO;
+import db.entity.User;
 import db.requestmodel.CustomerRequest;
-import db.requestmodel.UserRequest;
 
 public interface UserService {
 
-    int createUser(CustomerRequest request);
+    User createUser(String email, String password, String phone, int addressId);
+
+    CustomerDTO createCustomer(CustomerRequest request);
 
 }

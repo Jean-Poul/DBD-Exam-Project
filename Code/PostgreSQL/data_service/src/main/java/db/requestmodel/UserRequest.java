@@ -6,7 +6,8 @@ public class UserRequest {
     private String phone;
     private int addressId;
 
-    private int userId;
+    public UserRequest() {
+    }
 
     public UserRequest(String email, String password, String phone, int addressId) {
         this.email = email;
@@ -31,11 +32,5 @@ public class UserRequest {
         return addressId;
     }
 
-    public int getUserId() {
-        return userId;
-    }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 }

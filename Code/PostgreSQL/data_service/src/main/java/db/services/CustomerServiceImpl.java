@@ -31,28 +31,6 @@ public class CustomerServiceImpl implements CustomerService {
     UserRepo userRepo;
 
     @Override
-    //public ResponseEntity<Customer> createCustomer(CustomerRequest request) {
-    public CustomerDTO createCustomer(UserRequest request) {
-        System.out.println("CUSTOMER SERVICE HIT: " + request);
-        /*try {
-            Customer newCustomer = customerRepo.save(new Customer(customer.getUser().getEmail(), customer.getFirstName(), customer.getLastName()));
-            return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        } */
-        User user = userRepo.findById(request.getUserId()).get();
-        System.out.println("USER id: " + user.getId());
-        System.out.println("USER email: " + user.getEmail());
-        System.out.println("USER ROLE: " + user.getRoles());
-        Customer newCustomer = userRepo.getCustomerByUserId(request.getEmail());
-        System.out.println(newCustomer.getFirstName());
-        System.out.println(newCustomer.getId());
-        System.out.println(newCustomer.getUser().getPassword());
-        CustomerDTO customerDTO = new CustomerDTO(newCustomer.getUser().getId(), newCustomer.getId(), newCustomer.getUser().getEmail(), newCustomer.getUser().getPhone(), newCustomer.getFirstName(), newCustomer.getLastName());
-        return customerDTO;
-    }
-
-    @Override
     public CustomerDTO getCustomerById(int id) throws Exception {
         Customer customer = customerRepo.findById(id).get();
         return new CustomerDTO(customer);

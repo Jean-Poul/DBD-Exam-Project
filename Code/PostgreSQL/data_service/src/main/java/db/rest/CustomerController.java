@@ -27,21 +27,9 @@ public class CustomerController {
     @Autowired
     private UserServiceImpl userServiceImpl;
 
-    @PostMapping(path = "/createcustomer", consumes = "application/json", produces = "application/json")
-    // public ResponseEntity<CustomerDTO> createOrder(@RequestBody Customer customer) {
-    public CustomerDTO createOrder(@RequestBody CustomerRequest customer) {
-        System.out.println("customer controller hit (post customer)");
-        System.out.println("CUSTOMER FROM CONTROLLER id: " + customer.getUserId());
-        System.out.println("CUSTOMER FROM CONTROLLER fN: " + customer.getFirstName());
-        System.out.println("CUSTOMER FROM CONTROLLER lN: " + customer.getLastName());
-        System.out.println("CUSTOMER FROM CONTROLLER email: " + customer.getEmail());
-        System.out.println("CUSTOMER FROM CONTROLLER pass: " + customer.getPassword());
-        System.out.println("CUSTOMER FROM CONTROLLER phone: " + customer.getPhone());
-        int id = userServiceImpl.createUser(customer);
-        UserRequest userRequest = new UserRequest(customer.getEmail(), customer.getPassword(), customer.getPhone(), customer.getAddressId());
-        userRequest.setUserId(id);
-        CustomerDTO customerDTO = customerServiceImpl.createCustomer(userRequest);
-        return customerDTO;
+    @PostMapping(path = "", consumes = "application/json", produces = "application/json")
+    public CustomerDTO createCustomer(@RequestBody CustomerRequest request) {
+        return userServiceImpl.createCustomer(request);
     }
 
     @GetMapping(path = "/allcustomers")

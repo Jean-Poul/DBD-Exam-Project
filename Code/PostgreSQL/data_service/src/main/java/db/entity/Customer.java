@@ -24,6 +24,12 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public Customer(String firstName, String lastName, User user) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.user = user;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
