@@ -4,18 +4,22 @@ import db.connectors.DataConnectorImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.client.RestTemplate;
 
 @EntityScan(basePackages = {"db"})
 
-@SpringBootApplication
-public class MineEntryApplication {
+@EnableCaching
+@SpringBootApplication(exclude =  {DataSourceAutoConfiguration.class })
+public class MainEntryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MineEntryApplication.class, args);
+        SpringApplication.run(MainEntryApplication.class, args);
     }
 
     @Bean
@@ -44,6 +48,7 @@ public class MineEntryApplication {
         return restTemplate;
     }
 
+    @Primary
     @Bean
     public DataConnectorImpl getDataConnector() {
         final DataConnectorImpl connector = new DataConnectorImpl();
