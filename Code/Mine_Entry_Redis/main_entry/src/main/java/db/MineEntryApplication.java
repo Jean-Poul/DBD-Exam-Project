@@ -1,12 +1,12 @@
 package db;
 
+import db.connectors.DataConnectorImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @EntityScan(basePackages = {"db"})
@@ -43,4 +43,11 @@ public class MineEntryApplication {
 //        restTemplate.setRequestFactory(requestFactory);
         return restTemplate;
     }
+
+    @Bean
+    public DataConnectorImpl getDataConnector() {
+        final DataConnectorImpl connector = new DataConnectorImpl();
+        return connector;
+    }
+
 }
