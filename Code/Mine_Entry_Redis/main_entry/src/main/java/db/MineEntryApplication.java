@@ -6,14 +6,16 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
 
 @EntityScan(basePackages = {"db"})
 
 @SpringBootApplication
-public class DataServiceApplication {
+public class MineEntryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DataServiceApplication.class, args);
+        SpringApplication.run(MineEntryApplication.class, args);
     }
 
     @Bean
@@ -22,6 +24,7 @@ public class DataServiceApplication {
         template.setConnectionFactory(jedisConnectionFactory());
         return template;
     }
+
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
         JedisConnectionFactory jedisConFactory
@@ -29,5 +32,15 @@ public class DataServiceApplication {
         jedisConFactory.setHostName("localhost");
         jedisConFactory.setPort(6379);
         return jedisConFactory;
+    }
+
+    @Bean
+    public RestTemplate getRestTemplate() {
+        final RestTemplate restTemplate = new RestTemplate();
+//        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
+//        requestFactory.setConnectTimeout(60000);
+//        requestFactory.setReadTimeout(50000);
+//        restTemplate.setRequestFactory(requestFactory);
+        return restTemplate;
     }
 }

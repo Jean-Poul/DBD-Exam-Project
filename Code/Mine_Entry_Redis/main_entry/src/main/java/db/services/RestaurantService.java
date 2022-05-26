@@ -1,4 +1,4 @@
-package db.interfaces;
+package db.services;
 
 import db.entities.Restaurant;
 

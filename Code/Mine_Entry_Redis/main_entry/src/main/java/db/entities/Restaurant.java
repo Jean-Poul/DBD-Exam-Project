@@ -31,5 +31,15 @@ public class Restaurant implements Serializable {
     public Set<OpeningHours> getOpeningHours() {
         return openingHours;
     }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "Id=" + Id +
+                ", name='" + name + '\'' +
+                ", menu=" + menu +
+                ", openingHours=" + openingHours +
+                '}';
+    }
 }
 
