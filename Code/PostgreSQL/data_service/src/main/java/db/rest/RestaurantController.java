@@ -33,6 +33,11 @@ public class RestaurantController {
     public Set<RestaurantDTO> getAll(@RequestBody List<Integer> list) throws Exception {
         return restaurantServiceImpl.getAllRestaurantsById(list);
     }
+    @GetMapping("idzipcode")
+    public List<Integer> getRestaurantsIdsByZipcode(@RequestParam("zipcode") int zipcode) throws Exception {
+        return restaurantServiceImpl.getRestaurantIdListByZipcode(zipcode);
+    }
+
 
 
 

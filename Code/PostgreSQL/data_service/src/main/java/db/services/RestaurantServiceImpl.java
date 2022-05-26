@@ -34,5 +34,10 @@ public class RestaurantServiceImpl implements RestaurantService {
         return restaurantDTOs;
     }
 
+    @Override
+    public List<Integer> getRestaurantIdListByZipcode(int zipcode) {
+        return restaurantRepo.getRestaurantIdListByZipcode(zipcode);
+    }
+
 
 }

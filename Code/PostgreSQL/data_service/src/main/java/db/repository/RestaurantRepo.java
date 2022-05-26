@@ -61,4 +61,6 @@ public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
     @Query("SELECT r FROM Restaurant r left JOIN FETCH r.openingHours oh left Join fetch r.menu m WHERE r.id in ?1")
     Set<Restaurant> findListByIdWithOpeningHoursAndMenu(List<Integer> ids);
 
+    @Query("SELECT r.id FROM Restaurant r WHERE r.user.address.zipcode = ?1")
+    List<Integer> getRestaurantIdListByZipcode(int zipcode);
 }
