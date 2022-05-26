@@ -16,36 +16,47 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @Entity*/
-@Data
-@Entity
+
 @RedisHash("Restaurant")
 public class Restaurant implements Serializable {
 
-    /*    private static final long serialVersionUID = 1L; */
-
+    private static final long serialVersionUID = -7792341923197594840L;
+/*
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue
+    @GeneratedValue*/
     private int id;
 
     public Restaurant(int id) {
         this.id = id;
     }
 
-    /*
+
+
+
     private String name;
     private Set<Item> menu;
-    private Set<OpeningHours> openingHours;*/
+    private Set<OpeningHours> openingHours;
 
-/*
+    public Restaurant() {
+    }
+
+    public Restaurant(int id, String name, Set<Item> menu, Set<OpeningHours> openingHours) {
+        this.id = id;
+        this.name = name;
+        this.menu = menu;
+        this.openingHours = openingHours;
+    }
+
+    /*
     public Restaurant() {
     }*/
-/*
-    public Long getId() {
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -81,6 +92,6 @@ public class Restaurant implements Serializable {
                 ", menu=" + menu +
                 ", openingHours=" + openingHours +
                 '}';
-    }*/
+    }
 }
 

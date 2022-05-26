@@ -1,6 +1,7 @@
 package db.connectors;
 
 import com.sun.xml.bind.v2.model.core.TypeRef;
+import db.dto.RestaurantDTO;
 import db.entities.Restaurant;
 import db.exceptions.RestaurantNotFoundException;
 import db.wrapperclass.RestaurantList;
@@ -16,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @Component
 public class DataConnectorImpl implements DataConnector {
@@ -28,28 +30,38 @@ public class DataConnectorImpl implements DataConnector {
 
     @Override
     public Restaurant getRestaurantById(int id) throws URISyntaxException {
-
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/byId?id=" + id);
+        URI uri = new URI(baseUrl + "restaurant/restaurantbyid?id=" + id);
         ResponseEntity<Restaurant> result = restTemplate.getForEntity(uri, Restaurant.class);
         return result.getBody();
     }
 
     @Override
-    public List<Restaurant> getAllRestaurantsById(List<Integer> ids) {
-        return null;
+    public List<RestaurantDTO> getAllRestaurantsById(List<Integer> ids) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(baseUrl + "restaurant/allrestaurantsbyid");
+        // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
+        ResponseEntity<RestaurantDTO[]> response = restTemplate.getForEntity(uri, RestaurantDTO[].class);
+        if (response != null) {
+            // return response.getRestaurants();
+            return Arrays.asList(Objects.requireNonNull(response.getBody()));
+        }
+        throw new RestaurantNotFoundException("No restaurants has been found");
     }
+
 
     @Override
     public List<Restaurant> getAllRestaurants() throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         URI uri = new URI(baseUrl + "restaurant/idzipcode?zipcode=2860");
-       // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
+        // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
         ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
+        System.out.println(response.getBody());
         if (response != null) {
-           // return response.getRestaurants();
+            // return response.getRestaurants();
             return Arrays.asList(response.getBody());
         }
         throw new RestaurantNotFoundException("No restaurants has been found");

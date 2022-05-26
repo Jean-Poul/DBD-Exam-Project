@@ -1,5 +1,6 @@
 package db.repo;
 
+import db.dto.RestaurantDTO;
 import db.entities.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
-     //   Restaurant getAllRestaurantByIds(List<Integer> list);
+    List<RestaurantDTO> getAllRestaurantById(List<Integer> list);
 
-      //  Restaurant getAllResturants();
+    //  Restaurant getAllResturants();
 }
