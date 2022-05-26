@@ -1,5 +1,6 @@
 package db.connectors;
 
+import com.sun.xml.bind.v2.model.core.TypeRef;
 import db.entities.Restaurant;
 import db.exceptions.RestaurantNotFoundException;
 import db.wrapperclass.RestaurantList;
@@ -13,13 +14,14 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
 public class DataConnectorImpl implements DataConnector {
 
 
-    private final String baseUrl = "localhost:9080/";
+    private final String baseUrl = "http://localhost:9080/";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -44,9 +46,11 @@ public class DataConnectorImpl implements DataConnector {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         URI uri = new URI(baseUrl + "restaurant/idzipcode?zipcode=2860");
-        RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
+       // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
+        ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
         if (response != null) {
-            return response.getRestaurants();
+           // return response.getRestaurants();
+            return Arrays.asList(response.getBody());
         }
         throw new RestaurantNotFoundException("No restaurants has been found");
     }

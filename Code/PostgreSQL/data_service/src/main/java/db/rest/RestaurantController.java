@@ -38,7 +38,4 @@ public class RestaurantController {
         return restaurantServiceImpl.getRestaurantIdListByZipcode(zipcode);
     }
 
-
-
-
 }
