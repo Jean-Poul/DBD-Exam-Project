@@ -6,6 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+import org.mindrot.jbcrypt.BCrypt;
 
 @Entity(name = "User")
 @Table(name = "users")
@@ -47,15 +48,19 @@ public class User {
     }
 
     private void encodePassword(String password) {
-        PasswordEncoder passwordEncoder;
+        // Use Spring boots security package if mindrots break
+     /*   PasswordEncoder passwordEncoder;
         passwordEncoder = new BCryptPasswordEncoder();
-        this.password = passwordEncoder.encode(password);
+        this.password = passwordEncoder.encode(password); */
+        this.password = BCrypt.hashpw(password, BCrypt.gensalt(12));
     }
 
     public boolean verifyPassword(String password) {
-        PasswordEncoder passwordEncoder;
+        // Use Spring boots security package if mindrots break
+      /*  PasswordEncoder passwordEncoder;
         passwordEncoder = new BCryptPasswordEncoder();
-        return passwordEncoder.matches(password, this.password);
+        return passwordEncoder.matches(password, this.password); */
+        return (BCrypt.checkpw(password, this.password));
     }
 
     public void setEmail(String email) {

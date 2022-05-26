@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = {"db"})
 
 @EnableJpaRepositories(basePackages = {"db.repository"})
+
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class DataServiceApplication {
 
