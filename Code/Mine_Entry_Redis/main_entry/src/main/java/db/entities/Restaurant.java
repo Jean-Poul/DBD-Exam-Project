@@ -1,41 +1,74 @@
 package db.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.redis.core.RedisHash;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Set;
 
+/*
+@Data
+@AllArgsConstructor
+@Entity*/
 @RedisHash("Restaurant")
 public class Restaurant implements Serializable {
-    private Integer Id;
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue
+    private Long id;
     private String name;
     private Set<Item> menu;
     private Set<OpeningHours> openingHours;
 
-    public void addOpeningHours(OpeningHours openingHours){
-        this.openingHours.add(openingHours);
+
+    public Restaurant() {
     }
 
-    public Integer getId() {
-        return Id;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Set<Item> getMenu() {
         return menu;
+    }
+
+    public void setMenu(Set<Item> menu) {
+        this.menu = menu;
     }
 
     public Set<OpeningHours> getOpeningHours() {
         return openingHours;
     }
 
+    public void setOpeningHours(Set<OpeningHours> openingHours) {
+        this.openingHours = openingHours;
+    }
+
     @Override
     public String toString() {
         return "Restaurant{" +
-                "Id=" + Id +
+                "Id=" + id +
                 ", name='" + name + '\'' +
                 ", menu=" + menu +
                 ", openingHours=" + openingHours +

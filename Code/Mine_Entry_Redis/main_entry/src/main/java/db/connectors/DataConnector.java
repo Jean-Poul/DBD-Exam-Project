@@ -7,9 +7,10 @@ import java.util.List;
 
 public interface DataConnector {
     Restaurant getRestaurantById(int id) throws URISyntaxException;
-    List<Restaurant> getRestaurantListById(List<Integer> ids);
-    List<Restaurant> getAllRestaurants();
 
+    List<Restaurant> getAllRestaurantsById(List<Integer> ids);
+
+    List<Restaurant> getAllRestaurants() throws URISyntaxException;
 
 
 }
