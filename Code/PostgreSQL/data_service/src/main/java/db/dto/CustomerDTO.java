@@ -8,16 +8,10 @@ public class CustomerDTO extends UserDTO {
     private String firstName;
     private String lastName;
 
-    public CustomerDTO(String email, String phone, AddressDTO address, int customerId, String firstName, String lastName) {
-        super(email, phone, address);
-        this.customerId = customerId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
     public CustomerDTO(Customer customer) {
         this.setEmail(customer.getUser().getEmail());
         this.setPhone(customer.getUser().getPhone());
+        this.setAddress(new AddressDTO(customer.getUser().getAddress()));
         this.customerId = customer.getId();
         this.firstName = customer.getFirstName();
         this.lastName = customer.getLastName();

@@ -2,6 +2,7 @@ package db.services;
 
 import db.dto.AddressDTO;
 import db.dto.CustomerDTO;
+import db.dto.UserDTO;
 import db.entity.Address;
 import db.entity.Customer;
 import db.entity.Role;
@@ -11,8 +12,13 @@ import db.repository.AddressRepo;
 import db.repository.CustomerRepo;
 import db.repository.UserRepo;
 import db.requestmodel.CustomerRequest;
+import org.apache.tomcat.websocket.AuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.sql.Array;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -40,5 +46,17 @@ public class UserServiceImpl implements UserService {
         CustomerDTO created = new CustomerDTO(customerRepo.save(new Customer(request.getFirstName(), request.getLastName(), user)));
         created.setAddress(new AddressDTO(user.getAddress()));
         return created;
+    }
+
+    @Override
+    public UserDTO verifyUser(String userEmail, String password) throws AuthenticationException {
+        User user = userRepo.getUserByUserEmail(userEmail);
+        Address address = new Address(user.getAddress().getStreet(), user.getAddress().getBuildingIdentifier(), user.getAddress().getLocalIdentifier(), user.getAddress().getZipcode(), user.getAddress().getX(), user.getAddress().getY());
+        AddressDTO addressDTO = new AddressDTO(address);
+        if (user.verifyPassword(password) && user.getEmail() != null) {
+            return new UserDTO(user.getEmail(), user.getPhone(), addressDTO);
+        } else {
+            throw new AuthenticationException("Verification failed");
+        }
     }
 }

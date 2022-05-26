@@ -1,7 +1,7 @@
 package db.rest;
 
 import db.dto.OrderDTO;
-import db.dto.OrderRequest;
+import db.requestmodel.OrderRequest;
 import db.services.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

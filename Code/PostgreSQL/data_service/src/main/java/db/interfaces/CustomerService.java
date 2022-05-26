@@ -1,6 +1,7 @@
 package db.interfaces;
 
 import db.dto.CustomerDTO;
+import db.dto.CustomersDTO;
 import db.dto.RestaurantDTO;
 import db.dto.UserDTO;
 import db.entity.Customer;

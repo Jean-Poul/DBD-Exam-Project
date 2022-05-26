@@ -13,14 +13,12 @@ public class RestaurantDTO {
     private String name;
     private Set<Item> menu;
     private Set<OpeningHours> openingHours;
-    private User user;
 
     public RestaurantDTO(Restaurant entity) {
         this.Id = entity.getId();
         this.name = entity.getName();
         this.menu = entity.getMenu();
         this.openingHours = entity.getOpeningHours();
-        this.user = entity.getUser();
     }
 
     public int getId() {
@@ -39,7 +37,4 @@ public class RestaurantDTO {
         return openingHours;
     }
 
-    public User getUser() {
-        return user;
-    }
 }

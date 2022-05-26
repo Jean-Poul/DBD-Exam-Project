@@ -8,8 +8,8 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepo extends CrudRepository<User, Integer> {
 
-    @Query("SELECT r FROM Customer r JOIN r.user i WHERE r.user.email = ?1")
-    Customer getCustomerByUserId(String userId);
+    @Query("SELECT u FROM User u WHERE u.email = ?1")
+    User getUserByUserEmail(String userEmail);
 
     @Query("SELECT r FROM Role r WHERE r.roleName = ?1")
     Role getRole(String rolaName);

@@ -1,10 +1,13 @@
 package db.rest;
 
 import db.dto.CustomerDTO;
+import db.dto.CustomersDTO;
+import db.dto.UserDTO;
 import db.requestmodel.CustomerRequest;
 import db.requestmodel.UserRequest;
 import db.services.CustomerServiceImpl;
 import db.services.UserServiceImpl;
+import org.apache.tomcat.websocket.AuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +38,13 @@ public class CustomerController {
     @GetMapping(path = "/customerbyid")
     public CustomerDTO getCustomerById(@RequestParam("id") int id) throws Exception {
         return customerServiceImpl.getCustomerById(id);
+    }
+
+    @PostMapping(path = "/login", consumes = "application/json", produces = "application/json")
+    public UserDTO loginUser(@RequestBody UserRequest request) throws AuthenticationException {
+        String password = request.getPassword();
+        String userEmail = request.getEmail();
+// find user by email
+        return userServiceImpl.verifyUser(userEmail, password);
     }
 }

@@ -13,8 +13,8 @@ public interface CustomerRepo extends CrudRepository<Customer, Integer> {
     @Query("SELECT c.id FROM Customer c")
     List<Integer> getCustomersIds();
 
-    @Query("SELECT c from Customer c")
-    List<CustomerDTO> getAllCustomers();
+    @Query("SELECT c FROM Customer c JOIN c.user a")
+    List<Customer> getAllCustomers();
 
 
 

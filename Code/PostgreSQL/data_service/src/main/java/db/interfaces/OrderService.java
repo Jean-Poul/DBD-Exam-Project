@@ -1,7 +1,7 @@
 package db.interfaces;
 
 import db.dto.OrderDTO;
-import db.dto.OrderRequest;
+import db.requestmodel.OrderRequest;
 
 import java.util.List;
 
