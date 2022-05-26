@@ -19,10 +19,12 @@ public class OrderController {
     public List<OrderDTO> getForCustomer(@RequestParam("id") int id) {
         return orderService.getOrdersForCustomer(id);
     }
+
     @GetMapping("/courier")
     public List<OrderDTO> getForCourier(@RequestParam("id") int id) {
         return orderService.getOrdersForCourier(id);
     }
+
     @GetMapping("/restaurant")
     public List<OrderDTO> getRestaurant(@RequestParam("id") int id) {
         return orderService.getOrdersForRestaurant(id);
@@ -30,11 +32,11 @@ public class OrderController {
 
     @PostMapping
     public OrderDTO saveNewOrder(@RequestBody OrderRequest orderRequest) {
-        return  orderService.saveNewOrder(orderRequest);
+        return orderService.saveNewOrder(orderRequest);
     }
 
     @PutMapping
     public OrderDTO deliverOrder(@RequestBody OrderRequest orderRequest) {
-        return  orderService.deliverOrder(orderRequest);
+        return orderService.deliverOrder(orderRequest);
     }
 }
