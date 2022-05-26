@@ -5,7 +5,7 @@ import db.entities.OrderRequest;
 
 import java.util.List;
 
-public interface OrderService {
+public interface Orderservice {
 
     List<Order> getOrdersForCustomer(int id) ;
 
