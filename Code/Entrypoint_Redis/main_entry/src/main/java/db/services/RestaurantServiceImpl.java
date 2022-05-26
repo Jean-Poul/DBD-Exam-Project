@@ -65,7 +65,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         List<Restaurant> list = new ArrayList<>();
         for (Restaurant r : restaurantRepo.findAll()) {
             list.add(r);
-            restaurantRepo.save(r);
         }
         //   List<Restaurant> list = restaurantRepo.findAll();
         if (list.isEmpty()) {
