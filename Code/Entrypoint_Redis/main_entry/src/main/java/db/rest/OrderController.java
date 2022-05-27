@@ -17,27 +17,27 @@ public class OrderController {
     OrderServiceImpl orderService;
 
     @GetMapping("/customer")
-    public List<Order> getForCustomer(@RequestParam("id") int id) {
+    public List<Order> getForCustomer(@RequestParam("id") int id) throws URISyntaxException {
         return orderService.getOrdersForCustomer(id);
     }
 
     @GetMapping("/courier")
-    public List<Order> getForCourier(@RequestParam("id") int id) {
+    public List<Order> getForCourier(@RequestParam("id") int id) throws URISyntaxException {
         return orderService.getOrdersForCourier(id);
     }
 
     @GetMapping("/restaurant")
-    public List<Order> getRestaurant(@RequestParam("id") int id) {
+    public List<Order> getRestaurant(@RequestParam("id") int id) throws URISyntaxException {
         return orderService.getOrdersForRestaurant(id);
     }
 
     @PostMapping
-    public Order saveNewOrder(@RequestBody OrderRequest orderRequest) throws URISyntaxException {
+    public OrderRequest saveNewOrder(@RequestBody OrderRequest orderRequest) throws URISyntaxException {
         return orderService.saveNewOrder(orderRequest);
     }
 
     @PutMapping
-    public Order deliverOrder(@RequestBody OrderRequest orderRequest) {
+    public Order deliverOrder(@RequestBody OrderRequest orderRequest) throws URISyntaxException {
         return orderService.deliverOrder(orderRequest);
     }
 }

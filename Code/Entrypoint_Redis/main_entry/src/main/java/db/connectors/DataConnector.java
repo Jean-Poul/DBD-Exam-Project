@@ -1,8 +1,6 @@
 package db.connectors;
 
-import db.entities.Order;
-import db.entities.OrderRequest;
-import db.entities.Restaurant;
+import db.entities.*;
 
 import java.net.URISyntaxException;
 import java.util.List;
@@ -15,13 +13,18 @@ public interface DataConnector {
 
     Order postNewOrder(OrderRequest request) throws URISyntaxException;
 
-    Order sendOrderWithCourier(OrderRequest request);
+    Order sendOrderWithCourier(OrderRequest request) throws URISyntaxException;
 
-    List<Order> getOrdersForCourier(int id);
+    List<Order> getOrdersForCourier(int id) throws URISyntaxException;
 
-    List<Order> getOrdersForCustomer(int id);
+    List<Order> getOrdersForCustomer(int id) throws URISyntaxException;
 
-    List<Order> getOrdersForRestaurant(int id);
+    List<Order> getOrdersForRestaurant(int id) throws URISyntaxException;
 
+    //todo call mongoDb-service for courier
+    int getNearestCourierId(double x, double y);
 
+    User login(UserRequest request) throws URISyntaxException;
+
+    Customer createCustomer(CustomerRequest request) throws URISyntaxException;
 }

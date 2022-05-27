@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class OrderServiceImpl implements Orderservice {
@@ -18,25 +19,30 @@ public class OrderServiceImpl implements Orderservice {
     @Autowired
     DataConnectorImpl connector;
 
-    public List<Order> getOrdersForCustomer(int id) {
-        return null;
+    public List<Order> getOrdersForCustomer(int id) throws URISyntaxException {
+        return connector.getOrdersForCustomer(id);
     }
 
-    public List<Order> getOrdersForCourier(int id) {
-        return null;
+    public List<Order> getOrdersForCourier(int id) throws URISyntaxException {
+        return connector.getOrdersForCourier(id);
     }
 
-    public List<Order> getOrdersForRestaurant(int id) {
-        return null;
+    public List<Order> getOrdersForRestaurant(int id) throws URISyntaxException {
+        return connector.getOrdersForRestaurant(id);
     }
 
-    public Order saveNewOrder(OrderRequest orderRequest) throws URISyntaxException {
+    public OrderRequest saveNewOrder(OrderRequest orderRequest) throws URISyntaxException {
         Order order = connector.postNewOrder(orderRequest);
-        return null;
+        int courierId = connector.getNearestCourierId(order.getX(), order.getY());
+        orderRequest.setCourierId(courierId);
+        /*
+        We do not have any implementation for informing Restaurant about new orders
+         */
+        return orderRequest;
     }
 
-    public Order deliverOrder(OrderRequest orderRequest) {
-        return null;
+    public Order deliverOrder(OrderRequest orderRequest) throws URISyntaxException {
+        return connector.sendOrderWithCourier(orderRequest);
     }
 
     public OrderRequest getCart(int id) {
@@ -45,15 +51,25 @@ public class OrderServiceImpl implements Orderservice {
 
     @Override
     public OrderRequest updateCart(OrderRequest request) {
-        OrderRequest present = repo.findById(request.getCustomerId()).orElseThrow(() -> new EntityNotFoundException("Empty cart"));
-        present.setItems(request.getItems());
+        OrderRequest present;
+        try {
+            present = repo.findById(request.getCustomerId()).get();
+            present.setItems(request.getItems());
+        } catch (NoSuchElementException e) {
+            request.setId(request.getCustomerId());
+            present = request;
+        }
         repo.save(present);
         return present;
     }
 
     @Override
     public void emptyCart(OrderRequest request) {
-        OrderRequest present = repo.findById(request.getCustomerId()).orElseThrow(() -> new EntityNotFoundException("Empty cart"));
-        repo.delete(present);
+        try {
+            OrderRequest present = repo.findById(request.getCustomerId()).get();
+            present.setItems(request.getItems());
+            repo.delete(present);
+        } catch (NoSuchElementException e) {
+        }
     }
 }
