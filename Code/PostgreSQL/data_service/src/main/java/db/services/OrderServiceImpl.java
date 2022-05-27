@@ -3,7 +3,7 @@ package db.services;
 import db.dto.OrderDTO;
 import db.requestmodel.OrderRequest;
 import db.entity.*;
-import db.interfaces.OrderService;
+import db.interfaces.Orderservice;
 import db.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl implements Orderservice {
     @Autowired
     OrderRepo orderRepo;
     @Autowired

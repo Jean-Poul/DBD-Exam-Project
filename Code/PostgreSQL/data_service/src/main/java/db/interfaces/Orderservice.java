@@ -5,7 +5,7 @@ import db.requestmodel.OrderRequest;
 
 import java.util.List;
 
-public interface OrderService {
+public interface Orderservice {
     List<OrderDTO> getOrdersForCustomer(int id);
 
     List<OrderDTO> getOrdersForCourier(int id);

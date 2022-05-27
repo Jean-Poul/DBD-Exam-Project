@@ -1,8 +1,6 @@
 package db.connectors;
 
-import db.entities.Order;
-import db.entities.OrderRequest;
-import db.entities.Restaurant;
+import db.entities.*;
 import db.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -69,22 +67,84 @@ public class DataConnectorImpl implements DataConnector {
     }
 
     @Override
-    public Order sendOrderWithCourier(OrderRequest request) {
-        return null;
+    public Order sendOrderWithCourier(OrderRequest orderRequest) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(DATA_SERVICE_URL + "order/deliver");
+        HttpEntity<OrderRequest> request =
+                new HttpEntity(orderRequest, headers);
+        Order result = restTemplate.postForObject(uri, request, Order.class);
+
+        return result;
     }
 
     @Override
-    public List<Order> getOrdersForCourier(int id) {
-        return null;
+    public List<Order> getOrdersForCourier(int id) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(DATA_SERVICE_URL + "order/courier?id="+id);
+
+        ResponseEntity<Order[]> response = restTemplate.getForEntity(uri, Order[].class);
+        if (response != null) {
+            return Arrays.asList(Objects.requireNonNull(response.getBody()));
+        } else {
+            throw new EntityNotFoundException("No orders has been found");
+        }
     }
 
     @Override
-    public List<Order> getOrdersForCustomer(int id) {
-        return null;
+    public List<Order> getOrdersForCustomer(int id) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(DATA_SERVICE_URL + "order/customer?id="+id);
+
+        ResponseEntity<Order[]> response = restTemplate.getForEntity(uri, Order[].class);
+        if (response != null) {
+            return Arrays.asList(Objects.requireNonNull(response.getBody()));
+        } else {
+            throw new EntityNotFoundException("No orders has been found");
+        }
     }
 
     @Override
-    public List<Order> getOrdersForRestaurant(int id) {
-        return null;
+    public List<Order> getOrdersForRestaurant(int id) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(DATA_SERVICE_URL + "order/restaurant?id="+id);
+
+        ResponseEntity<Order[]> response = restTemplate.getForEntity(uri, Order[].class);
+        if (response != null) {
+            return Arrays.asList(Objects.requireNonNull(response.getBody()));
+        } else {
+            throw new EntityNotFoundException("No orders has been found");
+        }
+    }
+
+    @Override
+    public int getNearestCourierId(double x, double y) {
+        //todo call MongoDB
+        return 3;
+    }
+
+    @Override
+    public User login(UserRequest userRequest) throws URISyntaxException {
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+            URI uri = new URI(DATA_SERVICE_URL + "customer/login");
+            HttpEntity<UserRequest> request =
+                    new HttpEntity<>(userRequest, headers);
+            User result = restTemplate.postForObject(uri, request, User.class);
+            return result;
+    }
+
+    @Override
+    public Customer createCustomer(CustomerRequest customerRequest) throws URISyntaxException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(DATA_SERVICE_URL + "customer");
+        HttpEntity<CustomerRequest> request =
+                new HttpEntity<>(customerRequest, headers);
+        Customer result = restTemplate.postForObject(uri, request, Customer.class);
+        return result;
     }
 }

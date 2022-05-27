@@ -35,7 +35,7 @@ public class OrderController {
         return orderService.saveNewOrder(orderRequest);
     }
 
-    @PutMapping
+    @PostMapping("/deliver")
     public OrderDTO deliverOrder(@RequestBody OrderRequest orderRequest) {
         return orderService.deliverOrder(orderRequest);
     }
