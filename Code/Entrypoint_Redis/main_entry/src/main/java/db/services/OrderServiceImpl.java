@@ -8,6 +8,7 @@ import db.repo.CartRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 @Service
@@ -29,7 +30,8 @@ public class OrderServiceImpl implements Orderservice {
         return null;
     }
 
-    public Order saveNewOrder(OrderRequest orderRequest) {
+    public Order saveNewOrder(OrderRequest orderRequest) throws URISyntaxException {
+        Order order = connector.postNewOrder(orderRequest);
         return null;
     }
 

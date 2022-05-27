@@ -6,6 +6,7 @@ import db.services.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 @CrossOrigin
@@ -31,7 +32,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public Order saveNewOrder(@RequestBody OrderRequest orderRequest) {
+    public Order saveNewOrder(@RequestBody OrderRequest orderRequest) throws URISyntaxException {
         return orderService.saveNewOrder(orderRequest);
     }
 

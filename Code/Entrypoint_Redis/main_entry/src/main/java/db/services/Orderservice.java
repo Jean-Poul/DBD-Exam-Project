@@ -3,6 +3,7 @@ package db.services;
 import db.entities.Order;
 import db.entities.OrderRequest;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 public interface Orderservice {
@@ -13,7 +14,7 @@ public interface Orderservice {
 
     public List<Order> getOrdersForRestaurant(int id);
 
-    public Order saveNewOrder(OrderRequest orderRequest);
+    public Order saveNewOrder(OrderRequest orderRequest) throws URISyntaxException;
 
     Order deliverOrder(OrderRequest orderRequest);
 
