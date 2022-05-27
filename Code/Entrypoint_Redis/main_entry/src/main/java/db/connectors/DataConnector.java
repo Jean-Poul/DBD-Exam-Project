@@ -21,7 +21,6 @@ public interface DataConnector {
 
     List<Order> getOrdersForRestaurant(int id) throws URISyntaxException;
 
-    //todo call mongoDb-service for courier
     int getNearestCourierId(double x, double y);
 
     User login(UserRequest request) throws URISyntaxException;
