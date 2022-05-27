@@ -68,7 +68,7 @@ public class DataConnectorImpl implements DataConnector {
     }
 
     @Override
-    public Order senOrderWithCourier(OrderRequest request) {
+    public Order sendOrderWithCourier(OrderRequest request) {
         return null;
     }
 

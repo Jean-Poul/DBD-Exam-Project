@@ -15,7 +15,7 @@ public interface DataConnector {
 
     Order postNewOrder(OrderRequest request) throws URISyntaxException;
 
-    Order senOrderWithCourier(OrderRequest request);
+    Order sendOrderWithCourier(OrderRequest request);
 
     List<Order> getOrdersForCourier(int id);
 
