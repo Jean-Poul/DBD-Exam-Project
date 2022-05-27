@@ -1,17 +1,16 @@
 package db.services;
 
 import db.connectors.DataConnectorImpl;
-import db.dto.RestaurantDTO;
 import db.entities.Restaurant;
 import db.exceptions.EntityNotFoundException;
+
 import db.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class RestaurantServiceImpl implements RestaurantService {
@@ -19,69 +18,40 @@ public class RestaurantServiceImpl implements RestaurantService {
     DataConnectorImpl connector;
     @Autowired
     RestaurantRepo restaurantRepo;
+    @Autowired
+    RedisTemplate redisTemplate;
 
 
     @Override
-    @Cacheable(value = "Restaurant::SimplyKey []", key = "#rKey", condition = "#rKey!=null")
     public Restaurant getRestaurantById(int id) throws URISyntaxException {
-       /* Restaurant restaurant;
+        Restaurant restaurant;
         try {
-            Restaurant restaurant = restaurantRepo.findById(id)
-                .orElseThrow(() -> new RestaurantNotFoundException("Restaurant was not found"));
-        } catch (Exception e) {
-            try {
-                restaurant = connector.getRestaurantById(id);
-            } catch (URISyntaxException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-        return restaurant;*/
-        Restaurant restaurant = restaurantRepo.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Restaurant was not found"));
-        if (restaurant == null) {
+            restaurant = restaurantRepo.findById(id).get();
+        } catch (NoSuchElementException e) {
             restaurant = connector.getRestaurantById(id);
-            restaurantRepo.save(restaurant);
         }
+        restaurant = restaurantRepo.save(restaurant);
         return restaurant;
     }
 
     @Override
-    @Cacheable(value = "Restaurant")
-    public List<RestaurantDTO> getAllRestaurantsById(List<Integer> ids) throws URISyntaxException {
-        List<RestaurantDTO> list = new ArrayList<>(restaurantRepo.getAllRestaurantById(ids));
-       /* for (Restaurant c : restaurantRepo.getAllRestaurantById(ids)) {
-            list.add(c);
-        }*/
-        if (list.isEmpty()) {
-            list = connector.getAllRestaurantsById(ids);
-        }
-        return list;
-    }
+    public List<Restaurant> getAllRestaurantsById(Set<Integer> ids) throws URISyntaxException {
+        List<Restaurant> list = new ArrayList(restaurantRepo.getAllRestaurantById(ids));
 
-    @Override
-    @Cacheable(value = "Restaurant")
-    public List<Restaurant> getAllRestaurants() throws URISyntaxException {
-        // data connector from here
-        List<Restaurant> list = new ArrayList<>();
-        for (Restaurant r : restaurantRepo.findAll()) {
-            list.add(r);
+        Set<Integer> presentIds = new HashSet<>();
+        for (Restaurant r : list) {
+            presentIds.add(r.getId());
         }
-        //   List<Restaurant> list = restaurantRepo.findAll();
-        if (list.isEmpty()) {
-            list = connector.getAllRestaurants();
-            for (Restaurant r : connector.getAllRestaurants()) {
-                list.add(r);
-                restaurantRepo.save(r);
+        if (presentIds.equals(ids)) {
+            restaurantRepo.saveAll(list);
+            return list;
+        } else {
+            for (Integer i : presentIds) {
+                ids.remove(i);
             }
-
+            list.addAll(connector.getAllRestaurantsById(ids));
+            restaurantRepo.saveAll(list);
         }
         return list;
     }
-
-    @Override
-    public Restaurant saveRestaurant(Restaurant restaurant) {
-        return restaurantRepo.save(restaurant);
-    }
-
-
 }
