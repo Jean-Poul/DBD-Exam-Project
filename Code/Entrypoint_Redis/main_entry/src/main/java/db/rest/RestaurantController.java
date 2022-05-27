@@ -1,15 +1,15 @@
 package db.rest;
 
-import db.dto.RestaurantDTO;
 import db.entities.Restaurant;
 import db.services.RestaurantServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
+import javax.websocket.server.PathParam;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Set;
 
 @CrossOrigin
 @RestController
@@ -19,23 +19,14 @@ public class RestaurantController {
     @Autowired
     RestaurantServiceImpl restaurantService;
 
-    @GetMapping("/restaurantbyid/{id}")
-    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable int id) throws URISyntaxException {
+    @GetMapping
+    public ResponseEntity<Restaurant> getRestaurantById(@PathParam("id") int id) throws URISyntaxException {
+        System.out.println(id);
         return ResponseEntity.ok(restaurantService.getRestaurantById(id));
     }
 
-    @GetMapping("/allrestaurantsbyid")
-    public ResponseEntity<List<RestaurantDTO>> getAllRestaurantsById(@RequestBody List<Integer> idList) throws URISyntaxException {
+    @GetMapping("/all")
+    public ResponseEntity<List<Restaurant>> getAllRestaurantsById(@RequestBody Set<Integer> idList) throws URISyntaxException {
         return ResponseEntity.ok(restaurantService.getAllRestaurantsById(idList));
-    }
-
-    @GetMapping("/allrestaurants")
-    public ResponseEntity<List<Restaurant>> getAllRestaurants() throws URISyntaxException {
-        return ResponseEntity.ok(restaurantService.getAllRestaurants());
-    }
-
-    @PostMapping("/saverestaurant")
-    public Restaurant saveInvoice(@RequestBody Restaurant restaurant) {
-        return restaurantService.saveRestaurant(restaurant);
     }
 }
