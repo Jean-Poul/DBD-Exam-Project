@@ -13,8 +13,6 @@ public interface DataConnector {
 
     List<Restaurant> getAllRestaurantsById(Set<Integer> ids) throws URISyntaxException;
 
-    List<Restaurant> getAllRestaurants() throws URISyntaxException;
-
     Order postNewOrder(OrderRequest request) throws URISyntaxException;
 
     Order senOrderWithCourier(OrderRequest request);

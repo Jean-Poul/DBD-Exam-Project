@@ -5,7 +5,6 @@ import db.entities.Order;
 import db.entities.OrderRequest;
 import db.entities.Restaurant;
 import db.exceptions.RestaurantNotFoundException;
-import db.wrapperclass.RestaurantList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -16,7 +15,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 
 @Component
 public class DataConnectorImpl implements DataConnector {
@@ -31,7 +33,7 @@ public class DataConnectorImpl implements DataConnector {
     public Restaurant getRestaurantById(int id) throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/restaurantbyid?id=" + id);
+        URI uri = new URI(baseUrl + "restaurant?id=" + id);
         ResponseEntity<Restaurant> result = restTemplate.getForEntity(uri, Restaurant.class);
         return result.getBody();
     }
@@ -40,32 +42,19 @@ public class DataConnectorImpl implements DataConnector {
     public List<Restaurant> getAllRestaurantsById(Set<Integer> ids) throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/allrestaurantsbyid");
-        // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
+        String requestParameter = "?ids=";
+        for (Integer i : ids) {
+            requestParameter += i + ",";
+        }
+        URI uri = new URI(baseUrl + "restaurant/list" + requestParameter);
         ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
         if (response != null) {
             // return response.getRestaurants();
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
+        } else {
+            throw new RestaurantNotFoundException("No restaurants has been found");
         }
-        throw new RestaurantNotFoundException("No restaurants has been found");
     }
-
-
-    @Override
-    public List<Restaurant> getAllRestaurants() throws URISyntaxException {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/idzipcode?zipcode=2860");
-        // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
-        ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
-        System.out.println(response.getBody());
-        if (response != null) {
-            // return response.getRestaurants();
-            return Arrays.asList(response.getBody());
-        }
-        throw new RestaurantNotFoundException("No restaurants has been found");
-    }
-
 
     @Override
     public Order postNewOrder(OrderRequest orderRequest) throws URISyntaxException {

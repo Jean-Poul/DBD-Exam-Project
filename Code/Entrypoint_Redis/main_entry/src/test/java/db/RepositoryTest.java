@@ -127,6 +127,17 @@ public class RepositoryTest {
         });
     }
 
+    @Test
+    void playground () {
+        Integer[]a = {1,2,3};
+        String b = "ASAS";
+        for (Integer i :a
+             ) {
+            b+=i;
+        }
+        System.out.println(b);
+    }
+
 
 
 }

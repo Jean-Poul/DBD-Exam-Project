@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RedisHash(value ="Item", timeToLive = 5)
+//@RedisHash(value ="Item", timeToLive = 5)
 public class Item implements Serializable {
     private static final long serialVersionUID = -7792341923197594840L;
     @Id

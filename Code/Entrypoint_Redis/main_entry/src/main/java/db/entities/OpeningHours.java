@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RedisHash(value = "OpeningHours", timeToLive = 5)
+//@RedisHash(value = "OpeningHours", timeToLive = 5)
 public class OpeningHours implements Serializable {
 
     private static final long serialVersionUID = -7792341923197594840L;

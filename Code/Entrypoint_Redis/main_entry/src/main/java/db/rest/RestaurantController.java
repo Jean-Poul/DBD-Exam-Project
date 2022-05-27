@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.net.URISyntaxException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -25,8 +26,9 @@ public class RestaurantController {
         return ResponseEntity.ok(restaurantService.getRestaurantById(id));
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<List<Restaurant>> getAllRestaurantsById(@RequestBody Set<Integer> idList) throws URISyntaxException {
+    @GetMapping("/list")
+    public ResponseEntity<List<Restaurant>> getAllRestaurantsById(@RequestParam("ids") Set<Integer> idList) throws URISyntaxException {
+        idList.forEach(i-> System.out.println(i));
         return ResponseEntity.ok(restaurantService.getAllRestaurantsById(idList));
     }
 }

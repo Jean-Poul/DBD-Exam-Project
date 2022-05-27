@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.client.RestTemplate;
@@ -31,20 +32,14 @@ public class MainEntryApplication {
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        JedisConnectionFactory jedisConFactory
-                = new JedisConnectionFactory();
-        jedisConFactory.setHostName("localhost");
-        jedisConFactory.setPort(6379);
-        return jedisConFactory;
+        RedisStandaloneConfiguration redisStandaloneConfiguration =
+                new RedisStandaloneConfiguration("localhost", 6379);
+        return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
     @Bean
     public RestTemplate getRestTemplate() {
         final RestTemplate restTemplate = new RestTemplate();
-//        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
-//        requestFactory.setConnectTimeout(60000);
-//        requestFactory.setReadTimeout(50000);
-//        restTemplate.setRequestFactory(requestFactory);
         return restTemplate;
     }
 

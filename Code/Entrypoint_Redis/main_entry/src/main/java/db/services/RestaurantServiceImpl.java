@@ -4,8 +4,6 @@ import db.connectors.DataConnectorImpl;
 import db.entities.Restaurant;
 import db.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +11,6 @@ import java.net.URISyntaxException;
 import java.util.*;
 
 @Service
-@EnableCaching
 public class RestaurantServiceImpl implements RestaurantService {
     @Autowired
     DataConnectorImpl connector;
@@ -24,24 +21,18 @@ public class RestaurantServiceImpl implements RestaurantService {
 
 
     @Override
- //   @Cacheable(value = "Restaurant")
-
     public Restaurant getRestaurantById(int id) throws URISyntaxException {
         Restaurant restaurant;
         try {
             restaurant = restaurantRepo.findById(id).get();
         } catch (NoSuchElementException e) {
             restaurant = connector.getRestaurantById(id);
-            System.out.println(restaurant.toString());
         }
         Restaurant r = restaurantRepo.save(restaurant);
-        System.out.println(r.toString());
-
         return restaurant;
     }
 
     @Override
-    @Cacheable(value = "Restaurant")
     public List<Restaurant> getAllRestaurantsById(Set<Integer> ids) throws URISyntaxException {
         List<Restaurant> list = new ArrayList(restaurantRepo.getAllRestaurantById(ids));
 
