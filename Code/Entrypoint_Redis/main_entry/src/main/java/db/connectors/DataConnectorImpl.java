@@ -23,8 +23,10 @@ import java.util.Objects;
 @Component
 public class DataConnectorImpl implements DataConnector {
 
-    private final String MONGO_SERVICE_URL = "";
     private final String DATA_SERVICE_URL = "http://localhost:9080/";
+    private final String RESTAURANT_SERVICE_URL = "";
+    private final String COURIER_SERVICE_URL = "";
+    private final String LOGGING_SERVICE_URL = "";
     @Autowired
     private RestTemplate restTemplate;
 
