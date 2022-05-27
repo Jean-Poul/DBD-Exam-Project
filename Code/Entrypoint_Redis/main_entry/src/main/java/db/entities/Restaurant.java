@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RedisHash(value = "Restaurant", timeToLive = 10)
+@RedisHash(value = "Restaurant", timeToLive = 5)
 
 public class Restaurant implements Serializable {
     private static final long serialVersionUID = -7792341923197594840L;
