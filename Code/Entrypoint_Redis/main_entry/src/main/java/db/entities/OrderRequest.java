@@ -15,14 +15,13 @@ import java.util.Map;
 @RedisHash(value = "Cart", timeToLive = 30)
 public class OrderRequest {
     private static final long serialVersionUID = -7792341923197594840L;
-
+    @Id
+    private int id;
     private int orderId;
     private int restaurantId;
-    @Id
     private int customerId;
     private int courierId;
     private Map<Integer, Integer> items = new HashMap();
-
     public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
