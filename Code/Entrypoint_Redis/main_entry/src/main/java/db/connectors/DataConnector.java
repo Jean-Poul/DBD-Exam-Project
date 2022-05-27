@@ -13,5 +13,4 @@ public interface DataConnector {
 
     List<Restaurant> getAllRestaurants() throws URISyntaxException;
 
-
 }

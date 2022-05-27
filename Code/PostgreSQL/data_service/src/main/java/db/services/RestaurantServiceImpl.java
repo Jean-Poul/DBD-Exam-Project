@@ -16,10 +16,10 @@ import java.util.Set;
 public class RestaurantServiceImpl implements RestaurantService {
 
     @Autowired
-    RestaurantRepo restaurantRepo;
+    private RestaurantRepo restaurantRepo;
 
     @Override
-    public RestaurantDTO getRestaurantById(int id) throws Exception {
+    public RestaurantDTO getRestaurantById(int id) {
         Restaurant restaurant = restaurantRepo.findByIdWithOpeningHoursAndMenu(id);
         return new RestaurantDTO(restaurant);
     }
@@ -38,6 +38,5 @@ public class RestaurantServiceImpl implements RestaurantService {
     public List<Integer> getRestaurantIdListByZipcode(int zipcode) {
         return restaurantRepo.getRestaurantIdListByZipcode(zipcode);
     }
-
 
 }

@@ -2,6 +2,7 @@ package db.connectors;
 
 import com.sun.xml.bind.v2.model.core.TypeRef;
 import db.dto.RestaurantDTO;
+import db.entities.Address;
 import db.entities.Restaurant;
 import db.exceptions.RestaurantNotFoundException;
 import db.wrapperclass.RestaurantList;
@@ -22,8 +23,8 @@ import java.util.Objects;
 @Component
 public class DataConnectorImpl implements DataConnector {
 
-
-    private final String baseUrl = "http://localhost:9080/";
+    private final String MONGO_SERVICE_URL = "";
+    private final String DATA_SERVICE_URL = "http://localhost:9080/";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -32,7 +33,7 @@ public class DataConnectorImpl implements DataConnector {
     public Restaurant getRestaurantById(int id) throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/restaurantbyid?id=" + id);
+        URI uri = new URI(DATA_SERVICE_URL + "restaurant/restaurantbyid?id=" + id);
         ResponseEntity<Restaurant> result = restTemplate.getForEntity(uri, Restaurant.class);
         return result.getBody();
     }
@@ -41,7 +42,7 @@ public class DataConnectorImpl implements DataConnector {
     public List<RestaurantDTO> getAllRestaurantsById(List<Integer> ids) throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/allrestaurantsbyid");
+        URI uri = new URI(DATA_SERVICE_URL + "restaurant/allrestaurantsbyid");
         // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
         ResponseEntity<RestaurantDTO[]> response = restTemplate.getForEntity(uri, RestaurantDTO[].class);
         if (response != null) {
@@ -56,7 +57,7 @@ public class DataConnectorImpl implements DataConnector {
     public List<Restaurant> getAllRestaurants() throws URISyntaxException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        URI uri = new URI(baseUrl + "restaurant/idzipcode?zipcode=2860");
+        URI uri = new URI(DATA_SERVICE_URL + "restaurant/idzipcode?zipcode=2860");
         // RestaurantList response = restTemplate.getForObject(uri, RestaurantList.class);
         ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
         System.out.println(response.getBody());
