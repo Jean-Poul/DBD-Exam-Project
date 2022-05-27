@@ -2,10 +2,8 @@ package db.connectors;
 
 import com.sun.xml.bind.v2.model.core.TypeRef;
 import db.dto.RestaurantDTO;
-import db.entities.Address;
 import db.entities.Restaurant;
 import db.exceptions.RestaurantNotFoundException;
-import db.wrapperclass.RestaurantList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
