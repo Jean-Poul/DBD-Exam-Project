@@ -9,7 +9,6 @@ public class CustomerRequest extends UserRequest {
     public CustomerRequest() {
     }
 
-
     public String getFirstName() {
         return firstName;
     }
