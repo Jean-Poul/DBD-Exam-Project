@@ -2,6 +2,8 @@ package db.services;
 
 import db.connectors.DataConnectorImpl;
 import db.entities.Restaurant;
+import db.exceptions.EntityNotFoundException;
+
 import db.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -28,7 +30,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         } catch (NoSuchElementException e) {
             restaurant = connector.getRestaurantById(id);
         }
-        Restaurant r = restaurantRepo.save(restaurant);
+        restaurant = restaurantRepo.save(restaurant);
         return restaurant;
     }
 

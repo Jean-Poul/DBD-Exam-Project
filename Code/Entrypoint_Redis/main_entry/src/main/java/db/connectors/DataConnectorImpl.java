@@ -1,10 +1,9 @@
 package db.connectors;
 
-
 import db.entities.Order;
 import db.entities.OrderRequest;
 import db.entities.Restaurant;
-import db.exceptions.RestaurantNotFoundException;
+import db.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -47,12 +46,12 @@ public class DataConnectorImpl implements DataConnector {
             requestParameter += i + ",";
         }
         URI uri = new URI(baseUrl + "restaurant/list" + requestParameter);
+
         ResponseEntity<Restaurant[]> response = restTemplate.getForEntity(uri, Restaurant[].class);
         if (response != null) {
-            // return response.getRestaurants();
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
         } else {
-            throw new RestaurantNotFoundException("No restaurants has been found");
+            throw new EntityNotFoundException("No restaurants has been found");
         }
     }
 
