@@ -16,6 +16,8 @@ public class OrderDTO {
     private String restaurant;
     private String customer;
     private String courier;
+    private double x;
+    private double y;
 
     public OrderDTO(Order entity) {
         this.id = entity.getId();
@@ -23,6 +25,8 @@ public class OrderDTO {
         this.totalPrice = entity.getTotalPrice();
         if (entity.getRestaurant() != null) {
             this.restaurant = entity.getRestaurant().getName();
+            this.x = entity.getRestaurant().getUser().getAddress().getX();
+            this.y = entity.getRestaurant().getUser().getAddress().getY();
         }
         if (entity.getCustomer() != null) {
             this.customer = entity.getCustomer().getFirstName() + " " + entity.getCustomer().getLastName();
@@ -31,6 +35,14 @@ public class OrderDTO {
             this.courier = entity.getCourier().getFirstName() + " " + entity.getCourier().getLastName();
         }
         transferItems(entity);
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
     }
 
     public int getId() {

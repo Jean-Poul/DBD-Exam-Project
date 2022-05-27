@@ -34,7 +34,7 @@ public class RestaurantController {
         return restaurantServiceImpl.getAllRestaurantsById(list);
     }
     @GetMapping("idzipcode")
-    public List<Integer> getRestaurantsIdsByZipcode(@RequestParam("zipcode") int zipcode) throws Exception {
+    public List<Integer> getRestaurantsIdsByZipcode(@RequestParam("zipcode") int zipcode) {
         return restaurantServiceImpl.getRestaurantIdListByZipcode(zipcode);
     }
 
