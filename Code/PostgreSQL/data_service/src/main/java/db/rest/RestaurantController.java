@@ -24,13 +24,13 @@ public class RestaurantController {
         return "Hello World!";
     }
 
-    @GetMapping("restaurantbyid")
+    @GetMapping("")
     public RestaurantDTO get(@RequestParam("id") int id) throws Exception {
         return restaurantServiceImpl.getRestaurantById(id);
     }
 
-    @GetMapping("allrestaurantsbyid")
-    public Set<RestaurantDTO> getAll(@RequestBody List<Integer> list) throws Exception {
+    @GetMapping("/list")
+    public Set<RestaurantDTO> getAll(@RequestParam("ids") List<Integer> list) throws Exception {
         return restaurantServiceImpl.getAllRestaurantsById(list);
     }
     @GetMapping("idzipcode")
