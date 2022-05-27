@@ -3,7 +3,7 @@ package db.services;
 import db.connectors.DataConnectorImpl;
 import db.dto.RestaurantDTO;
 import db.entities.Restaurant;
-import db.exceptions.RestaurantNotFoundException;
+import db.exceptions.EntityNotFoundException;
 import db.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -37,7 +37,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         }
         return restaurant;*/
         Restaurant restaurant = restaurantRepo.findById(id)
-                .orElseThrow(() -> new RestaurantNotFoundException("Restaurant was not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Restaurant was not found"));
         if (restaurant == null) {
             restaurant = connector.getRestaurantById(id);
             restaurantRepo.save(restaurant);

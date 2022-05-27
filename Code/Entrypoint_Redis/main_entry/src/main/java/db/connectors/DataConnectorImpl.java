@@ -1,12 +1,10 @@
 package db.connectors;
 
-import com.sun.xml.bind.v2.model.core.TypeRef;
 import db.dto.RestaurantDTO;
 import db.entities.Order;
 import db.entities.OrderRequest;
 import db.entities.Restaurant;
-import db.exceptions.RestaurantNotFoundException;
-import db.wrapperclass.RestaurantList;
+import db.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -17,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +48,7 @@ public class DataConnectorImpl implements DataConnector {
             // return response.getRestaurants();
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
         }
-        throw new RestaurantNotFoundException("No restaurants has been found");
+        throw new EntityNotFoundException("No restaurants has been found");
     }
 
 
@@ -67,7 +64,7 @@ public class DataConnectorImpl implements DataConnector {
             // return response.getRestaurants();
             return Arrays.asList(response.getBody());
         }
-        throw new RestaurantNotFoundException("No restaurants has been found");
+        throw new EntityNotFoundException("No restaurants has been found");
     }
 
 

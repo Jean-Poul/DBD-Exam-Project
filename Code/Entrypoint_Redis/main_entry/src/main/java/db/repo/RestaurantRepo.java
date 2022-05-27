@@ -12,5 +12,4 @@ import java.util.List;
 public interface RestaurantRepo extends CrudRepository<Restaurant, Integer> {
     List<RestaurantDTO> getAllRestaurantById(List<Integer> list);
 
-    //  Restaurant getAllResturants();
 }
