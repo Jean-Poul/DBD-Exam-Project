@@ -1,43 +1,45 @@
 package db.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.redis.core.RedisHash;
+
+import javax.persistence.Id;
 import java.util.HashMap;
 import java.util.Map;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@RedisHash(value = "Cart", timeToLive = 30)
 public class OrderRequest {
+    private static final long serialVersionUID = -7792341923197594840L;
+
     private int orderId;
     private int restaurantId;
+    @Id
     private int customerId;
     private int courierId;
     private Map<Integer, Integer> items = new HashMap();
 
-    public OrderRequest() {
-    }
-
-    public OrderRequest(int orderId, int restaurantId, int customerId, int courierId, Map<Integer, Integer> items) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
+    }
+
+    public void setRestaurantId(int restaurantId) {
         this.restaurantId = restaurantId;
+    }
+
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
+    }
+
+    public void setCourierId(int courierId) {
         this.courierId = courierId;
+    }
+
+    public void setItems(Map<Integer, Integer> items) {
         this.items = items;
-    }
-
-    public int getOrderId() {
-        return orderId;
-    }
-
-    public int getRestaurantId() {
-        return restaurantId;
-    }
-
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public int getCourierId() {
-        return courierId;
-    }
-
-    public Map<Integer, Integer> getItems() {
-        return items;
     }
 }

@@ -16,4 +16,9 @@ public interface Orderservice {
     public Order saveNewOrder(OrderRequest orderRequest);
 
     Order deliverOrder(OrderRequest orderRequest);
+
+    OrderRequest getCart(int id);
+    OrderRequest updateCart(OrderRequest request);
+    void emptyCart(OrderRequest orderRequest);
+
 }
