@@ -8,7 +8,7 @@ public class MongoLoggingApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MongoLoggingApplication.class, args);
-        Connection.connectToMongo();
+        //Connection.connectToMongo();
     }
 
 }

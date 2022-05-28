@@ -13,7 +13,6 @@ public interface CourierRepository extends MongoRepository<Courier, String> {
 
     Courier findCourierById(String id);
 
-
     // { 'location' : { '$near' : [point.x, point.y], '$maxDistance' : distance}}
     List<Courier> findByLocationNear(Point location, Distance distance);
 }
