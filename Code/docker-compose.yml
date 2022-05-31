@@ -1,37 +1,29 @@
 version: "3.7"
 services:
-    neo4jservice:
-        build: Neo4J
-        ports:
-            - 8066:8066
+    #courierservice:
+    #    container_name: courierservicecon 
+    #    build: mongo_courier
+    #    ports:
+    #        - 8081:8081
+    #loggingservice:
+    #    container_name: logservicecon 
+    #    build: mongoLogging
+    #    ports:
+    #        - 8042:8042
+    #neo4jservice:
+    #    container_name: neo4jservicecon 
+    #    build: Neo4J
+    #    ports:
+    #        - 8066:8066
     postgresservice:
+        container_name: postgresservicecon 
         build: data_service
         ports:
             - 9080:9080
-    neo4j:
-        image: neo4j:4.4
-        hostname: neo4j
-        container_name: neo4j 
+    cachingservice:
+        container_name: cachingservicecon 
+        build: main_entry
         ports:
-          - "7474:7474"
-          - "7687:7687"
-        volumes:
-          - ./neo4jDB/import:/import
-          - ./neo4jDB/plugins:/plugins
+            - 9085:9085
 
-        environment:
-          NEO4J_AUTH: none
-          NEO4J_dbms_logs_debug_level: DEBUG
-          NEO4J_dbms_security_procedures_unrestricted: gds.* 
-          NEO4J_dbms_security_procedures_whitelist: gds.*
-    postgres:
-        image: postgres:14.1-alpine
-        restart: always
-        environment:
-          - POSTGRES_USER=postgres
-          - POSTGRES_PASSWORD=Qwerty!234
-          - POSTGRES_DB=food_delivery
-        ports:
-          - '5432:5432'
-        volumes: 
-          - ./postgresDB/db:/var/lib/postgresql/data
+  

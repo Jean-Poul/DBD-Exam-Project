@@ -116,7 +116,10 @@
 **/.idea/codestream.xml
 
 #Data
-/Code/neo4jDB/data
+/Code/volumes/neo4jDB/data
+/Code/volumes/postgresDB/db
+/Code/volumes/MongoData
+/Code/volumes/logs
 
 ### Java ###
 # Compiled class file
