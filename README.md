@@ -35,11 +35,11 @@ The following is our architectural solution for the end product:
 * Redis  
 
 #### Data sources: 
-* [Address data: ](https://api.dataforsyningen.dk/adresser?struktur=mini&kommunekode=0159)
-* [Menu data: ](https://mealme.p.rapidapi.com/restaurants/details/menu)
-* [Restaurants data: ](https://www.kaggle.com/datasets/shrutimehta/zomato-restaurants-data)
-* [User data: ](https://www.mockaroo.com/)  
-* [Zipcodes data: ](https://github.com/danielbahl/DK-Postnumre/blob/master/postnumre.sql)  
+* [Address data](https://api.dataforsyningen.dk/adresser?struktur=mini&kommunekode=0159)
+* [Menu data](https://mealme.p.rapidapi.com/restaurants/details/menu)
+* [Restaurants data](https://www.kaggle.com/datasets/shrutimehta/zomato-restaurants-data)
+* [User data](https://www.mockaroo.com/)  
+* [Zipcodes data](https://github.com/danielbahl/DK-Postnumre/blob/master/postnumre.sql)  
       
 #### Development:  
 * Git  
