@@ -10,29 +10,24 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Magdalena Wawrzak cph-mw216
   
 ## Introduction
-
  
 An explanation about our system development process can be found below:
 
 [Video link: ](URL MANGLER)  
   
 ## About The Project  
-Documentation for planning and use cases with diagrams can be found here: [Planning and use cases: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Planning%20and%20Use%20Cases.pdf) 
-Documentation for our functional requirements can be found here: [Functional requirements: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Functional%20requirements.pdf)
-  
-#### Remember to link to our use cases and functional requirements from here
-
-  
+Documentation for planning and use cases with diagrams can be found here: [Planning and use cases: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Planning%20and%20Use%20Cases.pdf)   
+Documentation for our functional requirements can be found here: [Functional requirements: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Functional%20requirements.pdf)  
+    
+### Microservice architecture  
+The following is our architectural solution for the end product:  
 ![Alt System overview](/Drawings/FinalProduct.PNG "Microservice architecture")
-
-![Alt ER-diagram](/Drawings/ER-diagram.png "PostgreSQL ER-diagram")
-
 
 ### Built With 
 #### Databases:  
 * MongoDB  
 * Neo4j  
-* PostgreSQL  
+* PostgreSQL ([ER-diagram: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Drawings/ER-diagram.png)  
 * Redis  
 
 #### Data sources: 
@@ -52,12 +47,10 @@ Documentation for our functional requirements can be found here: [Functional req
 * Extreme programming  
 * Scrum  
 * Trello  
-
-   
+     
 ### Getting Started  
 INSERT TEXT ABOUT START
-  
- 
+     
 ### Documentation  
 To be able to test our endpoints use the following link to view the documentation for our endpoints.
 [Postman collection documentation: ](https://documenter.getpostman.com/view/12822718/Uz5DqxXk#9267027e-6b0b-4f3b-b280-a0a9e8865af3)  
