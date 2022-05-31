@@ -3,16 +3,35 @@ services:
     neo4jservice:
         build: Neo4J
         ports:
-            - 8096:8066
+            - 8066:8066
+    postgresservice:
+        build: data_service
+        ports:
+            - 9080:9080
     neo4j:
-        image: neo4j:latest
+        image: neo4j:4.4
         hostname: neo4j
         container_name: neo4j 
         ports:
           - "7474:7474"
           - "7687:7687"
         volumes:
-          - ./neo4j/plugins:/plugins
+          - ./neo4jDB/import:/import
+          - ./neo4jDB/plugins:/plugins
+
         environment:
           NEO4J_AUTH: none
           NEO4J_dbms_logs_debug_level: DEBUG
+          NEO4J_dbms_security_procedures_unrestricted: gds.* 
+          NEO4J_dbms_security_procedures_whitelist: gds.*
+    postgres:
+        image: postgres:14.1-alpine
+        restart: always
+        environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=Qwerty!234
+          - POSTGRES_DB=food_delivery
+        ports:
+          - '5432:5432'
+        volumes: 
+          - ./postgresDB/db:/var/lib/postgresql/data

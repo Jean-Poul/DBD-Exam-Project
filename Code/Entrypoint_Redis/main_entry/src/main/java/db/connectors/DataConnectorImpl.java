@@ -21,7 +21,7 @@ import java.util.Set;
 public class DataConnectorImpl implements DataConnector {
 
     private final String DATA_SERVICE_URL = "http://localhost:9080/";
-    private final String RESTAURANT_SERVICE_URL = "";
+    private final String RESTAURANT_SERVICE_URL = "http://localhost:8066/";
     private final String COURIER_SERVICE_URL = "";
     private final String LOGGING_SERVICE_URL = "";
     @Autowired
@@ -147,4 +147,5 @@ public class DataConnectorImpl implements DataConnector {
         Customer result = restTemplate.postForObject(uri, request, Customer.class);
         return result;
     }
+
 }
