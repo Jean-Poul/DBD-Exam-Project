@@ -24,7 +24,8 @@ Documentation for our functional requirements can be found here:
     
 ### Microservice architecture  
 The following is our architectural solution for the end product:  
-![Alt System overview](/Drawings/FinalProduct.PNG "Microservice architecture" =250x250)
+![Alt System overview](/Drawings/FinalProduct.PNG "Microservice architecture")
+<img src="Drawings/FinalProduct.PNG" width="250" height="250">
 
 ### Built With 
 #### Databases:  
