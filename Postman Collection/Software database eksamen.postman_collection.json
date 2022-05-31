@@ -1022,6 +1022,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GetAllLogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"log\": \"Test\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8042/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8042",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
