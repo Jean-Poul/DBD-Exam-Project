@@ -21,8 +21,8 @@ An explanation about our system development process can be found below:
 
 #### Remember to link to our use cases and functional requirements from here
 
-[URL til vores postman collection: ](URL MANGLER)  
-test test test
+[Postman collection documentation: ](https://documenter.getpostman.com/view/12822718/Uz5DqxXk#9267027e-6b0b-4f3b-b280-a0a9e8865af3)  
+  
 ![Alt System overview](/Drawings/FinalProduct.PNG "Microservice architecture")
 
 ![Alt ER-diagram](/Drawings/ER-diagram.png "PostgreSQL ER-diagram")
