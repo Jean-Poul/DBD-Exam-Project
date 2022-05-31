@@ -14,7 +14,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.client.RestTemplate;
 
 @EntityScan(basePackages = {"db"})
-
 @EnableCaching
 @SpringBootApplication(exclude =  {DataSourceAutoConfiguration.class })
 public class MainEntryApplication {
