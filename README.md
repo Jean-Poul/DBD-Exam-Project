@@ -10,7 +10,7 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Magdalena Wawrzak cph-mw216
   
 ## Introduction
- 
+TODO MISSING STATEMENTS!   
 An explanation about our system development process can be found below:
 
 [Video link: ](URL MANGLER)  
@@ -53,7 +53,7 @@ The following is our architectural solution for the end product:
 * Trello  
      
 ### Getting Started  
-INSERT TEXT ABOUT START
+TODO MISSING STATEMENTS!
      
 ### Documentation  
 To be able to test our endpoints use the following link to view the documentation for our endpoints.  
@@ -63,7 +63,7 @@ We have also attached our Postman collection which can be found here:
 [Postman collection](https://github.com/Jean-Poul/DBD-Exam-Project/tree/developer/Postman%20Collection)  
  
 ### Executing program
-
+TODO MISSING STATEMENTS!  
 * How to run the program
 * Step-by-step bullets
 
