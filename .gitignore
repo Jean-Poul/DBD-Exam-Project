@@ -120,6 +120,7 @@
 /Code/volumes/postgresDB/db
 /Code/volumes/MongoData
 /Code/volumes/logs
+/Code/volumes/cache/dump.rdb
 
 ### Java ###
 # Compiled class file
