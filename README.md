@@ -16,8 +16,11 @@ An explanation about our system development process can be found below:
 [Video link: ](URL MANGLER)  
   
 ## About The Project  
-Documentation for planning and use cases with diagrams can be found here: [Planning and use cases: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Planning%20and%20Use%20Cases.pdf)   
-Documentation for our functional requirements can be found here: [Functional requirements: ](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Functional%20requirements.pdf)  
+Documentation for planning and use cases with diagrams can be found here:  
+[Planning and use cases](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Planning%20and%20Use%20Cases.pdf)   
+  
+Documentation for our functional requirements can be found here:  
+[Functional requirements](https://github.com/Jean-Poul/DBD-Exam-Project/blob/developer/Text/Functional%20requirements.pdf)  
     
 ### Microservice architecture  
 The following is our architectural solution for the end product:  
