@@ -9,6 +9,13 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Nina Lisakowski, cph-nl163
 - Magda Wawrzak, cph-
   
+## Introduction
+  
+An explanation about our system development process can be found below:
+
+[Video link: ](URL MANGLER)  
+
+  
 ## About The Project  
 
 
@@ -38,6 +45,6 @@ INSERT docker compose command here!
 
 * 0.2
     * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
+    * See [Developer commits](https://github.com/Jean-Poul/DBD-Exam-Project/commits/developer)
 * 0.1
     * Initial Release
