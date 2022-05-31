@@ -45,6 +45,6 @@ INSERT docker compose command here!
 
 * 0.2
     * Various bug fixes and optimizations
-    * See [Developer commits](https://github.com/Jean-Poul/DBD-Exam-Project/commits/developer)
+    * See [developer branch commits](https://github.com/Jean-Poul/DBD-Exam-Project/commits/developer)
 * 0.1
     * Initial Release
