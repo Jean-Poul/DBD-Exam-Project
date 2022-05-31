@@ -42,7 +42,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9080/restaurant/list?ids=3,6,9,12,",
+									"raw": "http://localhost:9080/restaurant/list?ids=3,6,9,12",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -55,7 +55,7 @@
 									"query": [
 										{
 											"key": "ids",
-											"value": "3,6,9,12,"
+											"value": "3,6,9,12"
 										}
 									]
 								}
@@ -722,14 +722,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8066/restaurant",
+							"raw": "http://localhost:8066/restaurant/populate_db",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8066",
 							"path": [
-								"restaurant"
+								"restaurant",
+								"populate_db"
 							]
 						}
 					},
