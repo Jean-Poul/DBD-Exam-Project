@@ -16,4 +16,4 @@ This is an exam project for the Databases course on CPH Business for the softwar
 
 ![Alt System overview](/Drawings/FinalProduct.PNG "Microservice architecture")
 
-![Alt ER-diagram](/Drawings/ER-diagram.PNG "PostgreSQL ER-diagram")
+![Alt ER-diagram](/Drawings/ER-diagram.png "PostgreSQL ER-diagram")
