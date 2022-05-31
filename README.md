@@ -53,9 +53,10 @@ INSERT TEXT ABOUT START
      
 ### Documentation  
 To be able to test our endpoints use the following link to view the documentation for our endpoints.
-[Postman collection documentation: ](https://documenter.getpostman.com/view/12822718/Uz5DqxXk#9267027e-6b0b-4f3b-b280-a0a9e8865af3)  
+[Postman collection documentation](https://documenter.getpostman.com/view/12822718/Uz5DqxXk#9267027e-6b0b-4f3b-b280-a0a9e8865af3)  
   
-We have also attached our Postman collection which can be found here: [Postman collection: ](https://github.com/Jean-Poul/DBD-Exam-Project/tree/developer/Postman%20Collection)  
+We have also attached our Postman collection which can be found here:  
+[Postman collection](https://github.com/Jean-Poul/DBD-Exam-Project/tree/developer/Postman%20Collection)  
  
 ### Executing program
 
