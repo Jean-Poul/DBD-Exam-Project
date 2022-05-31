@@ -116,7 +116,7 @@
 **/.idea/codestream.xml
 
 #Data
-/Code/neo4jDB/data/transactions
+/Code/neo4jDB/data
 
 ### Java ###
 # Compiled class file
@@ -132,7 +132,7 @@
 **/.mtj.tmp/
 
 # Package Files #
-**/*.jar
+#**/*.jar
 **/*.war
 **/*.nar
 **/*.ear

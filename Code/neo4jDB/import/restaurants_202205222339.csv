@@ -1,0 +1,138 @@
+id,restaurant_name,user_id,address_id,delivery
+1,Height's Cafe - Hotel Bangalore International,1,2093,yes
+2,Cobaja,2,27717,yes
+3,Nossa Goa,3,37849,yes
+4,China South,4,19833,yes
+5,Gobble Up Churros Cafe,5,17143,yes
+6,Ente Keralam,6,12366,yes
+7,Mirchi Bites- Spice Heaven,7,33600,yes
+8,Kaayal,8,34337,yes
+9,Dilli Dil Se,9,6385,yes
+10,Euki,10,36767,yes
+11,Cashmere Nites,11,1029,yes
+12,New Leaf Restaurant,12,9524,yes
+13,Homemade Food,13,36895,yes
+14,Delhi Highway,14,31478,yes
+15,The Twisted Desi,15,31536,yes
+16,Just Khao Suey,16,20012,yes
+17,Donne Biriyani Mane,17,30369,yes
+18,Shawarma Inc,18,32224,yes
+19,Tunday Kababi,19,7856,yes
+20,City Durbar,20,36011,yes
+21,1441 Pizzeria,21,29245,yes
+22,Indian Desi Momo,22,27103,yes
+23,Rajdhani Thali Restaurant,23,23983,yes
+24,Maraheb Restaurant,24,21803,yes
+25,Khyma Biryani,25,35650,yes
+26,Ammi's Biryani,26,11809,yes
+27,Marhaba,27,28762,yes
+28,Vanas,28,6172,yes
+29,Hotel Parampare,29,32836,yes
+30,Malabar Mandra,30,36183,yes
+31,Rasovara,31,12273,yes
+32,Swasthi Spice Restaurant,32,136,yes
+33,Chickpet Donne Biryani House,33,12499,yes
+34,Deccan Kitchen,34,5735,yes
+35,Sholay - The Barbeque,35,38333,yes
+36,Kuttanadu Family Restaurant,36,28994,yes
+37,Ute Food,37,32819,yes
+38,Lumbee Food,38,15472,yes
+39,Salvadoran Food,39,18795,yes
+40,Korean Food,40,37123,yes
+41,Colville Food,41,38634,yes
+42,Micronesian Food,42,2695,yes
+43,Cheyenne Food,43,25635,yes
+44,Chickasaw Food,44,1375,yes
+45,Potawatomi Food,45,12330,yes
+46,South American Food,46,18073,yes
+47,Pakistani Food,47,11374,yes
+48,Eskimo Food,48,1466,yes
+49,Polynesian Food,49,21223,yes
+50,Sioux Food,50,267,yes
+51,Menominee Food,51,16084,yes
+52,Venezuelan Food,52,18973,yes
+53,Iroquois Food,53,17604,yes
+54,Bolivian Food,54,9294,yes
+55,Yuman Food,55,2804,yes
+56,Fijian Food,56,1324,yes
+57,Navajo Food,57,20719,yes
+58,Cherokee Food,58,19146,yes
+59,Paraguayan Food,59,37237,yes
+61,Creek Food,61,22558,yes
+62,Taiwanese Food,62,22366,yes
+63,Pueblo Food,63,1209,yes
+64,Blackfeet Food,64,4320,yes
+65,Osage Food,65,23616,yes
+66,Ecuadorian Food,66,32230,yes
+67,Delaware Food,67,19408,yes
+68,Mexican Food,68,5957,yes
+69,White Food,69,29169,yes
+70,Guamanian Food,70,37867,yes
+71,Samoan Food,71,8450,yes
+72,Japanese Food,72,11386,yes
+73,Honduran Food,73,37824,yes
+74,Paiute Food,74,33919,yes
+75,Hmong Food,75,9702,yes
+76,Spaniard Food,76,13612,yes
+77,Vietnamese Food,77,32774,yes
+78,Thai Food,78,21134,yes
+79,Melanesian Food,79,39121,yes
+80,Tongan Food,80,4524,yes
+81,Shoshone Food,81,17427,yes
+82,Asian Indian Food,82,4173,yes
+83,Argentinian Food,83,4048,yes
+84,Crow Food,84,9991,yes
+85,Daltfresh,85,3424,yes
+86,Ronstring,86,12335,yes
+87,Prodder,87,15677,yes
+88,Stringtough,88,32980,yes
+89,Temp,89,34034,yes
+90,Tempsoft,90,28244,yes
+91,Wrapsafe,91,1683,yes
+92,Fintone,92,19221,yes
+93,Keylex,93,2861,yes
+94,Fintone,94,24279,yes
+95,Andalax,95,23371,yes
+96,Sonair,96,18480,yes
+97,Bytecard,97,11993,yes
+98,Otcom,98,3592,yes
+99,Rank,99,30896,yes
+100,It,100,14596,yes
+101,Kanlam,101,23251,no
+102,Flowdesk,102,21069,no
+103,Otcom,103,20633,no
+104,Mat Lam Tam,104,7811,no
+105,Tresom,105,11745,no
+106,Mat Lam Tam,106,16228,no
+107,Alphazap,107,7535,no
+108,Keylex,108,19086,no
+109,Holdlamis,109,9242,no
+110,Voyatouch,110,38763,no
+111,Matsoft,111,22442,no
+112,Y-find,112,27966,no
+114,Regrant,114,19195,no
+115,Shree Mandarathi Grand,115,2489,no
+116,Shanthi Sagar,116,16917,no
+117,South Grand,117,25256,no
+118,Kapoor's Cafe,118,29771,no
+119,SLV Corner Restaurant,119,22000,no
+120,Roti Ghar,120,33696,no
+121,Kadala Tarangaa,121,6790,no
+122,Pizza Hut,122,2185,no
+123,New Prashanth Hotel,123,13266,no
+124,Swadd Kitchen,124,9460,no
+125,Blue Berry Restaurant,125,26921,no
+127,Curry Flavours,127,23648,no
+128,Dosa Time,128,24760,no
+130,Cafe Treat - The Pride Hotel,130,21437,no
+131,Xpress Biryani,131,8913,no
+132,Kabab Magic,132,20452,no
+133,The Good Grain,133,2530,no
+134,The Brekkie Shop,134,15606,no
+135,Shaadi Ki Biryani,135,5404,no
+136,Qissa Khawani,136,35735,no
+137,Cambodian Food,137,12790,no
+138,Chamorro Food,138,33202,no
+140,Uruguayan Food,140,14422,no
+141,Puerto Rican Food,141,6026,no
+142,Aleut Food,142,22526,no
