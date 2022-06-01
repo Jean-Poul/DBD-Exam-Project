@@ -66,16 +66,6 @@ To be able to test our endpoints use the following link to view the documentatio
 We have also attached our Postman collection which can be found here:  
 [Postman collection](https://github.com/Jean-Poul/DBD-Exam-Project/tree/developer/Postman%20Collection)  
 
-### Mongo setup
-* To be able to use the courier service first setup the mongodb with 'location_2dsphere' through the mongosh terminal:
-
-* ```shell
-  use DBExamMongo
-  ```
-
-* ```shell
-  db.couriers.createIndex( { "location" : "2dsphere" } )
-  ```
 
 ### Executing program
     
@@ -88,8 +78,25 @@ We have also attached our Postman collection which can be found here:
 * ```shell
     run_containers.cmd
     ```  
+     or 
+* ```shell
+    ./run_containers.cmd
+    ```  
   
 * Be patient it might take a moment to start
+
+
+### Mongo setup
+* To be able to use the courier service first setup the mongodb with 'location_2dsphere' through the mongosh terminal:
+
+* ```shell
+  use DBExamMongo
+  ```
+
+* ```shell
+  db.couriers.createIndex( { "location" : "2dsphere" } )
+  ```
+
 
 ## Version History
 
