@@ -10,7 +10,10 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Magdalena Wawrzak, cph-mw216
   
 ## Introduction
-TODO MISSING STATEMENTS!   
+This project was developed in connection to Databases
+for Developers course at Copenhagen Business Academy as the final project of the course.
+The system is based on the ideology implemented in the JustEat platform. The system, hereinafter Food Delivery System, should provide the functionality for a customer of creating orders that contain items from a restaurant. Order should then be delivered by a courier.   
+  
 An explanation about our system development process can be found below:
 
 [Video link: ](URL MANGLER)  
@@ -53,8 +56,8 @@ The following is our architectural solution for the end product:
 * Scrum  
 * Trello  
      
-### Getting Started  
-TODO MISSING STATEMENTS!
+### Getting Started    
+In order to run this application it is required to have a container runtime installed and running. We recommend using Docker. 
      
 ### Documentation  
 To be able to test our endpoints use the following link to view the documentation for our endpoints.  
@@ -66,11 +69,16 @@ We have also attached our Postman collection which can be found here:
 ### Executing program
 TODO MISSING STATEMENTS!  
 * How to run the program
-* Step-by-step bullets
 
-```shell
-INSERT docker compose command here!
-```  
+* ```shell
+    cd DBD-Exam-Project\Code
+    ```  
+
+* ```shell
+    run_containers.cmd
+    ```  
+  
+* Be patient it might take a moment to start
 
 ## Version History
 
