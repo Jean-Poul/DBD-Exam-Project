@@ -152,7 +152,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n \"email\": \"ping@pong.com\",\r\n  \"password\": \"secretpassword\",\r\n  \"phone\": \"88998899\",\r\n  \"addressId\": 560,\r\n  \"firstName\": \"Donald\",\r\n  \"lastName\": \"Duck\"\r\n}",
+									"raw": "{\r\n \"email\": \"magda@mail.com\",\r\n  \"password\": \"password\",\r\n  \"phone\": \"88998899\",\r\n  \"addressId\": 560,\r\n  \"firstName\": \"Magda\",\r\n  \"lastName\": \"Duck\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -400,34 +400,6 @@
 					"name": "Orders",
 					"item": [
 						{
-							"name": "Save new Order",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"orderId\": 1027,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 11,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:9085/order",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "9085",
-									"path": [
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Get orders of a restaurant by restaurant's id",
 							"request": {
 								"method": "GET",
@@ -474,6 +446,34 @@
 											"key": "id",
 											"value": "1355"
 										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Send order with courier",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": 1000,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 15,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"order"
 									]
 								}
 							},
@@ -768,7 +768,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8066/restaurant/by-cityName?cityName=Søborg",
+							"raw": "http://localhost:8066/restaurant/by-cityName?cityName=Lyngby",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -781,7 +781,7 @@
 							"query": [
 								{
 									"key": "cityName",
-									"value": "Søborg"
+									"value": "Lyngby"
 								}
 							]
 						}
@@ -878,7 +878,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":5,\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676097, 12.568337] }\r\n}",
+							"raw": "{\r\n   \r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [56.633097, 12.563447] }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -940,7 +940,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":1,\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676095, 12.568337] }\r\n}",
+							"raw": "{\r\n  \r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676095, 12.568337] }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -948,7 +948,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/couriers/courierlocation/1",
+							"raw": "http://localhost:8081/couriers/courierlocation/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -957,14 +957,14 @@
 							"path": [
 								"couriers",
 								"courierlocation",
-								"1"
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "GetSaveOrder",
+					"name": "Get nearest courier",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -973,7 +973,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676097, 12.568337] }\r\n}",
+							"raw": "{\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [-79.986805, 33.7]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -981,7 +981,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/couriers/saveorder",
+							"raw": "http://localhost:8081/couriers/nearest",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -989,7 +989,7 @@
 							"port": "8081",
 							"path": [
 								"couriers",
-								"saveorder"
+								"nearest"
 							]
 						}
 					},
@@ -1002,7 +1002,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"log\": \"Test\"\r\n}\r\n",
+							"raw": "{\r\n    \"log\": \"Test\",\r\n    \"status\" : \"Tired\"\r\n\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1050,6 +1050,26 @@
 							"port": "8042",
 							"path": [
 								"log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Populate / update customers' locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/couriers/populate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"couriers",
+								"populate"
 							]
 						}
 					},
