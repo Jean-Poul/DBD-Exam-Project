@@ -1,6 +1,7 @@
 package db.exam.mongo.mongo_courier.controller;
 
 import db.exam.mongo.mongo_courier.model.Courier;
+import db.exam.mongo.mongo_courier.populate.Connection;
 import db.exam.mongo.mongo_courier.repository.CourierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.geo.Distance;
@@ -18,17 +19,25 @@ public class CourierRestController {
 
     @Autowired
     private CourierRepository courierRepository;
+    @Autowired
+    Connection conn;
 
     public CourierRestController(CourierRepository courierRepository) {
         this.courierRepository = courierRepository;
     }
 
-    @GetMapping("/saveorder")
+    @GetMapping("/nearest")
     @ResponseStatus(HttpStatus.OK)
     public String closestCourier(@RequestBody Point location) {
         Distance dist = new Distance(100000,Metrics.KILOMETERS);
         List<Courier> c = courierRepository.findByLocationNear(location, dist);
         return c.get(0).getId();
+    }
+
+    @GetMapping("/populate")
+    @ResponseStatus(HttpStatus.OK)
+    public String pupulateCouriers() {
+       return conn.populate_Couriers();
     }
 
 

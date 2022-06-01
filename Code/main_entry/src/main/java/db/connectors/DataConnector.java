@@ -21,7 +21,7 @@ public interface DataConnector {
 
     List<Order> getOrdersForRestaurant(int id) throws URISyntaxException;
 
-    int getNearestCourierId(double x, double y);
+    int getNearestCourierId(double x, double y) throws URISyntaxException;
 
     User login(UserRequest request) throws URISyntaxException;
 

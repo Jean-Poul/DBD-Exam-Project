@@ -20,10 +20,10 @@ import java.util.Set;
 @Component
 public class DataConnectorImpl implements DataConnector {
 
-    private final String DATA_SERVICE_URL = "http://localhost:9080/";
-    private final String RESTAURANT_SERVICE_URL = "http://localhost:8066/";
-    private final String COURIER_SERVICE_URL = "";
-    private final String LOGGING_SERVICE_URL = "";
+    private final String DATA_SERVICE_URL = "http://host.docker.internal:9080/";
+    private final String RESTAURANT_SERVICE_URL = "http://host.docker.internal:8066/";
+    private final String COURIER_SERVICE_URL = "http://host.docker.internal:8081/";
+    private final String LOGGING_SERVICE_URL = "http://host.docker.internal:8042/";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -121,9 +121,20 @@ public class DataConnectorImpl implements DataConnector {
     }
 
     @Override
-    public int getNearestCourierId(double x, double y) {
+    public int getNearestCourierId(double x, double y) throws URISyntaxException {
         //todo call MongoDB
-        return 3;
+
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(COURIER_SERVICE_URL + "couriers/nearest");
+        ResponseEntity<String> response = restTemplate.getForEntity(uri,String.class);
+        if (response != null) {
+            return Integer.parseInt(response.getBody());
+        } else {
+            throw new EntityNotFoundException("No couriers has been found");
+        }
+
     }
 
     @Override

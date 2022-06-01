@@ -53,7 +53,7 @@ public class RestaurantController {
     @GetMapping("/populate_db")
     String similarPopulate() {
         Driver driver = GraphDatabase
-                .driver("bolt://localhost:7687", AuthTokens.basic("neo4j", ""));
+                .driver("bolt://host.docker.internal:7687", AuthTokens.basic("neo4j", ""));
 
         Neo4jClient client = Neo4jClient.create(driver);
         try {
@@ -104,13 +104,13 @@ public class RestaurantController {
         }catch(Exception e){
             System.out.println(e);
         }
-        return "Database populated succesfully";
+        return "Database populated successfully";
     }
 
     @GetMapping("/get-similar-restaurants")
     Flux<RestaurantEntity> similarRestaurants(@RequestParam String id) {
             Driver driver = GraphDatabase
-                    .driver("bolt://localhost:7687", AuthTokens.basic("neo4j", ""));
+                    .driver("bolt://host.docker.internal:7687", AuthTokens.basic("neo4j", ""));
 
             Neo4jClient client = Neo4jClient.create(driver);
             try {

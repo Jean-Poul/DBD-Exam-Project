@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface CourierRepo extends CrudRepository<Courier, Integer> {
     @Query("SELECT c from Courier c")
-    List<CourierDTO> getAllCouriers();
+    List<Courier> getAllCouriers();
 
-    CourierDTO getCourierById(int id) throws Exception;
+
 }
