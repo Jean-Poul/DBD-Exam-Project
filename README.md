@@ -75,7 +75,7 @@ INSERT docker compose command here!
 ## Version History
 
 * 1.0
-    * Main branch release
+    * [Main branch release](https://github.com/Jean-Poul/DBD-Exam-Project/tree/main)
 * 0.2
     * Various bug fixes and optimizations
     * See [developer branch commits](https://github.com/Jean-Poul/DBD-Exam-Project/commits/developer)
