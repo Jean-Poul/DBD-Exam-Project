@@ -67,7 +67,7 @@ We have also attached our Postman collection which can be found here:
 [Postman collection](https://github.com/Jean-Poul/DBD-Exam-Project/tree/developer/Postman%20Collection)  
  
 ### Executing program
-TODO MISSING STATEMENTS!  
+    
 * How to run the program
 
 * ```shell
