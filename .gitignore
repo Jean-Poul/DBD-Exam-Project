@@ -3,10 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,netbeans,intellij,node,visualstudiocode,windows,macos,linux
 
 ### Ignore application properties so each developer can set his/hers own:
-**/src/main/resources/application.properties
 
-Billeder/
-Drawings/
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -118,6 +115,13 @@ Drawings/
 # https://plugins.jetbrains.com/plugin/12206-codestream
 **/.idea/codestream.xml
 
+#Data
+/Code/volumes/neo4jDB/data
+/Code/volumes/postgresDB/db
+/Code/volumes/MongoData
+/Code/volumes/logs
+/Code/volumes/cache/dump.rdb
+
 ### Java ###
 # Compiled class file
 **/*.class
@@ -132,7 +136,7 @@ Drawings/
 **/.mtj.tmp/
 
 # Package Files #
-**/*.jar
+#**/*.jar
 **/*.war
 **/*.nar
 **/*.ear

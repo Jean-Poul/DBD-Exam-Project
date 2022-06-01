@@ -1,0 +1,1420 @@
+"id","city","commune","region","zipcode"
+1,Nykøbing M,Morsø Kommune,Nordjylland,7900
+2,Erslev,Morsø Kommune,Nordjylland,7950
+3,Karby,Morsø Kommune,Nordjylland,7960
+4,Redsted M,Morsø Kommune,Nordjylland,7970
+5,Vils,Morsø Kommune,Nordjylland,7980
+6,Øster Assels,Morsø Kommune,Nordjylland,7990
+7,Thisted,Thisted Kommune,Nordjylland,7700
+8,Hanstholm,Thisted Kommune,Nordjylland,7730
+9,Frøstrup,Thisted Kommune,Nordjylland,7741
+10,Vesløs,Thisted Kommune,Nordjylland,7742
+11,Snedsted,Thisted Kommune,Nordjylland,7752
+12,Bedsted Thy,Thisted Kommune,Nordjylland,7755
+13,Hurup Thy,Thisted Kommune,Nordjylland,7760
+14,Vestervig,Thisted Kommune,Nordjylland,7770
+15,Hjallerup,Brønderslev Kommune,Nordjylland,9320
+16,Dronninglund,Brønderslev Kommune,Nordjylland,9330
+17,Asaa,Brønderslev Kommune,Nordjylland,9340
+18,Dybvad,Brønderslev Kommune,Nordjylland,9352
+19,Hals,Brønderslev Kommune,Nordjylland,9370
+20,Tylstrup,Brønderslev Kommune,Nordjylland,9382
+21,Aabybro,Brønderslev Kommune,Nordjylland,9440
+22,Løkken,Brønderslev Kommune,Nordjylland,9480
+23,Brønderslev,Brønderslev Kommune,Nordjylland,9700
+24,Jerslev J,Brønderslev Kommune,Nordjylland,9740
+25,Østervrå,Brønderslev Kommune,Nordjylland,9750
+26,Vrå,Brønderslev Kommune,Nordjylland,9760
+27,Sæby,Frederikshavn Kommune,Nordjylland,9300
+28,Dronninglund,Frederikshavn Kommune,Nordjylland,9330
+29,Asaa,Frederikshavn Kommune,Nordjylland,9340
+30,Dybvad,Frederikshavn Kommune,Nordjylland,9352
+31,Østervrå,Frederikshavn Kommune,Nordjylland,9750
+32,Tårs,Frederikshavn Kommune,Nordjylland,9830
+33,Sindal,Frederikshavn Kommune,Nordjylland,9870
+34,Bindslev,Frederikshavn Kommune,Nordjylland,9881
+35,Frederikshavn,Frederikshavn Kommune,Nordjylland,9900
+36,Strandby,Frederikshavn Kommune,Nordjylland,9970
+37,Jerup,Frederikshavn Kommune,Nordjylland,9981
+38,Ålbæk,Frederikshavn Kommune,Nordjylland,9982
+39,Skagen,Frederikshavn Kommune,Nordjylland,9990
+40,Nibe,Vesthimmerlands Kommune,Nordjylland,9240
+41,Suldrup,Vesthimmerlands Kommune,Nordjylland,9541
+42,Aars,Vesthimmerlands Kommune,Nordjylland,9600
+43,Nørager,Vesthimmerlands Kommune,Nordjylland,9610
+44,Aalestrup,Vesthimmerlands Kommune,Nordjylland,9620
+45,Gedsted,Vesthimmerlands Kommune,Nordjylland,9631
+46,Farsø,Vesthimmerlands Kommune,Nordjylland,9640
+47,Løgstør,Vesthimmerlands Kommune,Nordjylland,9670
+48,Ranum,Vesthimmerlands Kommune,Nordjylland,9681
+49,Læsø,Læsø Kommune,Nordjylland,9940
+50,Svenstrup J,Rebild Kommune,Nordjylland,9230
+51,Nibe,Rebild Kommune,Nordjylland,9240
+52,Gistrup,Rebild Kommune,Nordjylland,9260
+53,Kongerslev,Rebild Kommune,Nordjylland,9293
+54,Hobro,Rebild Kommune,Nordjylland,9500
+55,Arden,Rebild Kommune,Nordjylland,9510
+56,Skørping,Rebild Kommune,Nordjylland,9520
+57,Støvring,Rebild Kommune,Nordjylland,9530
+58,Suldrup,Rebild Kommune,Nordjylland,9541
+59,Hadsund,Rebild Kommune,Nordjylland,9560
+60,Bælum,Rebild Kommune,Nordjylland,9574
+61,Terndrup,Rebild Kommune,Nordjylland,9575
+62,Aars,Rebild Kommune,Nordjylland,9600
+63,Nørager,Rebild Kommune,Nordjylland,9610
+64,Aalestrup,Rebild Kommune,Nordjylland,9620
+65,Havndal,Mariagerfjord Kommune,Nordjylland,8970
+66,Fårup,Mariagerfjord Kommune,Nordjylland,8990
+67,Hobro,Mariagerfjord Kommune,Nordjylland,9500
+68,Arden,Mariagerfjord Kommune,Nordjylland,9510
+69,Mariager,Mariagerfjord Kommune,Nordjylland,9550
+70,Hadsund,Mariagerfjord Kommune,Nordjylland,9560
+71,Aalestrup,Mariagerfjord Kommune,Nordjylland,9620
+72,Møldrup,Mariagerfjord Kommune,Nordjylland,9632
+73,Sulsted,Jammerbugt Kommune,Nordjylland,9381
+74,Tylstrup,Jammerbugt Kommune,Nordjylland,9382
+75,Vadum,Jammerbugt Kommune,Nordjylland,9430
+76,Aabybro,Jammerbugt Kommune,Nordjylland,9440
+77,Brovst,Jammerbugt Kommune,Nordjylland,9460
+78,Løkken,Jammerbugt Kommune,Nordjylland,9480
+79,Pandrup,Jammerbugt Kommune,Nordjylland,9490
+80,Blokhus,Jammerbugt Kommune,Nordjylland,9492
+81,Saltum,Jammerbugt Kommune,Nordjylland,9493
+82,Løgstør,Jammerbugt Kommune,Nordjylland,9670
+83,Fjerritslev,Jammerbugt Kommune,Nordjylland,9690
+84,Brønderslev,Jammerbugt Kommune,Nordjylland,9700
+85,Aalborg,Aalborg Kommune,Nordjylland,9000
+86,Aalborg SV,Aalborg Kommune,Nordjylland,9200
+87,Aalborg SØ,Aalborg Kommune,Nordjylland,9210
+88,Aalborg Øst,Aalborg Kommune,Nordjylland,9220
+89,Svenstrup J,Aalborg Kommune,Nordjylland,9230
+90,Nibe,Aalborg Kommune,Nordjylland,9240
+91,Gistrup,Aalborg Kommune,Nordjylland,9260
+92,Klarup,Aalborg Kommune,Nordjylland,9270
+93,Storvorde,Aalborg Kommune,Nordjylland,9280
+94,Kongerslev,Aalborg Kommune,Nordjylland,9293
+95,Vodskov,Aalborg Kommune,Nordjylland,9310
+96,Hjallerup,Aalborg Kommune,Nordjylland,9320
+97,Gandrup,Aalborg Kommune,Nordjylland,9362
+98,Hals,Aalborg Kommune,Nordjylland,9370
+99,Vestbjerg,Aalborg Kommune,Nordjylland,9380
+100,Sulsted,Aalborg Kommune,Nordjylland,9381
+101,Tylstrup,Aalborg Kommune,Nordjylland,9382
+102,Nørresundby,Aalborg Kommune,Nordjylland,9400
+103,Vadum,Aalborg Kommune,Nordjylland,9430
+104,Aabybro,Aalborg Kommune,Nordjylland,9440
+105,Støvring,Aalborg Kommune,Nordjylland,9530
+106,Løkken,Hjørring Kommune,Nordjylland,9480
+107,Jerslev J,Hjørring Kommune,Nordjylland,9740
+108,Østervrå,Hjørring Kommune,Nordjylland,9750
+109,Vrå,Hjørring Kommune,Nordjylland,9760
+110,Hjørring,Hjørring Kommune,Nordjylland,9800
+111,Tårs,Hjørring Kommune,Nordjylland,9830
+112,Hirtshals,Hjørring Kommune,Nordjylland,9850
+113,Sindal,Hjørring Kommune,Nordjylland,9870
+114,Bindslev,Hjørring Kommune,Nordjylland,9881
+115,Frederikshavn,Hjørring Kommune,Nordjylland,9900
+116,Ålbæk,Hjørring Kommune,Nordjylland,9982
+117,Bryrup,Horsens Kommune,Midtjylland,8654
+118,Skanderborg,Horsens Kommune,Midtjylland,8660
+119,Ry,Horsens Kommune,Midtjylland,8680
+120,Horsens,Horsens Kommune,Midtjylland,8700
+121,Hovedgård,Horsens Kommune,Midtjylland,8732
+122,Brædstrup,Horsens Kommune,Midtjylland,8740
+123,Gedved,Horsens Kommune,Midtjylland,8751
+124,Østbirk,Horsens Kommune,Midtjylland,8752
+125,Flemming,Horsens Kommune,Midtjylland,8762
+126,Klovborg,Horsens Kommune,Midtjylland,8765
+127,Stenderup,Horsens Kommune,Midtjylland,8781
+128,Hornsyld,Horsens Kommune,Midtjylland,8783
+129,Kibæk,Herning Kommune,Midtjylland,6933
+130,Ørnhøj,Herning Kommune,Midtjylland,6973
+131,Ulfborg,Herning Kommune,Midtjylland,6990
+132,Sønder Omme,Herning Kommune,Midtjylland,7260
+133,Stakroge,Herning Kommune,Midtjylland,7270
+134,Sønder Felding,Herning Kommune,Midtjylland,7280
+135,Brande,Herning Kommune,Midtjylland,7330
+136,Herning,Herning Kommune,Midtjylland,7400
+137,Sunds,Herning Kommune,Midtjylland,7451
+138,Karup J,Herning Kommune,Midtjylland,7470
+139,Vildbjerg,Herning Kommune,Midtjylland,7480
+140,Aulum,Herning Kommune,Midtjylland,7490
+141,Holstebro,Herning Kommune,Midtjylland,7500
+142,Haderup,Herning Kommune,Midtjylland,7540
+143,Sørvad,Herning Kommune,Midtjylland,7550
+144,Vinderup,Herning Kommune,Midtjylland,7830
+145,Ulfborg,Holstebro Kommune,Midtjylland,6990
+146,Holstebro,Holstebro Kommune,Midtjylland,7500
+147,Haderup,Holstebro Kommune,Midtjylland,7540
+148,Hjerm,Holstebro Kommune,Midtjylland,7560
+149,Vemb,Holstebro Kommune,Midtjylland,7570
+150,Struer,Holstebro Kommune,Midtjylland,7600
+151,Skive,Holstebro Kommune,Midtjylland,7800
+152,Vinderup,Holstebro Kommune,Midtjylland,7830
+153,Ulfborg,Lemvig Kommune,Midtjylland,6990
+154,Vemb,Lemvig Kommune,Midtjylland,7570
+155,Struer,Lemvig Kommune,Midtjylland,7600
+156,Lemvig,Lemvig Kommune,Midtjylland,7620
+157,Bøvlingbjerg,Lemvig Kommune,Midtjylland,7650
+158,Bækmarksbro,Lemvig Kommune,Midtjylland,7660
+159,Harboøre,Lemvig Kommune,Midtjylland,7673
+160,Thyborøn,Lemvig Kommune,Midtjylland,7680
+161,Holstebro,Struer Kommune,Midtjylland,7500
+162,Hjerm,Struer Kommune,Midtjylland,7560
+163,Struer,Struer Kommune,Midtjylland,7600
+164,Bækmarksbro,Struer Kommune,Midtjylland,7660
+165,Hurup Thy,Struer Kommune,Midtjylland,7760
+166,Thyholm,Struer Kommune,Midtjylland,7790
+167,Vinderup,Struer Kommune,Midtjylland,7830
+168,Ebeltoft,Syddjurs Kommune,Midtjylland,8400
+169,Rønde,Syddjurs Kommune,Midtjylland,8410
+170,Knebel,Syddjurs Kommune,Midtjylland,8420
+171,Balle,Syddjurs Kommune,Midtjylland,8444
+172,Hornslet,Syddjurs Kommune,Midtjylland,8543
+173,Mørke,Syddjurs Kommune,Midtjylland,8544
+174,Ryomgård,Syddjurs Kommune,Midtjylland,8550
+175,Kolind,Syddjurs Kommune,Midtjylland,8560
+176,Trustrup,Syddjurs Kommune,Midtjylland,8570
+177,Nimtofte,Syddjurs Kommune,Midtjylland,8581
+178,Auning,Syddjurs Kommune,Midtjylland,8963
+179,Balle,Norddjurs Kommune,Midtjylland,8444
+180,Grenaa,Norddjurs Kommune,Midtjylland,8500
+181,Ryomgård,Norddjurs Kommune,Midtjylland,8550
+182,Kolind,Norddjurs Kommune,Midtjylland,8560
+183,Trustrup,Norddjurs Kommune,Midtjylland,8570
+184,Nimtofte,Norddjurs Kommune,Midtjylland,8581
+185,Glesborg,Norddjurs Kommune,Midtjylland,8585
+186,Ørum Djurs,Norddjurs Kommune,Midtjylland,8586
+187,Anholt,Norddjurs Kommune,Midtjylland,8592
+188,Ørsted,Norddjurs Kommune,Midtjylland,8950
+189,Allingåbro,Norddjurs Kommune,Midtjylland,8961
+190,Auning,Norddjurs Kommune,Midtjylland,8963
+191,Hadsten,Favrskov Kommune,Midtjylland,8370
+192,Trige,Favrskov Kommune,Midtjylland,8380
+193,Hinnerup,Favrskov Kommune,Midtjylland,8382
+194,Hammel,Favrskov Kommune,Midtjylland,8450
+195,Sabro,Favrskov Kommune,Midtjylland,8471
+196,Sporup,Favrskov Kommune,Midtjylland,8472
+197,Sorring,Favrskov Kommune,Midtjylland,8641
+198,Bjerringbro,Favrskov Kommune,Midtjylland,8850
+199,Ulstrup,Favrskov Kommune,Midtjylland,8860
+200,Langå,Favrskov Kommune,Midtjylland,8870
+201,Thorsø,Favrskov Kommune,Midtjylland,8881
+202,Fårvang,Favrskov Kommune,Midtjylland,8882
+203,Randers SV,Favrskov Kommune,Midtjylland,8940
+204,Randers SØ,Favrskov Kommune,Midtjylland,8960
+205,Odder,Odder Kommune,Midtjylland,8300
+206,Malling,Odder Kommune,Midtjylland,8340
+207,Hundslund,Odder Kommune,Midtjylland,8350
+208,Skanderborg,Odder Kommune,Midtjylland,8660
+209,Ulstrup,Randers Kommune,Midtjylland,8860
+210,Langå,Randers Kommune,Midtjylland,8870
+211,Randers C,Randers Kommune,Midtjylland,8900
+212,Randers NV,Randers Kommune,Midtjylland,8920
+213,Randers NØ,Randers Kommune,Midtjylland,8930
+214,Randers SV,Randers Kommune,Midtjylland,8940
+215,Randers SØ,Randers Kommune,Midtjylland,8960
+216,Havndal,Randers Kommune,Midtjylland,8970
+217,Spentrup,Randers Kommune,Midtjylland,8981
+218,Gjerlev J,Randers Kommune,Midtjylland,8983
+219,Fårup,Randers Kommune,Midtjylland,8990
+220,Mariager,Randers Kommune,Midtjylland,9550
+221,Hampen,Silkeborg Kommune,Midtjylland,7362
+222,Bording,Silkeborg Kommune,Midtjylland,7441
+223,Engesvang,Silkeborg Kommune,Midtjylland,7442
+224,Karup J,Silkeborg Kommune,Midtjylland,7470
+225,Hammel,Silkeborg Kommune,Midtjylland,8450
+226,Sporup,Silkeborg Kommune,Midtjylland,8472
+227,Silkeborg,Silkeborg Kommune,Midtjylland,8600
+228,Kjellerup,Silkeborg Kommune,Midtjylland,8620
+229,Lemming,Silkeborg Kommune,Midtjylland,8632
+230,Sorring,Silkeborg Kommune,Midtjylland,8641
+231,Ans By,Silkeborg Kommune,Midtjylland,8643
+232,Them,Silkeborg Kommune,Midtjylland,8653
+233,Bryrup,Silkeborg Kommune,Midtjylland,8654
+234,Ry,Silkeborg Kommune,Midtjylland,8680
+235,Brædstrup,Silkeborg Kommune,Midtjylland,8740
+236,Viborg,Silkeborg Kommune,Midtjylland,8800
+237,Rødkærsbro,Silkeborg Kommune,Midtjylland,8840
+238,Thorsø,Silkeborg Kommune,Midtjylland,8881
+239,Fårvang,Silkeborg Kommune,Midtjylland,8882
+240,Gjern,Silkeborg Kommune,Midtjylland,8883
+241,Samsø,Samsø Kommune,Midtjylland,8305
+242,Hørning,Skanderborg Kommune,Midtjylland,8362
+243,Galten,Skanderborg Kommune,Midtjylland,8464
+244,Sabro,Skanderborg Kommune,Midtjylland,8471
+245,Sporup,Skanderborg Kommune,Midtjylland,8472
+246,Silkeborg,Skanderborg Kommune,Midtjylland,8600
+247,Skanderborg,Skanderborg Kommune,Midtjylland,8660
+248,Låsby,Skanderborg Kommune,Midtjylland,8670
+249,Ry,Skanderborg Kommune,Midtjylland,8680
+250,Gedved,Skanderborg Kommune,Midtjylland,8751
+251,Aarhus C,Aarhus Kommune,Midtjylland,8000
+252,Aarhus N,Aarhus Kommune,Midtjylland,8200
+253,Aarhus V,Aarhus Kommune,Midtjylland,8210
+254,Brabrand,Aarhus Kommune,Midtjylland,8220
+255,Åbyhøj,Aarhus Kommune,Midtjylland,8230
+256,Risskov,Aarhus Kommune,Midtjylland,8240
+257,Risskov Ø,Aarhus Kommune,Midtjylland,8245
+258,Egå,Aarhus Kommune,Midtjylland,8250
+259,Viby J,Aarhus Kommune,Midtjylland,8260
+260,Højbjerg,Aarhus Kommune,Midtjylland,8270
+261,Odder,Aarhus Kommune,Midtjylland,8300
+262,Tranbjerg J,Aarhus Kommune,Midtjylland,8310
+263,Mårslet,Aarhus Kommune,Midtjylland,8320
+264,Beder,Aarhus Kommune,Midtjylland,8330
+265,Malling,Aarhus Kommune,Midtjylland,8340
+266,Solbjerg,Aarhus Kommune,Midtjylland,8355
+267,Hasselager,Aarhus Kommune,Midtjylland,8361
+268,Hørning,Aarhus Kommune,Midtjylland,8362
+269,Trige,Aarhus Kommune,Midtjylland,8380
+270,Tilst,Aarhus Kommune,Midtjylland,8381
+271,Hinnerup,Aarhus Kommune,Midtjylland,8382
+272,Harlev J,Aarhus Kommune,Midtjylland,8462
+273,Galten,Aarhus Kommune,Midtjylland,8464
+274,Sabro,Aarhus Kommune,Midtjylland,8471
+275,Lystrup,Aarhus Kommune,Midtjylland,8520
+276,Hjortshøj,Aarhus Kommune,Midtjylland,8530
+277,Skødstrup,Aarhus Kommune,Midtjylland,8541
+278,Hornslet,Aarhus Kommune,Midtjylland,8543
+279,Skanderborg,Aarhus Kommune,Midtjylland,8660
+280,Tørring,Ikast-Brande Kommune,Midtjylland,7160
+281,Brande,Ikast-Brande Kommune,Midtjylland,7330
+282,Ejstrupholm,Ikast-Brande Kommune,Midtjylland,7361
+283,Hampen,Ikast-Brande Kommune,Midtjylland,7362
+284,Herning,Ikast-Brande Kommune,Midtjylland,7400
+285,Ikast,Ikast-Brande Kommune,Midtjylland,7430
+286,Bording,Ikast-Brande Kommune,Midtjylland,7441
+287,Engesvang,Ikast-Brande Kommune,Midtjylland,7442
+288,Sunds,Ikast-Brande Kommune,Midtjylland,7451
+289,Silkeborg,Ikast-Brande Kommune,Midtjylland,8600
+290,Bryrup,Ikast-Brande Kommune,Midtjylland,8654
+291,Klovborg,Ikast-Brande Kommune,Midtjylland,8765
+292,Nørre Snede,Ikast-Brande Kommune,Midtjylland,8766
+293,Nørre Nebel,Ringkøbing-Skjern Kommune,Midtjylland,6830
+294,Ølgod,Ringkøbing-Skjern Kommune,Midtjylland,6870
+295,Tarm,Ringkøbing-Skjern Kommune,Midtjylland,6880
+296,Hemmet,Ringkøbing-Skjern Kommune,Midtjylland,6893
+297,Skjern,Ringkøbing-Skjern Kommune,Midtjylland,6900
+298,Videbæk,Ringkøbing-Skjern Kommune,Midtjylland,6920
+299,Kibæk,Ringkøbing-Skjern Kommune,Midtjylland,6933
+300,Lem St,Ringkøbing-Skjern Kommune,Midtjylland,6940
+301,Ringkøbing,Ringkøbing-Skjern Kommune,Midtjylland,6950
+302,Hvide Sande,Ringkøbing-Skjern Kommune,Midtjylland,6960
+303,Spjald,Ringkøbing-Skjern Kommune,Midtjylland,6971
+304,Ørnhøj,Ringkøbing-Skjern Kommune,Midtjylland,6973
+305,Tim,Ringkøbing-Skjern Kommune,Midtjylland,6980
+306,Ulfborg,Ringkøbing-Skjern Kommune,Midtjylland,6990
+307,Stakroge,Ringkøbing-Skjern Kommune,Midtjylland,7270
+308,Sønder Felding,Ringkøbing-Skjern Kommune,Midtjylland,7280
+309,Herning,Ringkøbing-Skjern Kommune,Midtjylland,7400
+310,Vildbjerg,Ringkøbing-Skjern Kommune,Midtjylland,7480
+311,Vejle,Hedensted Kommune,Midtjylland,7100
+312,Vejle Øst,Hedensted Kommune,Midtjylland,7120
+313,Juelsminde,Hedensted Kommune,Midtjylland,7130
+314,Stouby,Hedensted Kommune,Midtjylland,7140
+315,Barrit,Hedensted Kommune,Midtjylland,7150
+316,Tørring,Hedensted Kommune,Midtjylland,7160
+317,Uldum,Hedensted Kommune,Midtjylland,7171
+318,Give,Hedensted Kommune,Midtjylland,7323
+319,Horsens,Hedensted Kommune,Midtjylland,8700
+320,Daugård,Hedensted Kommune,Midtjylland,8721
+321,Hedensted,Hedensted Kommune,Midtjylland,8722
+322,Løsning,Hedensted Kommune,Midtjylland,8723
+323,Flemming,Hedensted Kommune,Midtjylland,8762
+324,Rask Mølle,Hedensted Kommune,Midtjylland,8763
+325,Nørre Snede,Hedensted Kommune,Midtjylland,8766
+326,Stenderup,Hedensted Kommune,Midtjylland,8781
+327,Hornsyld,Hedensted Kommune,Midtjylland,8783
+328,Skive,Skive Kommune,Midtjylland,7800
+329,Vinderup,Skive Kommune,Midtjylland,7830
+330,Højslev,Skive Kommune,Midtjylland,7840
+331,Spøttrup,Skive Kommune,Midtjylland,7860
+332,Roslev,Skive Kommune,Midtjylland,7870
+333,Fur,Skive Kommune,Midtjylland,7884
+334,Karup J,Viborg Kommune,Midtjylland,7470
+335,Haderup,Viborg Kommune,Midtjylland,7540
+336,Skive,Viborg Kommune,Midtjylland,7800
+337,Højslev,Viborg Kommune,Midtjylland,7840
+338,Stoholm Jyll,Viborg Kommune,Midtjylland,7850
+339,Kjellerup,Viborg Kommune,Midtjylland,8620
+340,Ans By,Viborg Kommune,Midtjylland,8643
+341,Viborg,Viborg Kommune,Midtjylland,8800
+342,Tjele,Viborg Kommune,Midtjylland,8830
+343,Løgstrup,Viborg Kommune,Midtjylland,8831
+344,Skals,Viborg Kommune,Midtjylland,8832
+345,Rødkærsbro,Viborg Kommune,Midtjylland,8840
+346,Bjerringbro,Viborg Kommune,Midtjylland,8850
+347,Ulstrup,Viborg Kommune,Midtjylland,8860
+348,Hobro,Viborg Kommune,Midtjylland,9500
+349,Aalestrup,Viborg Kommune,Midtjylland,9620
+350,Gedsted,Viborg Kommune,Midtjylland,9631
+351,Møldrup,Viborg Kommune,Midtjylland,9632
+352,Harndrup,Middelfart Kommune,Syddanmark,5463
+353,Brenderup Fyn,Middelfart Kommune,Syddanmark,5464
+354,Asperup,Middelfart Kommune,Syddanmark,5466
+355,Middelfart,Middelfart Kommune,Syddanmark,5500
+356,Aarup,Middelfart Kommune,Syddanmark,5560
+357,Nørre Aaby,Middelfart Kommune,Syddanmark,5580
+358,Gelsted,Middelfart Kommune,Syddanmark,5591
+359,Ejby,Middelfart Kommune,Syddanmark,5592
+360,Vissenbjerg,Assens Kommune,Syddanmark,5492
+361,Aarup,Assens Kommune,Syddanmark,5560
+362,Assens,Assens Kommune,Syddanmark,5610
+363,Glamsbjerg,Assens Kommune,Syddanmark,5620
+364,Ebberup,Assens Kommune,Syddanmark,5631
+365,Millinge,Assens Kommune,Syddanmark,5642
+366,Haarby,Assens Kommune,Syddanmark,5683
+367,Tommerup,Assens Kommune,Syddanmark,5690
+368,Langeskov,Faaborg-Midtfyn Kommune,Syddanmark,5550
+369,Faaborg,Faaborg-Midtfyn Kommune,Syddanmark,5600
+370,Millinge,Faaborg-Midtfyn Kommune,Syddanmark,5642
+371,Broby,Faaborg-Midtfyn Kommune,Syddanmark,5672
+372,Ringe,Faaborg-Midtfyn Kommune,Syddanmark,5750
+373,Vester Skerninge,Faaborg-Midtfyn Kommune,Syddanmark,5762
+374,Stenstrup,Faaborg-Midtfyn Kommune,Syddanmark,5771
+375,Kværndrup,Faaborg-Midtfyn Kommune,Syddanmark,5772
+376,Årslev,Faaborg-Midtfyn Kommune,Syddanmark,5792
+377,Ørbæk,Faaborg-Midtfyn Kommune,Syddanmark,5853
+378,Gislev,Faaborg-Midtfyn Kommune,Syddanmark,5854
+379,Ryslinge,Faaborg-Midtfyn Kommune,Syddanmark,5856
+380,Ferritslev Fyn,Faaborg-Midtfyn Kommune,Syddanmark,5863
+381,Marslev,Kerteminde Kommune,Syddanmark,5290
+382,Kerteminde,Kerteminde Kommune,Syddanmark,5300
+383,Munkebo,Kerteminde Kommune,Syddanmark,5330
+384,Rynkeby,Kerteminde Kommune,Syddanmark,5350
+385,Mesinge,Kerteminde Kommune,Syddanmark,5370
+386,Dalby,Kerteminde Kommune,Syddanmark,5380
+387,Martofte,Kerteminde Kommune,Syddanmark,5390
+388,Ullerslev,Kerteminde Kommune,Syddanmark,5540
+389,Langeskov,Kerteminde Kommune,Syddanmark,5550
+390,Ferritslev Fyn,Kerteminde Kommune,Syddanmark,5863
+391,Ullerslev,Nyborg Kommune,Syddanmark,5540
+392,Langeskov,Nyborg Kommune,Syddanmark,5550
+393,Nyborg,Nyborg Kommune,Syddanmark,5800
+394,Ørbæk,Nyborg Kommune,Syddanmark,5853
+395,Frørup,Nyborg Kommune,Syddanmark,5871
+396,Hesselager,Nyborg Kommune,Syddanmark,5874
+397,Odense C,Odense Kommune,Syddanmark,5000
+398,Odense V,Odense Kommune,Syddanmark,5200
+399,Odense NV,Odense Kommune,Syddanmark,5210
+400,Odense SØ,Odense Kommune,Syddanmark,5220
+401,Odense M,Odense Kommune,Syddanmark,5230
+402,Odense NØ,Odense Kommune,Syddanmark,5240
+403,Odense SV,Odense Kommune,Syddanmark,5250
+404,Odense S,Odense Kommune,Syddanmark,5260
+405,Odense N,Odense Kommune,Syddanmark,5270
+406,Agedrup,Odense Kommune,Syddanmark,5320
+407,Munkebo,Odense Kommune,Syddanmark,5330
+408,Blommenslyst,Odense Kommune,Syddanmark,5491
+409,Vissenbjerg,Odense Kommune,Syddanmark,5492
+410,Svendborg,Svendborg Kommune,Syddanmark,5700
+411,Vester Skerninge,Svendborg Kommune,Syddanmark,5762
+412,Stenstrup,Svendborg Kommune,Syddanmark,5771
+413,Kværndrup,Svendborg Kommune,Syddanmark,5772
+414,Gislev,Svendborg Kommune,Syddanmark,5854
+415,Hesselager,Svendborg Kommune,Syddanmark,5874
+416,Skårup Fyn,Svendborg Kommune,Syddanmark,5881
+417,Vejstrup,Svendborg Kommune,Syddanmark,5882
+418,Oure,Svendborg Kommune,Syddanmark,5883
+419,Gudme,Svendborg Kommune,Syddanmark,5884
+420,Gudbjerg Sydfyn,Svendborg Kommune,Syddanmark,5892
+421,Odense N,Nordfyns Kommune,Syddanmark,5270
+422,Bogense,Nordfyns Kommune,Syddanmark,5400
+423,Otterup,Nordfyns Kommune,Syddanmark,5450
+424,Morud,Nordfyns Kommune,Syddanmark,5462
+425,Søndersø,Nordfyns Kommune,Syddanmark,5471
+426,Veflinge,Nordfyns Kommune,Syddanmark,5474
+427,Skamby,Nordfyns Kommune,Syddanmark,5485
+428,Blommenslyst,Nordfyns Kommune,Syddanmark,5491
+429,Vissenbjerg,Nordfyns Kommune,Syddanmark,5492
+430,Aarup,Nordfyns Kommune,Syddanmark,5560
+431,Rudkøbing,Langeland Kommune,Syddanmark,5900
+432,Humble,Langeland Kommune,Syddanmark,5932
+433,Bagenkop,Langeland Kommune,Syddanmark,5935
+434,Tranekær,Langeland Kommune,Syddanmark,5953
+435,Marstal,Ærø Kommune,Syddanmark,5960
+436,Ærøskøbing,Ærø Kommune,Syddanmark,5970
+437,Søby Ærø,Ærø Kommune,Syddanmark,5985
+438,Christiansfeld,Haderslev Kommune,Syddanmark,6070
+439,Hejls,Haderslev Kommune,Syddanmark,6094
+440,Haderslev,Haderslev Kommune,Syddanmark,6100
+441,Vojens,Haderslev Kommune,Syddanmark,6500
+442,Gram,Haderslev Kommune,Syddanmark,6510
+443,Toftlund,Haderslev Kommune,Syddanmark,6520
+444,Agerskov,Haderslev Kommune,Syddanmark,6534
+445,Bevtoft,Haderslev Kommune,Syddanmark,6541
+446,Sommersted,Haderslev Kommune,Syddanmark,6560
+447,Rødding,Haderslev Kommune,Syddanmark,6630
+448,Vorbasse,Billund Kommune,Syddanmark,6623
+449,Hovborg,Billund Kommune,Syddanmark,6682
+450,Ansager,Billund Kommune,Syddanmark,6823
+451,Billund,Billund Kommune,Syddanmark,7190
+452,Grindsted,Billund Kommune,Syddanmark,7200
+453,Hejnsvig,Billund Kommune,Syddanmark,7250
+454,Sønder Omme,Billund Kommune,Syddanmark,7260
+455,Stakroge,Billund Kommune,Syddanmark,7270
+456,Gråsten,Sønderborg Kommune,Syddanmark,6300
+457,Broager,Sønderborg Kommune,Syddanmark,6310
+458,Egernsund,Sønderborg Kommune,Syddanmark,6320
+459,Sønderborg,Sønderborg Kommune,Syddanmark,6400
+460,Nordborg,Sønderborg Kommune,Syddanmark,6430
+461,Augustenborg,Sønderborg Kommune,Syddanmark,6440
+462,Sydals,Sønderborg Kommune,Syddanmark,6470
+463,Løgumkloster,Tønder Kommune,Syddanmark,6240
+464,Bredebro,Tønder Kommune,Syddanmark,6261
+465,Tønder,Tønder Kommune,Syddanmark,6270
+466,Højer,Tønder Kommune,Syddanmark,6280
+467,Toftlund,Tønder Kommune,Syddanmark,6520
+468,Agerskov,Tønder Kommune,Syddanmark,6534
+469,Branderup J,Tønder Kommune,Syddanmark,6535
+470,Bevtoft,Tønder Kommune,Syddanmark,6541
+471,Skærbæk,Tønder Kommune,Syddanmark,6780
+472,Rømø,Tønder Kommune,Syddanmark,6792
+473,Holsted,Esbjerg Kommune,Syddanmark,6670
+474,Føvling,Esbjerg Kommune,Syddanmark,6683
+475,Gørding,Esbjerg Kommune,Syddanmark,6690
+476,Esbjerg,Esbjerg Kommune,Syddanmark,6700
+477,Esbjerg Ø,Esbjerg Kommune,Syddanmark,6705
+478,Esbjerg V,Esbjerg Kommune,Syddanmark,6710
+479,Esbjerg N,Esbjerg Kommune,Syddanmark,6715
+480,Tjæreborg,Esbjerg Kommune,Syddanmark,6731
+481,Bramming,Esbjerg Kommune,Syddanmark,6740
+482,Ribe,Esbjerg Kommune,Syddanmark,6760
+483,Gredstedbro,Esbjerg Kommune,Syddanmark,6771
+484,Årre,Esbjerg Kommune,Syddanmark,6818
+485,Fanø,Fanø Kommune,Syddanmark,6720
+486,Hovborg,Varde Kommune,Syddanmark,6682
+487,Agerbæk,Varde Kommune,Syddanmark,6753
+488,Varde,Varde Kommune,Syddanmark,6800
+489,Årre,Varde Kommune,Syddanmark,6818
+490,Ansager,Varde Kommune,Syddanmark,6823
+491,Nørre Nebel,Varde Kommune,Syddanmark,6830
+492,Oksbøl,Varde Kommune,Syddanmark,6840
+493,Janderup Vestj,Varde Kommune,Syddanmark,6851
+494,Billum,Varde Kommune,Syddanmark,6852
+495,Vejers Strand,Varde Kommune,Syddanmark,6853
+496,Henne,Varde Kommune,Syddanmark,6854
+497,Outrup,Varde Kommune,Syddanmark,6855
+498,Blåvand,Varde Kommune,Syddanmark,6857
+499,Tistrup,Varde Kommune,Syddanmark,6862
+500,Ølgod,Varde Kommune,Syddanmark,6870
+501,Tarm,Varde Kommune,Syddanmark,6880
+502,Grindsted,Varde Kommune,Syddanmark,7200
+503,Vejen,Vejen Kommune,Syddanmark,6600
+504,Gesten,Vejen Kommune,Syddanmark,6621
+505,Bække,Vejen Kommune,Syddanmark,6622
+506,Vorbasse,Vejen Kommune,Syddanmark,6623
+507,Rødding,Vejen Kommune,Syddanmark,6630
+508,Brørup,Vejen Kommune,Syddanmark,6650
+509,Lintrup,Vejen Kommune,Syddanmark,6660
+510,Holsted,Vejen Kommune,Syddanmark,6670
+511,Hovborg,Vejen Kommune,Syddanmark,6682
+512,Føvling,Vejen Kommune,Syddanmark,6683
+513,Gørding,Vejen Kommune,Syddanmark,6690
+514,Glejbjerg,Vejen Kommune,Syddanmark,6752
+515,Agerbæk,Vejen Kommune,Syddanmark,6753
+516,Aabenraa,Aabenraa Kommune,Syddanmark,6200
+517,Rødekro,Aabenraa Kommune,Syddanmark,6230
+518,Padborg,Aabenraa Kommune,Syddanmark,6330
+519,Kruså,Aabenraa Kommune,Syddanmark,6340
+520,Tinglev,Aabenraa Kommune,Syddanmark,6360
+521,Bylderup-Bov,Aabenraa Kommune,Syddanmark,6372
+522,Bolderslev,Aabenraa Kommune,Syddanmark,6392
+523,Agerskov,Aabenraa Kommune,Syddanmark,6534
+524,Fredericia,Fredericia Kommune,Syddanmark,7000
+525,Fredericia,Fredericia Kommune,Syddanmark,7007
+526,Kolding,Kolding Kommune,Syddanmark,6000
+527,Egtved,Kolding Kommune,Syddanmark,6040
+528,Almind,Kolding Kommune,Syddanmark,6051
+529,Viuf,Kolding Kommune,Syddanmark,6052
+530,Jordrup,Kolding Kommune,Syddanmark,6064
+531,Christiansfeld,Kolding Kommune,Syddanmark,6070
+532,Bjert,Kolding Kommune,Syddanmark,6091
+533,Sønder Stenderup,Kolding Kommune,Syddanmark,6092
+534,Sjølund,Kolding Kommune,Syddanmark,6093
+535,Hejls,Kolding Kommune,Syddanmark,6094
+536,Haderslev,Kolding Kommune,Syddanmark,6100
+537,Nordborg,Kolding Kommune,Syddanmark,6430
+538,Sommersted,Kolding Kommune,Syddanmark,6560
+539,Vamdrup,Kolding Kommune,Syddanmark,6580
+540,Lunderskov,Kolding Kommune,Syddanmark,6640
+541,Egtved,Vejle Kommune,Syddanmark,6040
+542,Viuf,Vejle Kommune,Syddanmark,6052
+543,Vorbasse,Vejle Kommune,Syddanmark,6623
+544,Fredericia,Vejle Kommune,Syddanmark,7000
+545,Børkop,Vejle Kommune,Syddanmark,7080
+546,Vejle,Vejle Kommune,Syddanmark,7100
+547,Vejle Øst,Vejle Kommune,Syddanmark,7120
+548,Tørring,Vejle Kommune,Syddanmark,7160
+549,Vonge,Vejle Kommune,Syddanmark,7173
+550,Bredsten,Vejle Kommune,Syddanmark,7182
+551,Randbøl,Vejle Kommune,Syddanmark,7183
+552,Vandel,Vejle Kommune,Syddanmark,7184
+553,Billund,Vejle Kommune,Syddanmark,7190
+554,Grindsted,Vejle Kommune,Syddanmark,7200
+555,Jelling,Vejle Kommune,Syddanmark,7300
+556,Gadbjerg,Vejle Kommune,Syddanmark,7321
+557,Give,Vejle Kommune,Syddanmark,7323
+558,Brande,Vejle Kommune,Syddanmark,7330
+559,Ejstrupholm,Vejle Kommune,Syddanmark,7361
+560,København C,Københavns Kommune,Hovedstaden,900
+561,Udland,Københavns Kommune,Hovedstaden,960
+562,København C,Københavns Kommune,Hovedstaden,999
+563,København K,Københavns Kommune,Hovedstaden,1000
+564,København K,Københavns Kommune,Hovedstaden,1050
+565,København K,Københavns Kommune,Hovedstaden,1051
+566,København K,Københavns Kommune,Hovedstaden,1052
+567,København K,Københavns Kommune,Hovedstaden,1053
+568,København K,Københavns Kommune,Hovedstaden,1054
+569,København K,Københavns Kommune,Hovedstaden,1055
+570,København K,Københavns Kommune,Hovedstaden,1056
+571,København K,Københavns Kommune,Hovedstaden,1057
+572,København K,Københavns Kommune,Hovedstaden,1058
+573,København K,Københavns Kommune,Hovedstaden,1059
+574,København K,Københavns Kommune,Hovedstaden,1060
+575,København K,Københavns Kommune,Hovedstaden,1061
+576,København K,Københavns Kommune,Hovedstaden,1062
+577,København K,Københavns Kommune,Hovedstaden,1063
+578,København K,Københavns Kommune,Hovedstaden,1064
+579,København K,Københavns Kommune,Hovedstaden,1065
+580,København K,Københavns Kommune,Hovedstaden,1066
+581,København K,Københavns Kommune,Hovedstaden,1067
+582,København K,Københavns Kommune,Hovedstaden,1068
+583,København K,Københavns Kommune,Hovedstaden,1069
+584,København K,Københavns Kommune,Hovedstaden,1070
+585,København K,Københavns Kommune,Hovedstaden,1071
+586,København K,Københavns Kommune,Hovedstaden,1072
+587,København K,Københavns Kommune,Hovedstaden,1073
+588,København K,Københavns Kommune,Hovedstaden,1074
+589,København K,Københavns Kommune,Hovedstaden,1092
+590,København K,Københavns Kommune,Hovedstaden,1093
+591,København K,Københavns Kommune,Hovedstaden,1095
+592,København K,Københavns Kommune,Hovedstaden,1098
+593,København K,Københavns Kommune,Hovedstaden,1100
+594,København K,Københavns Kommune,Hovedstaden,1101
+595,København K,Københavns Kommune,Hovedstaden,1102
+596,København K,Københavns Kommune,Hovedstaden,1103
+597,København K,Københavns Kommune,Hovedstaden,1104
+598,København K,Københavns Kommune,Hovedstaden,1105
+599,København K,Københavns Kommune,Hovedstaden,1106
+600,København K,Københavns Kommune,Hovedstaden,1107
+601,København K,Københavns Kommune,Hovedstaden,1110
+602,København K,Københavns Kommune,Hovedstaden,1111
+603,København K,Københavns Kommune,Hovedstaden,1112
+604,København K,Københavns Kommune,Hovedstaden,1113
+605,København K,Københavns Kommune,Hovedstaden,1114
+606,København K,Københavns Kommune,Hovedstaden,1115
+607,København K,Københavns Kommune,Hovedstaden,1116
+608,København K,Københavns Kommune,Hovedstaden,1117
+609,København K,Københavns Kommune,Hovedstaden,1118
+610,København K,Københavns Kommune,Hovedstaden,1119
+611,København K,Københavns Kommune,Hovedstaden,1120
+612,København K,Københavns Kommune,Hovedstaden,1121
+613,København K,Københavns Kommune,Hovedstaden,1122
+614,København K,Københavns Kommune,Hovedstaden,1123
+615,København K,Københavns Kommune,Hovedstaden,1124
+616,København K,Københavns Kommune,Hovedstaden,1125
+617,København K,Københavns Kommune,Hovedstaden,1126
+618,København K,Københavns Kommune,Hovedstaden,1127
+619,København K,Københavns Kommune,Hovedstaden,1128
+620,København K,Københavns Kommune,Hovedstaden,1129
+621,København K,Københavns Kommune,Hovedstaden,1130
+622,København K,Københavns Kommune,Hovedstaden,1131
+623,København K,Københavns Kommune,Hovedstaden,1140
+624,København K,Københavns Kommune,Hovedstaden,1147
+625,København K,Københavns Kommune,Hovedstaden,1148
+626,København K,Københavns Kommune,Hovedstaden,1150
+627,København K,Københavns Kommune,Hovedstaden,1151
+628,København K,Københavns Kommune,Hovedstaden,1152
+629,København K,Københavns Kommune,Hovedstaden,1153
+630,København K,Københavns Kommune,Hovedstaden,1154
+631,København K,Københavns Kommune,Hovedstaden,1155
+632,København K,Københavns Kommune,Hovedstaden,1156
+633,København K,Københavns Kommune,Hovedstaden,1157
+634,København K,Københavns Kommune,Hovedstaden,1158
+635,København K,Københavns Kommune,Hovedstaden,1159
+636,København K,Københavns Kommune,Hovedstaden,1160
+637,København K,Københavns Kommune,Hovedstaden,1161
+638,København K,Københavns Kommune,Hovedstaden,1162
+639,København K,Københavns Kommune,Hovedstaden,1164
+640,København K,Københavns Kommune,Hovedstaden,1165
+641,København K,Københavns Kommune,Hovedstaden,1166
+642,København K,Københavns Kommune,Hovedstaden,1167
+643,København K,Københavns Kommune,Hovedstaden,1168
+644,København K,Københavns Kommune,Hovedstaden,1169
+645,København K,Københavns Kommune,Hovedstaden,1170
+646,København K,Københavns Kommune,Hovedstaden,1171
+647,København K,Københavns Kommune,Hovedstaden,1172
+648,København K,Københavns Kommune,Hovedstaden,1173
+649,København K,Københavns Kommune,Hovedstaden,1174
+650,København K,Københavns Kommune,Hovedstaden,1175
+651,København K,Københavns Kommune,Hovedstaden,1200
+652,København K,Københavns Kommune,Hovedstaden,1201
+653,København K,Københavns Kommune,Hovedstaden,1202
+654,København K,Københavns Kommune,Hovedstaden,1203
+655,København K,Københavns Kommune,Hovedstaden,1204
+656,København K,Københavns Kommune,Hovedstaden,1205
+657,København K,Københavns Kommune,Hovedstaden,1206
+658,København K,Københavns Kommune,Hovedstaden,1207
+659,København K,Københavns Kommune,Hovedstaden,1208
+660,København K,Københavns Kommune,Hovedstaden,1209
+661,København K,Københavns Kommune,Hovedstaden,1210
+662,København K,Københavns Kommune,Hovedstaden,1211
+663,København K,Københavns Kommune,Hovedstaden,1213
+664,København K,Københavns Kommune,Hovedstaden,1214
+665,København K,Københavns Kommune,Hovedstaden,1215
+666,København K,Københavns Kommune,Hovedstaden,1216
+667,København K,Københavns Kommune,Hovedstaden,1217
+668,København K,Københavns Kommune,Hovedstaden,1218
+669,København K,Københavns Kommune,Hovedstaden,1219
+670,København K,Københavns Kommune,Hovedstaden,1220
+671,København K,Københavns Kommune,Hovedstaden,1221
+672,København K,Københavns Kommune,Hovedstaden,1240
+673,København K,Københavns Kommune,Hovedstaden,1250
+674,København K,Københavns Kommune,Hovedstaden,1251
+675,København K,Københavns Kommune,Hovedstaden,1252
+676,København K,Københavns Kommune,Hovedstaden,1253
+677,København K,Københavns Kommune,Hovedstaden,1254
+678,København K,Københavns Kommune,Hovedstaden,1255
+679,København K,Københavns Kommune,Hovedstaden,1256
+680,København K,Københavns Kommune,Hovedstaden,1257
+681,København K,Københavns Kommune,Hovedstaden,1259
+682,København K,Københavns Kommune,Hovedstaden,1260
+683,København K,Københavns Kommune,Hovedstaden,1261
+684,København K,Københavns Kommune,Hovedstaden,1263
+685,København K,Københavns Kommune,Hovedstaden,1264
+686,København K,Københavns Kommune,Hovedstaden,1265
+687,København K,Københavns Kommune,Hovedstaden,1266
+688,København K,Københavns Kommune,Hovedstaden,1267
+689,København K,Københavns Kommune,Hovedstaden,1268
+690,København K,Københavns Kommune,Hovedstaden,1270
+691,København K,Københavns Kommune,Hovedstaden,1271
+692,København K,Københavns Kommune,Hovedstaden,1291
+693,København K,Københavns Kommune,Hovedstaden,1300
+694,København K,Københavns Kommune,Hovedstaden,1301
+695,København K,Københavns Kommune,Hovedstaden,1302
+696,København K,Københavns Kommune,Hovedstaden,1303
+697,København K,Københavns Kommune,Hovedstaden,1304
+698,København K,Københavns Kommune,Hovedstaden,1306
+699,København K,Københavns Kommune,Hovedstaden,1307
+700,København K,Københavns Kommune,Hovedstaden,1308
+701,København K,Københavns Kommune,Hovedstaden,1309
+702,København K,Københavns Kommune,Hovedstaden,1310
+703,København K,Københavns Kommune,Hovedstaden,1311
+704,København K,Københavns Kommune,Hovedstaden,1312
+705,København K,Københavns Kommune,Hovedstaden,1313
+706,København K,Københavns Kommune,Hovedstaden,1314
+707,København K,Københavns Kommune,Hovedstaden,1315
+708,København K,Københavns Kommune,Hovedstaden,1316
+709,København K,Københavns Kommune,Hovedstaden,1317
+710,København K,Københavns Kommune,Hovedstaden,1318
+711,København K,Københavns Kommune,Hovedstaden,1319
+712,København K,Københavns Kommune,Hovedstaden,1320
+713,København K,Københavns Kommune,Hovedstaden,1321
+714,København K,Københavns Kommune,Hovedstaden,1322
+715,København K,Københavns Kommune,Hovedstaden,1323
+716,København K,Københavns Kommune,Hovedstaden,1324
+717,København K,Københavns Kommune,Hovedstaden,1325
+718,København K,Københavns Kommune,Hovedstaden,1326
+719,København K,Københavns Kommune,Hovedstaden,1327
+720,København K,Københavns Kommune,Hovedstaden,1328
+721,København K,Københavns Kommune,Hovedstaden,1329
+722,København K,Københavns Kommune,Hovedstaden,1350
+723,København K,Københavns Kommune,Hovedstaden,1352
+724,København K,Københavns Kommune,Hovedstaden,1353
+725,København K,Københavns Kommune,Hovedstaden,1354
+726,København K,Københavns Kommune,Hovedstaden,1355
+727,København K,Københavns Kommune,Hovedstaden,1356
+728,København K,Københavns Kommune,Hovedstaden,1357
+729,København K,Københavns Kommune,Hovedstaden,1358
+730,København K,Københavns Kommune,Hovedstaden,1359
+731,København K,Københavns Kommune,Hovedstaden,1360
+732,København K,Københavns Kommune,Hovedstaden,1361
+733,København K,Københavns Kommune,Hovedstaden,1362
+734,København K,Københavns Kommune,Hovedstaden,1363
+735,København K,Københavns Kommune,Hovedstaden,1364
+736,København K,Københavns Kommune,Hovedstaden,1365
+737,København K,Københavns Kommune,Hovedstaden,1366
+738,København K,Københavns Kommune,Hovedstaden,1367
+739,København K,Københavns Kommune,Hovedstaden,1368
+740,København K,Københavns Kommune,Hovedstaden,1369
+741,København K,Københavns Kommune,Hovedstaden,1370
+742,København K,Københavns Kommune,Hovedstaden,1371
+743,København K,Københavns Kommune,Hovedstaden,1400
+744,København K,Københavns Kommune,Hovedstaden,1401
+745,København K,Københavns Kommune,Hovedstaden,1402
+746,København K,Københavns Kommune,Hovedstaden,1403
+747,København K,Københavns Kommune,Hovedstaden,1406
+748,København K,Københavns Kommune,Hovedstaden,1407
+749,København K,Københavns Kommune,Hovedstaden,1408
+750,København K,Københavns Kommune,Hovedstaden,1409
+751,København K,Københavns Kommune,Hovedstaden,1410
+752,København K,Københavns Kommune,Hovedstaden,1411
+753,København K,Københavns Kommune,Hovedstaden,1412
+754,København K,Københavns Kommune,Hovedstaden,1413
+755,København K,Københavns Kommune,Hovedstaden,1414
+756,København K,Københavns Kommune,Hovedstaden,1415
+757,København K,Københavns Kommune,Hovedstaden,1416
+758,København K,Københavns Kommune,Hovedstaden,1417
+759,København K,Københavns Kommune,Hovedstaden,1418
+760,København K,Københavns Kommune,Hovedstaden,1419
+761,København K,Københavns Kommune,Hovedstaden,1420
+762,København K,Københavns Kommune,Hovedstaden,1421
+763,København K,Københavns Kommune,Hovedstaden,1422
+764,København K,Københavns Kommune,Hovedstaden,1423
+765,København K,Københavns Kommune,Hovedstaden,1424
+766,København K,Københavns Kommune,Hovedstaden,1425
+767,København K,Københavns Kommune,Hovedstaden,1426
+768,København K,Københavns Kommune,Hovedstaden,1427
+769,København K,Københavns Kommune,Hovedstaden,1428
+770,København K,Københavns Kommune,Hovedstaden,1429
+771,København K,Københavns Kommune,Hovedstaden,1430
+772,København K,Københavns Kommune,Hovedstaden,1431
+773,København K,Københavns Kommune,Hovedstaden,1432
+774,København K,Københavns Kommune,Hovedstaden,1433
+775,København K,Københavns Kommune,Hovedstaden,1434
+776,København K,Københavns Kommune,Hovedstaden,1435
+777,København K,Københavns Kommune,Hovedstaden,1436
+778,København K,Københavns Kommune,Hovedstaden,1437
+779,København K,Københavns Kommune,Hovedstaden,1438
+780,København K,Københavns Kommune,Hovedstaden,1439
+781,København K,Københavns Kommune,Hovedstaden,1440
+782,København K,Københavns Kommune,Hovedstaden,1441
+783,København K,Københavns Kommune,Hovedstaden,1448
+784,København K,Københavns Kommune,Hovedstaden,1450
+785,København K,Københavns Kommune,Hovedstaden,1451
+786,København K,Københavns Kommune,Hovedstaden,1452
+787,København K,Københavns Kommune,Hovedstaden,1453
+788,København K,Københavns Kommune,Hovedstaden,1454
+789,København K,Københavns Kommune,Hovedstaden,1455
+790,København K,Københavns Kommune,Hovedstaden,1456
+791,København K,Københavns Kommune,Hovedstaden,1457
+792,København K,Københavns Kommune,Hovedstaden,1458
+793,København K,Københavns Kommune,Hovedstaden,1459
+794,København K,Københavns Kommune,Hovedstaden,1460
+795,København K,Københavns Kommune,Hovedstaden,1462
+796,København K,Københavns Kommune,Hovedstaden,1463
+797,København K,Københavns Kommune,Hovedstaden,1464
+798,København K,Københavns Kommune,Hovedstaden,1466
+799,København K,Københavns Kommune,Hovedstaden,1467
+800,København K,Københavns Kommune,Hovedstaden,1468
+801,København K,Københavns Kommune,Hovedstaden,1470
+802,København K,Københavns Kommune,Hovedstaden,1471
+803,København K,Københavns Kommune,Hovedstaden,1472
+804,København V,Københavns Kommune,Hovedstaden,1500
+805,København V,Københavns Kommune,Hovedstaden,1550
+806,København V,Københavns Kommune,Hovedstaden,1551
+807,København V,Københavns Kommune,Hovedstaden,1552
+808,København V,Københavns Kommune,Hovedstaden,1553
+809,København V,Københavns Kommune,Hovedstaden,1554
+810,København V,Københavns Kommune,Hovedstaden,1555
+811,København V,Københavns Kommune,Hovedstaden,1556
+812,København V,Københavns Kommune,Hovedstaden,1557
+813,København V,Københavns Kommune,Hovedstaden,1558
+814,København V,Københavns Kommune,Hovedstaden,1559
+815,København V,Københavns Kommune,Hovedstaden,1560
+816,København V,Københavns Kommune,Hovedstaden,1561
+817,København V,Københavns Kommune,Hovedstaden,1562
+818,København V,Københavns Kommune,Hovedstaden,1563
+819,København V,Københavns Kommune,Hovedstaden,1564
+820,København V,Københavns Kommune,Hovedstaden,1566
+821,København V,Københavns Kommune,Hovedstaden,1567
+822,København V,Københavns Kommune,Hovedstaden,1568
+823,København V,Københavns Kommune,Hovedstaden,1569
+824,København V,Københavns Kommune,Hovedstaden,1570
+825,København V,Københavns Kommune,Hovedstaden,1571
+826,København V,Københavns Kommune,Hovedstaden,1572
+827,København V,Københavns Kommune,Hovedstaden,1573
+828,København V,Københavns Kommune,Hovedstaden,1574
+829,København V,Københavns Kommune,Hovedstaden,1575
+830,København V,Københavns Kommune,Hovedstaden,1576
+831,København V,Københavns Kommune,Hovedstaden,1577
+832,København V,Københavns Kommune,Hovedstaden,1592
+833,København V,Københavns Kommune,Hovedstaden,1599
+834,København V,Københavns Kommune,Hovedstaden,1600
+835,København V,Københavns Kommune,Hovedstaden,1601
+836,København V,Københavns Kommune,Hovedstaden,1602
+837,København V,Københavns Kommune,Hovedstaden,1603
+838,København V,Københavns Kommune,Hovedstaden,1604
+839,København V,Københavns Kommune,Hovedstaden,1606
+840,København V,Københavns Kommune,Hovedstaden,1607
+841,København V,Københavns Kommune,Hovedstaden,1608
+842,København V,Københavns Kommune,Hovedstaden,1609
+843,København V,Københavns Kommune,Hovedstaden,1610
+844,København V,Københavns Kommune,Hovedstaden,1611
+845,København V,Københavns Kommune,Hovedstaden,1612
+846,København V,Københavns Kommune,Hovedstaden,1613
+847,København V,Københavns Kommune,Hovedstaden,1614
+848,København V,Københavns Kommune,Hovedstaden,1615
+849,København V,Københavns Kommune,Hovedstaden,1616
+850,København V,Københavns Kommune,Hovedstaden,1617
+851,København V,Københavns Kommune,Hovedstaden,1618
+852,København V,Københavns Kommune,Hovedstaden,1619
+853,København V,Københavns Kommune,Hovedstaden,1620
+854,København V,Københavns Kommune,Hovedstaden,1621
+855,København V,Københavns Kommune,Hovedstaden,1622
+856,København V,Københavns Kommune,Hovedstaden,1623
+857,København V,Københavns Kommune,Hovedstaden,1624
+858,København V,Københavns Kommune,Hovedstaden,1630
+859,København V,Københavns Kommune,Hovedstaden,1631
+860,København V,Københavns Kommune,Hovedstaden,1632
+861,København V,Københavns Kommune,Hovedstaden,1633
+862,København V,Københavns Kommune,Hovedstaden,1634
+863,København V,Københavns Kommune,Hovedstaden,1635
+864,København V,Københavns Kommune,Hovedstaden,1650
+865,København V,Københavns Kommune,Hovedstaden,1651
+866,København V,Københavns Kommune,Hovedstaden,1652
+867,København V,Københavns Kommune,Hovedstaden,1653
+868,København V,Københavns Kommune,Hovedstaden,1654
+869,København V,Københavns Kommune,Hovedstaden,1655
+870,København V,Københavns Kommune,Hovedstaden,1656
+871,København V,Københavns Kommune,Hovedstaden,1657
+872,København V,Københavns Kommune,Hovedstaden,1658
+873,København V,Københavns Kommune,Hovedstaden,1659
+874,København V,Københavns Kommune,Hovedstaden,1660
+875,København V,Københavns Kommune,Hovedstaden,1661
+876,København V,Københavns Kommune,Hovedstaden,1662
+877,København V,Københavns Kommune,Hovedstaden,1663
+878,København V,Københavns Kommune,Hovedstaden,1664
+879,København V,Københavns Kommune,Hovedstaden,1665
+880,København V,Københavns Kommune,Hovedstaden,1666
+881,København V,Københavns Kommune,Hovedstaden,1667
+882,København V,Københavns Kommune,Hovedstaden,1668
+883,København V,Københavns Kommune,Hovedstaden,1669
+884,København V,Københavns Kommune,Hovedstaden,1670
+885,København V,Københavns Kommune,Hovedstaden,1671
+886,København V,Københavns Kommune,Hovedstaden,1672
+887,København V,Københavns Kommune,Hovedstaden,1673
+888,København V,Københavns Kommune,Hovedstaden,1674
+889,København V,Københavns Kommune,Hovedstaden,1675
+890,København V,Københavns Kommune,Hovedstaden,1676
+891,København V,Københavns Kommune,Hovedstaden,1677
+892,København V,Københavns Kommune,Hovedstaden,1699
+893,København V,Københavns Kommune,Hovedstaden,1700
+894,København V,Københavns Kommune,Hovedstaden,1701
+895,København V,Københavns Kommune,Hovedstaden,1702
+896,København V,Københavns Kommune,Hovedstaden,1703
+897,København V,Københavns Kommune,Hovedstaden,1704
+898,København V,Københavns Kommune,Hovedstaden,1705
+899,København V,Københavns Kommune,Hovedstaden,1706
+900,København V,Københavns Kommune,Hovedstaden,1707
+901,København V,Københavns Kommune,Hovedstaden,1708
+902,København V,Københavns Kommune,Hovedstaden,1709
+903,København V,Københavns Kommune,Hovedstaden,1710
+904,København V,Københavns Kommune,Hovedstaden,1711
+905,København V,Københavns Kommune,Hovedstaden,1712
+906,København V,Københavns Kommune,Hovedstaden,1714
+907,København V,Københavns Kommune,Hovedstaden,1715
+908,København V,Københavns Kommune,Hovedstaden,1716
+909,København V,Københavns Kommune,Hovedstaden,1717
+910,København V,Københavns Kommune,Hovedstaden,1718
+911,København V,Københavns Kommune,Hovedstaden,1719
+912,København V,Københavns Kommune,Hovedstaden,1720
+913,København V,Københavns Kommune,Hovedstaden,1721
+914,København V,Københavns Kommune,Hovedstaden,1722
+915,København V,Københavns Kommune,Hovedstaden,1723
+916,København V,Københavns Kommune,Hovedstaden,1724
+917,København V,Københavns Kommune,Hovedstaden,1725
+918,København V,Københavns Kommune,Hovedstaden,1726
+919,København V,Københavns Kommune,Hovedstaden,1727
+920,København V,Københavns Kommune,Hovedstaden,1728
+921,København V,Københavns Kommune,Hovedstaden,1729
+922,København V,Københavns Kommune,Hovedstaden,1730
+923,København V,Københavns Kommune,Hovedstaden,1731
+924,København V,Københavns Kommune,Hovedstaden,1732
+925,København V,Københavns Kommune,Hovedstaden,1733
+926,København V,Københavns Kommune,Hovedstaden,1734
+927,København V,Københavns Kommune,Hovedstaden,1735
+928,København V,Københavns Kommune,Hovedstaden,1736
+929,København V,Københavns Kommune,Hovedstaden,1737
+930,København V,Københavns Kommune,Hovedstaden,1738
+931,København V,Københavns Kommune,Hovedstaden,1739
+932,København V,Københavns Kommune,Hovedstaden,1749
+933,København V,Københavns Kommune,Hovedstaden,1750
+934,København V,Københavns Kommune,Hovedstaden,1751
+935,København V,Københavns Kommune,Hovedstaden,1752
+936,København V,Københavns Kommune,Hovedstaden,1753
+937,København V,Københavns Kommune,Hovedstaden,1754
+938,København V,Københavns Kommune,Hovedstaden,1755
+939,København V,Københavns Kommune,Hovedstaden,1756
+940,København V,Københavns Kommune,Hovedstaden,1757
+941,København V,Københavns Kommune,Hovedstaden,1758
+942,København V,Københavns Kommune,Hovedstaden,1759
+943,København V,Københavns Kommune,Hovedstaden,1760
+944,København V,Københavns Kommune,Hovedstaden,1761
+945,København V,Københavns Kommune,Hovedstaden,1762
+946,København V,Københavns Kommune,Hovedstaden,1763
+947,København V,Københavns Kommune,Hovedstaden,1764
+948,København V,Københavns Kommune,Hovedstaden,1765
+949,København V,Københavns Kommune,Hovedstaden,1766
+950,København V,Københavns Kommune,Hovedstaden,1770
+951,København V,Københavns Kommune,Hovedstaden,1771
+952,København V,Københavns Kommune,Hovedstaden,1772
+953,København V,Københavns Kommune,Hovedstaden,1773
+954,København V,Københavns Kommune,Hovedstaden,1774
+955,København V,Københavns Kommune,Hovedstaden,1775
+956,København V,Københavns Kommune,Hovedstaden,1777
+957,København V,Københavns Kommune,Hovedstaden,1780
+958,København V,Københavns Kommune,Hovedstaden,1785
+959,København V,Københavns Kommune,Hovedstaden,1786
+960,København V,Københavns Kommune,Hovedstaden,1787
+961,København V,Københavns Kommune,Hovedstaden,1790
+962,København V,Københavns Kommune,Hovedstaden,1799
+963,Frederiksberg C,Københavns Kommune,Hovedstaden,1810
+964,Frederiksberg,Københavns Kommune,Hovedstaden,2000
+965,København Ø,Københavns Kommune,Hovedstaden,2100
+966,Nordhavn,Københavns Kommune,Hovedstaden,2150
+967,København N,Københavns Kommune,Hovedstaden,2200
+968,København S,Københavns Kommune,Hovedstaden,2300
+969,København NV,Københavns Kommune,Hovedstaden,2400
+970,København SV,Københavns Kommune,Hovedstaden,2450
+971,Valby,Københavns Kommune,Hovedstaden,2500
+972,Rødovre,Københavns Kommune,Hovedstaden,2610
+973,Brønshøj,Københavns Kommune,Hovedstaden,2700
+974,Vanløse,Københavns Kommune,Hovedstaden,2720
+975,Kastrup,Københavns Kommune,Hovedstaden,2770
+976,Søborg,Københavns Kommune,Hovedstaden,2860
+977,Hellerup,Københavns Kommune,Hovedstaden,2900
+978,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1800
+979,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1801
+980,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1802
+981,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1803
+982,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1804
+983,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1805
+984,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1806
+985,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1807
+986,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1808
+987,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1809
+988,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1810
+989,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1811
+990,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1812
+991,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1813
+992,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1814
+993,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1815
+994,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1816
+995,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1817
+996,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1818
+997,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1819
+998,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1820
+999,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1822
+1000,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1823
+1001,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1824
+1002,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1825
+1003,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1826
+1004,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1827
+1005,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1828
+1006,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1829
+1007,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1850
+1008,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1851
+1009,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1852
+1010,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1853
+1011,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1854
+1012,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1855
+1013,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1856
+1014,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1857
+1015,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1860
+1016,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1861
+1017,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1862
+1018,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1863
+1019,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1864
+1020,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1865
+1021,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1866
+1022,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1867
+1023,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1868
+1024,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1870
+1025,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1871
+1026,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1872
+1027,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1873
+1028,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1874
+1029,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1875
+1030,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1876
+1031,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1877
+1032,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1878
+1033,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1879
+1034,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1900
+1035,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1901
+1036,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1902
+1037,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1903
+1038,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1904
+1039,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1905
+1040,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1906
+1041,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1908
+1042,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1909
+1043,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1910
+1044,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1911
+1045,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1912
+1046,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1913
+1047,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1914
+1048,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1915
+1049,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1916
+1050,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1917
+1051,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1920
+1052,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1921
+1053,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1922
+1054,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1923
+1055,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1924
+1056,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1925
+1057,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1926
+1058,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1927
+1059,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1928
+1060,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1950
+1061,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1951
+1062,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1952
+1063,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1953
+1064,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1954
+1065,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1955
+1066,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1956
+1067,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1957
+1068,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1958
+1069,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1959
+1070,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1960
+1071,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1961
+1072,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1962
+1073,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1963
+1074,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1964
+1075,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1965
+1076,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1966
+1077,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1967
+1078,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1970
+1079,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1971
+1080,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1972
+1081,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1973
+1082,Frederiksberg C,Frederiksberg Kommune,Hovedstaden,1974
+1083,Frederiksberg,Frederiksberg Kommune,Hovedstaden,2000
+1084,København N,Frederiksberg Kommune,Hovedstaden,2200
+1085,Valby,Frederiksberg Kommune,Hovedstaden,2500
+1086,Vanløse,Frederiksberg Kommune,Hovedstaden,2720
+1087,Herlev,Ballerup Kommune,Hovedstaden,2730
+1088,Skovlunde,Ballerup Kommune,Hovedstaden,2740
+1089,Ballerup,Ballerup Kommune,Hovedstaden,2750
+1090,Måløv,Ballerup Kommune,Hovedstaden,2760
+1091,Værløse,Ballerup Kommune,Hovedstaden,3500
+1092,Københavns Pakkecent,Brøndby Kommune,Hovedstaden,917
+1093,Glostrup,Brøndby Kommune,Hovedstaden,2600
+1094,Brøndby,Brøndby Kommune,Hovedstaden,2605
+1095,Albertslund,Brøndby Kommune,Hovedstaden,2620
+1096,Hvidovre,Brøndby Kommune,Hovedstaden,2650
+1097,Brøndby Strand,Brøndby Kommune,Hovedstaden,2660
+1098,Dragør,Dragør Kommune,Hovedstaden,2791
+1099,Kongens Lyngby,Gentofte Kommune,Hovedstaden,2800
+1100,Gentofte,Gentofte Kommune,Hovedstaden,2820
+1101,Dyssegård,Gentofte Kommune,Hovedstaden,2870
+1102,Hellerup,Gentofte Kommune,Hovedstaden,2900
+1103,Charlottenlund,Gentofte Kommune,Hovedstaden,2920
+1104,Klampenborg,Gentofte Kommune,Hovedstaden,2930
+1105,Herlev,Gladsaxe Kommune,Hovedstaden,2730
+1106,Kongens Lyngby,Gladsaxe Kommune,Hovedstaden,2800
+1107,Gentofte,Gladsaxe Kommune,Hovedstaden,2820
+1108,Søborg,Gladsaxe Kommune,Hovedstaden,2860
+1109,Bagsværd,Gladsaxe Kommune,Hovedstaden,2880
+1110,Værløse,Gladsaxe Kommune,Hovedstaden,3500
+1111,Glostrup,Glostrup Kommune,Hovedstaden,2600
+1112,Herlev,Herlev Kommune,Hovedstaden,2730
+1113,Skovlunde,Herlev Kommune,Hovedstaden,2740
+1114,Bagsværd,Herlev Kommune,Hovedstaden,2880
+1115,Glostrup,Albertslund Kommune,Hovedstaden,2600
+1116,Albertslund,Albertslund Kommune,Hovedstaden,2620
+1117,Ballerup,Albertslund Kommune,Hovedstaden,2750
+1118,Rødovre,Hvidovre Kommune,Hovedstaden,2610
+1119,Hvidovre,Hvidovre Kommune,Hovedstaden,2650
+1120,Brøndby Strand,Hvidovre Kommune,Hovedstaden,2660
+1121,Høje Taastrup,Høje-Taastrup Kommune,Hovedstaden,800
+1122,Taastrup,Høje-Taastrup Kommune,Hovedstaden,2630
+1123,Hedehusene,Høje-Taastrup Kommune,Hovedstaden,2640
+1124,Roskilde,Høje-Taastrup Kommune,Hovedstaden,4000
+1125,Kongens Lyngby,Lyngby-Taarbæk Kommune,Hovedstaden,2800
+1126,Virum,Lyngby-Taarbæk Kommune,Hovedstaden,2830
+1127,Holte,Lyngby-Taarbæk Kommune,Hovedstaden,2840
+1128,Klampenborg,Lyngby-Taarbæk Kommune,Hovedstaden,2930
+1129,Værløse,Lyngby-Taarbæk Kommune,Hovedstaden,3500
+1130,Rødovre,Rødovre Kommune,Hovedstaden,2610
+1131,Herlev,Rødovre Kommune,Hovedstaden,2730
+1132,Ishøj,Ishøj Kommune,Hovedstaden,2635
+1133,Hedehusene,Ishøj Kommune,Hovedstaden,2640
+1134,København V,Tårnby Kommune,Hovedstaden,1532
+1135,København V,Tårnby Kommune,Hovedstaden,1533
+1136,København S,Tårnby Kommune,Hovedstaden,2300
+1137,Kastrup,Tårnby Kommune,Hovedstaden,2770
+1138,Dragør,Tårnby Kommune,Hovedstaden,2791
+1139,Vallensbæk,Vallensbæk Kommune,Hovedstaden,2625
+1140,Vallensbæk Strand,Vallensbæk Kommune,Hovedstaden,2665
+1141,Bagsværd,Furesø Kommune,Hovedstaden,2880
+1142,Birkerød,Furesø Kommune,Hovedstaden,3460
+1143,Værløse,Furesø Kommune,Hovedstaden,3500
+1144,Farum,Furesø Kommune,Hovedstaden,3520
+1145,Lynge,Furesø Kommune,Hovedstaden,3540
+1146,Hillerød,Allerød Kommune,Hovedstaden,3400
+1147,Allerød,Allerød Kommune,Hovedstaden,3450
+1148,Birkerød,Allerød Kommune,Hovedstaden,3460
+1149,Farum,Allerød Kommune,Hovedstaden,3520
+1150,Lynge,Allerød Kommune,Hovedstaden,3540
+1151,Slangerup,Allerød Kommune,Hovedstaden,3550
+1152,Hørsholm,Fredensborg Kommune,Hovedstaden,2970
+1153,Kokkedal,Fredensborg Kommune,Hovedstaden,2980
+1154,Nivå,Fredensborg Kommune,Hovedstaden,2990
+1155,Humlebæk,Fredensborg Kommune,Hovedstaden,3050
+1156,Espergærde,Fredensborg Kommune,Hovedstaden,3060
+1157,Hillerød,Fredensborg Kommune,Hovedstaden,3400
+1158,Allerød,Fredensborg Kommune,Hovedstaden,3450
+1159,Fredensborg,Fredensborg Kommune,Hovedstaden,3480
+1160,Kvistgård,Fredensborg Kommune,Hovedstaden,3490
+1161,Helsingør,Helsingør Kommune,Hovedstaden,3000
+1162,Humlebæk,Helsingør Kommune,Hovedstaden,3050
+1163,Espergærde,Helsingør Kommune,Hovedstaden,3060
+1164,Snekkersten,Helsingør Kommune,Hovedstaden,3070
+1165,Tikøb,Helsingør Kommune,Hovedstaden,3080
+1166,Hornbæk,Helsingør Kommune,Hovedstaden,3100
+1167,Ålsgårde,Helsingør Kommune,Hovedstaden,3140
+1168,Hellebæk,Helsingør Kommune,Hovedstaden,3150
+1169,Græsted,Helsingør Kommune,Hovedstaden,3230
+1170,Fredensborg,Helsingør Kommune,Hovedstaden,3480
+1171,Kvistgård,Helsingør Kommune,Hovedstaden,3490
+1172,Helsinge,Hillerød Kommune,Hovedstaden,3200
+1173,Græsted,Hillerød Kommune,Hovedstaden,3230
+1174,Ølsted,Hillerød Kommune,Hovedstaden,3310
+1175,Skævinge,Hillerød Kommune,Hovedstaden,3320
+1176,Gørløse,Hillerød Kommune,Hovedstaden,3330
+1177,Hillerød,Hillerød Kommune,Hovedstaden,3400
+1178,Allerød,Hillerød Kommune,Hovedstaden,3450
+1179,Fredensborg,Hillerød Kommune,Hovedstaden,3480
+1180,Lynge,Hillerød Kommune,Hovedstaden,3540
+1181,Slangerup,Hillerød Kommune,Hovedstaden,3550
+1182,Frederikssund,Hillerød Kommune,Hovedstaden,3600
+1183,Vedbæk,Hørsholm Kommune,Hovedstaden,2950
+1184,Rungsted Kyst,Hørsholm Kommune,Hovedstaden,2960
+1185,Hørsholm,Hørsholm Kommune,Hovedstaden,2970
+1186,Kokkedal,Hørsholm Kommune,Hovedstaden,2980
+1187,Kongens Lyngby,Rudersdal Kommune,Hovedstaden,2800
+1188,Virum,Rudersdal Kommune,Hovedstaden,2830
+1189,Holte,Rudersdal Kommune,Hovedstaden,2840
+1190,Nærum,Rudersdal Kommune,Hovedstaden,2850
+1191,Skodsborg,Rudersdal Kommune,Hovedstaden,2942
+1192,Vedbæk,Rudersdal Kommune,Hovedstaden,2950
+1193,Hørsholm,Rudersdal Kommune,Hovedstaden,2970
+1194,Birkerød,Rudersdal Kommune,Hovedstaden,3460
+1195,Ballerup,Egedal Kommune,Hovedstaden,2750
+1196,Smørum,Egedal Kommune,Hovedstaden,2765
+1197,Værløse,Egedal Kommune,Hovedstaden,3500
+1198,Farum,Egedal Kommune,Hovedstaden,3520
+1199,Lynge,Egedal Kommune,Hovedstaden,3540
+1200,Slangerup,Egedal Kommune,Hovedstaden,3550
+1201,Ølstykke,Egedal Kommune,Hovedstaden,3650
+1202,Stenløse,Egedal Kommune,Hovedstaden,3660
+1203,Veksø Sjælland,Egedal Kommune,Hovedstaden,3670
+1204,Slangerup,Frederikssund Kommune,Hovedstaden,3550
+1205,Frederikssund,Frederikssund Kommune,Hovedstaden,3600
+1206,Jægerspris,Frederikssund Kommune,Hovedstaden,3630
+1207,Skibby,Frederikssund Kommune,Hovedstaden,4050
+1208,Frederiksværk,Halsnæs Kommune,Hovedstaden,3300
+1209,Ølsted,Halsnæs Kommune,Hovedstaden,3310
+1210,Skævinge,Halsnæs Kommune,Hovedstaden,3320
+1211,Liseleje,Halsnæs Kommune,Hovedstaden,3360
+1212,Melby,Halsnæs Kommune,Hovedstaden,3370
+1213,Hundested,Halsnæs Kommune,Hovedstaden,3390
+1214,Frederikssund,Halsnæs Kommune,Hovedstaden,3600
+1215,Hornbæk,Gribskov Kommune,Hovedstaden,3100
+1216,Dronningmølle,Gribskov Kommune,Hovedstaden,3120
+1217,Helsinge,Gribskov Kommune,Hovedstaden,3200
+1218,Vejby,Gribskov Kommune,Hovedstaden,3210
+1219,Tisvildeleje,Gribskov Kommune,Hovedstaden,3220
+1220,Græsted,Gribskov Kommune,Hovedstaden,3230
+1221,Gilleleje,Gribskov Kommune,Hovedstaden,3250
+1222,Frederiksværk,Gribskov Kommune,Hovedstaden,3300
+1223,Rønne,Bornholm Kommune,Hovedstaden,3700
+1224,Aakirkeby,Bornholm Kommune,Hovedstaden,3720
+1225,Nexø,Bornholm Kommune,Hovedstaden,3730
+1226,Svaneke,Bornholm Kommune,Hovedstaden,3740
+1227,Østermarie,Bornholm Kommune,Hovedstaden,3751
+1228,Gudhjem,Bornholm Kommune,Hovedstaden,3760
+1229,Allinge,Bornholm Kommune,Hovedstaden,3770
+1230,Klemensker,Bornholm Kommune,Hovedstaden,3782
+1231,Hasle,Bornholm Kommune,Hovedstaden,3790
+1232,Gudhjem,Christiansø,Hovedstaden,3760
+1233,Hedehusene,Greve Kommune,Sjælland,2640
+1234,Greve,Greve Kommune,Sjælland,2670
+1235,Karlslunde,Greve Kommune,Sjælland,2690
+1236,Tune,Greve Kommune,Sjælland,4030
+1237,Ringsted,Køge Kommune,Sjælland,4100
+1238,Viby Sjælland,Køge Kommune,Sjælland,4130
+1239,Borup,Køge Kommune,Sjælland,4140
+1240,Jystrup Midtsj,Køge Kommune,Sjælland,4174
+1241,Lejre,Køge Kommune,Sjælland,4320
+1242,Køge,Køge Kommune,Sjælland,4600
+1243,Lille Skensved,Køge Kommune,Sjælland,4623
+1244,Bjæverskov,Køge Kommune,Sjælland,4632
+1245,Herfølge,Køge Kommune,Sjælland,4681
+1246,Tureby,Køge Kommune,Sjælland,4682
+1247,Hedehusene,Roskilde Kommune,Sjælland,2640
+1248,Veksø Sjælland,Roskilde Kommune,Sjælland,3670
+1249,Roskilde,Roskilde Kommune,Sjælland,4000
+1250,Tune,Roskilde Kommune,Sjælland,4030
+1251,Jyllinge,Roskilde Kommune,Sjælland,4040
+1252,Viby Sjælland,Roskilde Kommune,Sjælland,4130
+1253,Borup,Roskilde Kommune,Sjælland,4140
+1254,Lejre,Roskilde Kommune,Sjælland,4320
+1255,Gadstrup,Roskilde Kommune,Sjælland,4621
+1256,Havdrup,Roskilde Kommune,Sjælland,4622
+1257,Lille Skensved,Roskilde Kommune,Sjælland,4623
+1258,Solrød Strand,Solrød Kommune,Sjælland,2680
+1259,Karlslunde,Solrød Kommune,Sjælland,2690
+1260,Havdrup,Solrød Kommune,Sjælland,4622
+1261,Lille Skensved,Solrød Kommune,Sjælland,4623
+1262,Nykøbing Sj,Odsherred Kommune,Sjælland,4500
+1263,Hørve,Odsherred Kommune,Sjælland,4534
+1264,Fårevejle,Odsherred Kommune,Sjælland,4540
+1265,Asnæs,Odsherred Kommune,Sjælland,4550
+1266,Vig,Odsherred Kommune,Sjælland,4560
+1267,Grevinge,Odsherred Kommune,Sjælland,4571
+1268,Nørre Asmindrup,Odsherred Kommune,Sjælland,4572
+1269,Højby,Odsherred Kommune,Sjælland,4573
+1270,Rørvig,Odsherred Kommune,Sjælland,4581
+1271,Sjællands Odde,Odsherred Kommune,Sjælland,4583
+1272,Føllenslev,Odsherred Kommune,Sjælland,4591
+1273,Ringsted,Holbæk Kommune,Sjælland,4100
+1274,Stenlille,Holbæk Kommune,Sjælland,4295
+1275,Nyrup,Holbæk Kommune,Sjælland,4296
+1276,Holbæk,Holbæk Kommune,Sjælland,4300
+1277,Hvalsø,Holbæk Kommune,Sjælland,4330
+1278,Tølløse,Holbæk Kommune,Sjælland,4340
+1279,Ugerløse,Holbæk Kommune,Sjælland,4350
+1280,Kirke Eskilstrup,Holbæk Kommune,Sjælland,4360
+1281,Store Merløse,Holbæk Kommune,Sjælland,4370
+1282,Vipperød,Holbæk Kommune,Sjælland,4390
+1283,Regstrup,Holbæk Kommune,Sjælland,4420
+1284,Mørkøv,Holbæk Kommune,Sjælland,4440
+1285,Jyderup,Holbæk Kommune,Sjælland,4450
+1286,Snertinge,Holbæk Kommune,Sjælland,4460
+1287,Svebølle,Holbæk Kommune,Sjælland,4470
+1288,Svinninge,Holbæk Kommune,Sjælland,4520
+1289,Gislinge,Holbæk Kommune,Sjælland,4532
+1290,Ringsted,Faxe Kommune,Sjælland,4100
+1291,Herlufmagle,Faxe Kommune,Sjælland,4160
+1292,Faxe,Faxe Kommune,Sjælland,4640
+1293,Hårlev,Faxe Kommune,Sjælland,4652
+1294,Karise,Faxe Kommune,Sjælland,4653
+1295,Faxe Ladeplads,Faxe Kommune,Sjælland,4654
+1296,Tureby,Faxe Kommune,Sjælland,4682
+1297,Rønnede,Faxe Kommune,Sjælland,4683
+1298,Holmegaard,Faxe Kommune,Sjælland,4684
+1299,Haslev,Faxe Kommune,Sjælland,4690
+1300,Tappernøje,Faxe Kommune,Sjælland,4733
+1301,Slagelse,Kalundborg Kommune,Sjælland,4200
+1302,Høng,Kalundborg Kommune,Sjælland,4270
+1303,Gørlev,Kalundborg Kommune,Sjælland,4281
+1304,Ruds Vedby,Kalundborg Kommune,Sjælland,4291
+1305,Dianalund,Kalundborg Kommune,Sjælland,4293
+1306,Kalundborg,Kalundborg Kommune,Sjælland,4400
+1307,Jyderup,Kalundborg Kommune,Sjælland,4450
+1308,Snertinge,Kalundborg Kommune,Sjælland,4460
+1309,Svebølle,Kalundborg Kommune,Sjælland,4470
+1310,Store Fuglede,Kalundborg Kommune,Sjælland,4480
+1311,Jerslev Sjælland,Kalundborg Kommune,Sjælland,4490
+1312,Hørve,Kalundborg Kommune,Sjælland,4534
+1313,Føllenslev,Kalundborg Kommune,Sjælland,4591
+1314,Sejerø,Kalundborg Kommune,Sjælland,4592
+1315,Eskebjerg,Kalundborg Kommune,Sjælland,4593
+1316,Ringsted,Ringsted Kommune,Sjælland,4100
+1317,Borup,Ringsted Kommune,Sjælland,4140
+1318,Fjenneslev,Ringsted Kommune,Sjælland,4173
+1319,Jystrup Midtsj,Ringsted Kommune,Sjælland,4174
+1320,Sorø,Ringsted Kommune,Sjælland,4180
+1321,Hvalsø,Ringsted Kommune,Sjælland,4330
+1322,Kirke Eskilstrup,Ringsted Kommune,Sjælland,4360
+1323,Store Merløse,Ringsted Kommune,Sjælland,4370
+1324,Haslev,Ringsted Kommune,Sjælland,4690
+1325,Sorø,Slagelse Kommune,Sjælland,4180
+1326,Munke Bjergby,Slagelse Kommune,Sjælland,4190
+1327,Slagelse,Slagelse Kommune,Sjælland,4200
+1328,Korsør,Slagelse Kommune,Sjælland,4220
+1329,Skælskør,Slagelse Kommune,Sjælland,4230
+1330,Vemmelev,Slagelse Kommune,Sjælland,4241
+1331,Boeslunde,Slagelse Kommune,Sjælland,4242
+1332,Rude,Slagelse Kommune,Sjælland,4243
+1333,Fuglebjerg,Slagelse Kommune,Sjælland,4250
+1334,Dalmose,Slagelse Kommune,Sjælland,4261
+1335,Sandved,Slagelse Kommune,Sjælland,4262
+1336,Høng,Slagelse Kommune,Sjælland,4270
+1337,Køge,Stevns Kommune,Sjælland,4600
+1338,Hårlev,Stevns Kommune,Sjælland,4652
+1339,Karise,Stevns Kommune,Sjælland,4653
+1340,Store Heddinge,Stevns Kommune,Sjælland,4660
+1341,Strøby,Stevns Kommune,Sjælland,4671
+1342,Klippinge,Stevns Kommune,Sjælland,4672
+1343,Rødvig Stevns,Stevns Kommune,Sjælland,4673
+1344,Tureby,Stevns Kommune,Sjælland,4682
+1345,Ringsted,Sorø Kommune,Sjælland,4100
+1346,Fjenneslev,Sorø Kommune,Sjælland,4173
+1347,Sorø,Sorø Kommune,Sjælland,4180
+1348,Munke Bjergby,Sorø Kommune,Sjælland,4190
+1349,Slagelse,Sorø Kommune,Sjælland,4200
+1350,Ruds Vedby,Sorø Kommune,Sjælland,4291
+1351,Dianalund,Sorø Kommune,Sjælland,4293
+1352,Stenlille,Sorø Kommune,Sjælland,4295
+1353,Nyrup,Sorø Kommune,Sjælland,4296
+1354,Store Merløse,Sorø Kommune,Sjælland,4370
+1355,Roskilde,Lejre Kommune,Sjælland,4000
+1356,Kirke Såby,Lejre Kommune,Sjælland,4060
+1357,Kirke Hyllinge,Lejre Kommune,Sjælland,4070
+1358,Lejre,Lejre Kommune,Sjælland,4320
+1359,Hvalsø,Lejre Kommune,Sjælland,4330
+1360,Tølløse,Lejre Kommune,Sjælland,4340
+1361,Øster Ulslev,Lolland Kommune,Sjælland,4894
+1362,Errindlev,Lolland Kommune,Sjælland,4895
+1363,Nakskov,Lolland Kommune,Sjælland,4900
+1364,Harpelunde,Lolland Kommune,Sjælland,4912
+1365,Horslunde,Lolland Kommune,Sjælland,4913
+1366,Søllested,Lolland Kommune,Sjælland,4920
+1367,Maribo,Lolland Kommune,Sjælland,4930
+1368,Bandholm,Lolland Kommune,Sjælland,4941
+1369,Torrig L,Lolland Kommune,Sjælland,4943
+1370,Fejø,Lolland Kommune,Sjælland,4944
+1371,Nørreballe,Lolland Kommune,Sjælland,4951
+1372,Stokkemarke,Lolland Kommune,Sjælland,4952
+1373,Vesterborg,Lolland Kommune,Sjælland,4953
+1374,Holeby,Lolland Kommune,Sjælland,4960
+1375,Rødby,Lolland Kommune,Sjælland,4970
+1376,Dannemare,Lolland Kommune,Sjælland,4983
+1377,Ringsted,Næstved Kommune,Sjælland,4100
+1378,Herlufmagle,Næstved Kommune,Sjælland,4160
+1379,Glumsø,Næstved Kommune,Sjælland,4171
+1380,Slagelse,Næstved Kommune,Sjælland,4200
+1381,Rude,Næstved Kommune,Sjælland,4243
+1382,Fuglebjerg,Næstved Kommune,Sjælland,4250
+1383,Dalmose,Næstved Kommune,Sjælland,4261
+1384,Sandved,Næstved Kommune,Sjælland,4262
+1385,Faxe,Næstved Kommune,Sjælland,4640
+1386,Rønnede,Næstved Kommune,Sjælland,4683
+1387,Holmegaard,Næstved Kommune,Sjælland,4684
+1388,Haslev,Næstved Kommune,Sjælland,4690
+1389,Næstved,Næstved Kommune,Sjælland,4700
+1390,Tappernøje,Næstved Kommune,Sjælland,4733
+1391,Karrebæksminde,Næstved Kommune,Sjælland,4736
+1392,Lundby,Næstved Kommune,Sjælland,4750
+1393,Nykøbing F,Guldborgsund Kommune,Sjælland,4800
+1394,Nørre Alslev,Guldborgsund Kommune,Sjælland,4840
+1395,Stubbekøbing,Guldborgsund Kommune,Sjælland,4850
+1396,Guldborg,Guldborgsund Kommune,Sjælland,4862
+1397,Eskilstrup,Guldborgsund Kommune,Sjælland,4863
+1398,Horbelev,Guldborgsund Kommune,Sjælland,4871
+1399,Idestrup,Guldborgsund Kommune,Sjælland,4872
+1400,Væggerløse,Guldborgsund Kommune,Sjælland,4873
+1401,Gedser,Guldborgsund Kommune,Sjælland,4874
+1402,Nysted,Guldborgsund Kommune,Sjælland,4880
+1403,Toreby L,Guldborgsund Kommune,Sjælland,4891
+1404,Kettinge,Guldborgsund Kommune,Sjælland,4892
+1405,Øster Ulslev,Guldborgsund Kommune,Sjælland,4894
+1406,Maribo,Guldborgsund Kommune,Sjælland,4930
+1407,Sakskøbing,Guldborgsund Kommune,Sjælland,4990
+1408,Præstø,Vordingborg Kommune,Sjælland,4720
+1409,Tappernøje,Vordingborg Kommune,Sjælland,4733
+1410,Mern,Vordingborg Kommune,Sjælland,4735
+1411,Lundby,Vordingborg Kommune,Sjælland,4750
+1412,Vordingborg,Vordingborg Kommune,Sjælland,4760
+1413,Kalvehave,Vordingborg Kommune,Sjælland,4771
+1414,Langebæk,Vordingborg Kommune,Sjælland,4772
+1415,Stensved,Vordingborg Kommune,Sjælland,4773
+1416,Stege,Vordingborg Kommune,Sjælland,4780
+1417,Borre,Vordingborg Kommune,Sjælland,4791
+1418,Askeby,Vordingborg Kommune,Sjælland,4792
+1419,Bogø By,Vordingborg Kommune,Sjælland,4793

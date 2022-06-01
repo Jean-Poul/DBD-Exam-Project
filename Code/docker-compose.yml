@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+    #courierservice:
+    #    container_name: courierservicecon 
+    #    build: mongo_courier
+    #    ports:
+    #        - 8081:8081
+    #loggingservice:
+    #    container_name: logservicecon 
+    #    build: mongoLogging
+    #    ports:
+    #        - 8042:8042
+    #neo4jservice:
+    #    container_name: neo4jservicecon 
+    #    build: Neo4J
+    #    ports:
+    #        - 8066:8066
+    postgresservice:
+        container_name: postgresservicecon 
+        build: data_service
+        ports:
+            - 9080:9080
+    cachingservice:
+        container_name: cachingservicecon 
+        build: main_entry
+        ports:
+            - 9085:9085
+
+  

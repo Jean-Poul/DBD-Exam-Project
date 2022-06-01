@@ -1,0 +1,1061 @@
+{
+	"info": {
+		"_postman_id": "73d1132b-6831-4d37-920a-9b2e90ebd931",
+		"name": "Software database eksamen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12822718"
+	},
+	"item": [
+		{
+			"name": "PostgreSQL",
+			"item": [
+				{
+					"name": "Restaurant",
+					"item": [
+						{
+							"name": "GET a list of restaurants by theirs id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n   1, 2, 3, 4\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9080/restaurant/list?ids=3,6,9,12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"restaurant",
+										"list"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "3,6,9,12"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET restaurant by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/restaurant/?id=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"restaurant",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET restaurants ids by zipcode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/restaurant/idzipcode?zipcode=2880",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"restaurant",
+										"idzipcode"
+									],
+									"query": [
+										{
+											"key": "zipcode",
+											"value": "2880"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET coordinates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/address/addressById?id=70",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"address",
+										"addressById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "70"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "POST Create new Custromer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"email\": \"ping@pong.com\",\r\n  \"password\": \"secretpassword\",\r\n  \"phone\": \"88998899\",\r\n  \"addressId\": 560,\r\n  \"firstName\": \"Donald\",\r\n  \"lastName\": \"Duck\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9080/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET all customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/customer/allcustomers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"customer",
+										"allcustomers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET customer by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/customer/customerbyid?id=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"customer",
+										"customerbyid"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST customer login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"email\": \"ping@pong.com\",\r\n  \"password\": \"secretpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9080/customer/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "GET order by customer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/order/customer?id=1355",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"order",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1355"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET order for courier",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/order/courier?id=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"order",
+										"courier"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET order for restaurant",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9080/order/restaurant?id=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"order",
+										"restaurant"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": null,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 1,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9080/order/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"order",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST order for delivery with courier",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": \"1027\",\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": \"7\",\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9080/order/deliver",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9080",
+									"path": [
+										"order",
+										"deliver"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Redis",
+			"item": [
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "Save new Order",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": 1027,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 11,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get orders of a restaurant by restaurant's id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9085/order/restaurant?id=13",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"order",
+										"restaurant"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "13"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get orders for Customer by his id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9085/order/customer?id=1355",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"order",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1355"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Get cart if exist or throw EntityNotFoundException",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9085/cart?customerid=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"cart"
+									],
+									"query": [
+										{
+											"key": "customerid",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Cart",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": null,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 1,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/cart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Empty Cart",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": null,\r\n    \"restaurantId\": \"9\",\r\n    \"customerId\": \"12\",\r\n    \"courierId\": 1,\r\n    \"items\": {\"2\": \"2\", \"3\": \"2\", \"4\": \"1\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/cart?customerid=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"cart"
+									],
+									"query": [
+										{
+											"key": "customerid",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Restaurant",
+					"item": [
+						{
+							"name": "GET restaurants by ids",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9085/restaurant/list?ids=1,2,3,50",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"restaurant",
+										"list"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "1,2,3,50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET restaurant by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9085/restaurant?id=14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"restaurant"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "Customer Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"email\": \"tryllehatten@mail.com\",\r\n  \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/customer/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create new Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"email\": \"la1la@mail.com\",\r\n  \"password\": \"password\",\r\n  \"phone\": \"88998899\",\r\n  \"addressId\": 560,\r\n  \"firstName\": \"Donald\",\r\n  \"lastName\": \"Duck\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9085/customer/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9085",
+									"path": [
+										"customer",
+										"new"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Neo4j",
+			"item": [
+				{
+					"name": "GetAllRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPopulate_DB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/populate_db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"populate_db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByZipcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/by-zipcode?zipcode=2880",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"by-zipcode"
+							],
+							"query": [
+								{
+									"key": "zipcode",
+									"value": "2880"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCityName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/by-cityName?cityName=Søborg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"by-cityName"
+							],
+							"query": [
+								{
+									"key": "cityName",
+									"value": "Søborg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDelivery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/by-delivery?delivery=no",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"by-delivery"
+							],
+							"query": [
+								{
+									"key": "delivery",
+									"value": "no"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByFoodType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/by-food?foodCategory=Footlong Cold Subs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"by-food"
+							],
+							"query": [
+								{
+									"key": "foodCategory",
+									"value": "Footlong Cold Subs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSimilarRestaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8066/restaurant/get-similar-restaurants?id=127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"restaurant",
+								"get-similar-restaurants"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "127"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MongoDB",
+			"item": [
+				{
+					"name": "PostCourier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5,\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676097, 12.568337] }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/couriers/savecourier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"couriers",
+								"savecourier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676095, 12.568337] }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/couriers/deletecourier/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"couriers",
+								"deletecourier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCourier",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676095, 12.568337] }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/couriers/courierlocation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"couriers",
+								"courierlocation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSaveOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\":{ \"type\": \"Point\", \"coordinates\": [55.676097, 12.568337] }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/couriers/saveorder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"couriers",
+								"saveorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"log\": \"Test\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8042/log/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8042",
+							"path": [
+								"log",
+								"log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllLogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"log\": \"Test\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8042/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8042",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
