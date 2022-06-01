@@ -16,7 +16,7 @@ The system is based on the functionality implemented in the real world JustEat p
   
 An explanation about our system development process can be found below:
 
-[Video link: ](URL MANGLER)  
+[Video link: ](https://www.youtube.com/watch?v=ZUVT4IwlWj4)  
   
 ## About The Project  
 Documentation for planning and use cases with diagrams can be found here:  
