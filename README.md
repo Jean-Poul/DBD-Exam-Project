@@ -61,8 +61,7 @@ The following is our architectural solution for the end product:
 
 - Extreme programming
 - Scrum
-- Trello  
-
+- Trello
 
 ### Getting Started
 
