@@ -7,7 +7,7 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Allan Bo Simonsen, cph-as484
 - Jean-Poul Leth-Møller, cph-jl360
 - Nina Lisakowski, cph-nl163
-- Magdalena Wawrzak cph-mw216
+- Magdalena Wawrzak, cph-mw216
   
 ## Introduction
 TODO MISSING STATEMENTS!   
