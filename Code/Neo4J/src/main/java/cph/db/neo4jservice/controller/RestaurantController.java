@@ -104,7 +104,7 @@ public class RestaurantController {
         }catch(Exception e){
             System.out.println(e);
         }
-        return "Database populated succesfully";
+        return "Database populated successfully";
     }
 
     @GetMapping("/get-similar-restaurants")
