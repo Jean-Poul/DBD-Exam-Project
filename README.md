@@ -10,9 +10,9 @@ This is an exam project for the Databases course on CPH Business for the softwar
 - Magdalena Wawrzak, cph-mw216
   
 ## Introduction
-This project was developed in connection to Databases
+This project was developed as part of the Databases
 for Developers course at Copenhagen Business Academy as the final project of the course.
-The system is based on the ideology implemented in the JustEat platform. The system, hereinafter Food Delivery System, should provide the functionality for a customer of creating orders that contain items from a restaurant. Order should then be delivered by a courier.   
+The system is based on the functionality implemented in the real world JustEat platform. The system, hereinafter Food Delivery System, should provide the functionality for finding restaurants, have customers be able to create orders that contains items from a restaurant and the system should find a suitable courier that can deliver the order.   
   
 An explanation about our system development process can be found below:
 
@@ -57,7 +57,7 @@ The following is our architectural solution for the end product:
 * Trello  
      
 ### Getting Started    
-In order to run this application it is required to have a container runtime installed and running. We recommend using Docker. 
+In order to run this application it is required to have docker deamon installed and running. We recommend using Docker desktop. 
      
 ### Documentation  
 To be able to test our endpoints use the following link to view the documentation for our endpoints.  
