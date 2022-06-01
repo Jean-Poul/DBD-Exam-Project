@@ -121,9 +121,20 @@ public class DataConnectorImpl implements DataConnector {
     }
 
     @Override
-    public int getNearestCourierId(double x, double y) {
+    public int getNearestCourierId(double x, double y) throws URISyntaxException {
         //todo call MongoDB
-        return 3;
+
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        URI uri = new URI(COURIER_SERVICE_URL + "couriers/nearest");
+        ResponseEntity<String> response = restTemplate.getForEntity(uri,String.class);
+        if (response != null) {
+            return Integer.parseInt(response.getBody());
+        } else {
+            throw new EntityNotFoundException("No couriers has been found");
+        }
+
     }
 
     @Override
