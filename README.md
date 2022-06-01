@@ -40,6 +40,7 @@ The following is our architectural solution for the end product:
 * [Restaurants data](https://www.kaggle.com/datasets/shrutimehta/zomato-restaurants-data)
 * [User data](https://www.mockaroo.com/)  
 * [Zipcodes data](https://github.com/danielbahl/DK-Postnumre/blob/master/postnumre.sql)  
+   
       
 #### Development:  
 * Git  
@@ -73,6 +74,8 @@ INSERT docker compose command here!
 
 ## Version History
 
+* 1.0
+    * Main branch release
 * 0.2
     * Various bug fixes and optimizations
     * See [developer branch commits](https://github.com/Jean-Poul/DBD-Exam-Project/commits/developer)
