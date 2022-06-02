@@ -97,6 +97,7 @@ We have also attached our Postman collection which can be found here:
   db.couriers.createIndex( { "location" : "2dsphere" } )
   ```
 
+To populate Mongodb og Neo4j it is necessary to call Get requests "populate" in courier service and "populate_db" in neo4j/restaurant service. Calling "populate" in Courier service updates couriers with random locations
 
 ## Version History
 
